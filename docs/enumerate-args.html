@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>Py Notes</title>
+    <title>Enumerate-Args</title>
 
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
@@ -42,41 +42,43 @@
 
     <!-- Main Blog Content -->
     <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/enumerate-args.html" rel="bookmark"
+        title="Permalink to Enumerate-Args">Enumerate-Args</a></h3>
+    </header>
 
-<h3>Archives</h3>
-
-<table class="table-archive">
-    <tbody>
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Title</th>
-                <th>Score</th>
-            </tr>
-        </thead>
+<h6 class="subheader" title="2024-11-19T00:00:00-05:00">Tue 19 November 2024
+</h6>
 
 
-        <!-- Display the total score -->
-        <p><strong>Overall Score:</strong> 15</p>
+    <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">print_everything</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">thing</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">. </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">thing</span><span class="p">))</span>
+</code></pre></div>
 
-        <tr>
-            <td>Tue 19 November 2024</td>
-            <td><a href='add-a-new-column.html'>Add-A-New-Column</a></td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Tue 19 November 2024</td>
-            <td><a href='age-calculator.html'>Age-Calculator</a></td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>Tue 19 November 2024</td>
-            <td><a href='enumerate-args.html'>Enumerate-Args</a></td>
-            <td>0</td>
-        </tr>
-    </tbody>
-</table>
+<div class="highlight"><pre><span></span><code><span class="n">print_everything</span><span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;cabbage&#39;</span><span class="p">,</span> <span class="s1">&#39;spinach&#39;</span><span class="p">)</span>
+</code></pre></div>
 
+<div class="highlight"><pre><span></span><code><span class="mf">0.</span><span class="w"> </span><span class="n">apple</span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">banana</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">cabbage</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">spinach</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+
+</article>
     </div>
     <!-- End Main Content -->
 
