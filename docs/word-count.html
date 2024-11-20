@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>Odd Even</title>
+    <title>Word Count</title>
 
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
@@ -44,33 +44,27 @@
     <div class="large-9 columns">
 <article>
     <header>
-        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/odd-even.html" rel="bookmark"
-        title="Permalink to Odd Even">Odd Even</a></h3>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/word-count.html" rel="bookmark"
+        title="Permalink to Word Count">Word Count</a></h3>
     </header>
 
 <h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
 </h6>
 
 
-    <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">odd_even</span><span class="p">():</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>      
-        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-              <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The number </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> is even&quot;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The number </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> is odd&quot;</span><span class="p">)</span>
-<span class="n">odd_even</span><span class="p">()</span>
+    <p>word count
+Nov 20 2024</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">word_count</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">word_list</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_count</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">))</span>  
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>The number 0 is even
-The number 1 is odd
-The number 2 is even
-The number 3 is odd
-The number 4 is even
-The number 5 is odd
-The number 6 is even
-The number 7 is odd
-The number 8 is even
-The number 9 is odd
+<div class="highlight"><pre><span></span><code><span class="mf">2</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
