@@ -14,23 +14,21 @@ Prints "Prime" or "Not Prime."
 
 ```python
 def get_prime_number(number):
-    if number ==2:
-        for number in range(1,10):
-            if number % 2:
-                return f'The {number} is not prime'
-            else:
-                return f'The {number} is prime'
+    if number % 2:
+        return f'The {number} is prime'
+    else:
+        return f'The {number} is not prime'
 ```
 
 
 ```python
-get_prime_number(2)
+get_prime_number(3)
 ```
 
 
 
 
-    'The 1 is not prime'
+    'The 3 is prime'
 
 
 

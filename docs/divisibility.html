@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>Prime-Numbers</title>
+    <title>Divisibility</title>
 
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
@@ -44,31 +44,47 @@
     <div class="large-9 columns">
 <article>
     <header>
-        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/prime-numbers.html" rel="bookmark"
-        title="Permalink to Prime-Numbers">Prime-Numbers</a></h3>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/divisibility.html" rel="bookmark"
+        title="Permalink to Divisibility">Divisibility</a></h3>
     </header>
 
 <h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
 </h6>
 
 
-    <p>Assignment 5
-Checks if the number is a prime number.
-Prints "Prime" or "Not Prime."</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_prime_number</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is prime&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is not prime&#39;</span>
+    <p>10
+Takes a number 
+Checks if it is divisible by both 5 and 3.
+Prints "Divisible by both" or "Not divisible by both."</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_divisibility</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39; The number </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> is divisible by 3 and 5&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The number </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> is not divisible by 3 and 5&#39;</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">get_prime_number</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">get_divisibility</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&#39;The 3 is prime&#39;
+<div class="highlight"><pre><span></span><code>&#39; The number 30 is divisible by 3 and 5&#39;
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_divisibility</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;The number 22 is not divisible by 3 and 5&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_divisibility</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;The number 40 is not divisible by 3 and 5&#39;
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>

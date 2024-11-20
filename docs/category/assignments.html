@@ -46,6 +46,66 @@
         
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/divisibility.html"><h3 class="article-title">Divisibility</h3></a>
+<h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
+</h6>
+
+
+<p>10
+Takes a number 
+Checks if it is divisible by both 5 and 3.
+Prints "Divisible by both" or "Not divisible by both."</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_divisibility</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39; The number </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> is divisible by 3 and 5&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The number </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> is not divisible by 3 and 5&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_divisibility</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39; The number 30 is divisible by 3 and 5&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_divisibility</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;The number 22 is not divisible by 3 and 5&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_divisibility</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;The number 40 is not divisible by 3 and 5&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+
+</p>
+
+
+
+            </article>
+
+
+                <hr  class="gradient"/>
+
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/leap-year.html"><h3 class="article-title">Leap-Year</h3></a>
 <h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
 </h6>
@@ -61,28 +121,15 @@ Prints "Leap Year" or "Not a Leap Year."</p>
         <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1"> is leap year&#39;</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1"> is not a leap year&#39;</span>
-<span class="n">get_leap_year</span><span class="p">(</span><span class="mi">2024</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;2024 is leap year&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1"> is not …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
 
 </p>
 
 
 
-            </article>
-
-
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/leap-year.html">Read More</a>
                 <hr  class="gradient"/>
-
+            </article>
 
         
 
@@ -163,24 +210,200 @@ The number 4 …</code></pre></div><p class="subheader">Category: <a href="https
 Checks if the number is a prime number.
 Prints "Prime" or "Not Prime."</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_prime_number</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span><span class="mi">2</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
-                <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is not prime&#39;</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is prime&#39;</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is prime&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is not prime&#39;</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">get_prime_number</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">get_prime_number</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&#39;The 1 is not …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+<div class="highlight"><pre><span></span><code>&#39;The 3 is prime&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
 
 </p>
 
 
 
                 <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/prime-numbers.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/reverse-numbers.html"><h3 class="article-title">Reverse-Numbers</h3></a>
+<h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
+</h6>
+
+
+<p>6
+Reverse the given list</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_reverse_numbers</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;series of numbers is now listed: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_reverse_numbers</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;series of numbers is now listed: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/reverse-numbers.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/small-large.html"><h3 class="article-title">Small Large</h3></a>
+<h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
+</h6>
+
+
+<p>Finds and prints the smallest and largest numbers in the list.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_large_small</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is smallest&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is largest&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_large_small</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>The number is smallest
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_large_small</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>The number is largest
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_large_small</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+
+    <span class="k">if …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/small-large.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/sum-numbers.html"><h3 class="article-title">Sum-Numbers</h3></a>
+<h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
+</h6>
+
+
+<p>Calculates the sum of its digits.
+Prints the result.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_sum_of_numbers</span><span class="p">():</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="nb">sum</span><span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;result = </span><span class="si">{</span><span class="nb">sum</span><span class="si">}</span><span class="s1">&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_sum_of_numbers</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;result = 30&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/sum-numbers.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/swapped-values.html"><h3 class="article-title">Swapped Values</h3></a>
+<h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
+</h6>
+
+
+<p>Takes two variables.
+Swaps their values without using a third variable.
+Prints the swapped values.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">swap_two_variables</span><span class="p">():</span>
+    <span class="n">a</span><span class="o">=</span><span class="mi">10</span>
+    <span class="n">b</span><span class="o">=</span><span class="mi">20</span>
+    <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span><span class="n">a</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1"> is now swapped&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">swap_two_variables</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;The (20, 10) is now swapped&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/swapped-values.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
