@@ -2,8 +2,8 @@
 title: Swapped Values
 date: 2024-11-20
 author: Your Name
-cell_count: 4
-score: 0
+cell_count: 5
+score: 5
 ---
 
 Takes two variables.
@@ -39,5 +39,10 @@ swap_two_variables()
 ```
 
 
+```python
+
+```
+
+
 ---
-**Score: 0**
+**Score: 5**

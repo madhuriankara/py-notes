@@ -46,6 +46,133 @@
         
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/1-address.html"><h3 class="article-title">1 Address</h3></a>
+<h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+
+<span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Collecting</span><span class="w"> </span><span class="n">faker</span>
+<span class="w">  </span><span class="n">Downloading</span><span class="w"> </span><span class="n">Faker</span><span class="o">-</span><span class="mf">33.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span><span class="o">.</span><span class="n">metadata</span><span class="w"> </span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="n">kB</span><span class="p">)</span>
+<span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">python</span><span class="o">-</span><span class="n">dateutil</span><span class="o">&gt;=</span><span class="mf">2.4</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">faker</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mf">2.9</span><span class="o">.</span><span class="mf">0.</span><span class="n">post0</span><span class="p">)</span>
+<span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">typing</span><span class="o">-</span><span class="n">extensions</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">faker</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mf">4.12</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">six</span><span class="o">&gt;=</span><span class="mf">1.5</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">python</span><span class="o">-</span><span class="n">dateutil</span><span class="o">&gt;=</span><span class="mf">2.4</span><span class="o">-&gt;</span><span class="n">faker</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mf">1.16</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">Downloading</span><span class="w"> </span><span class="n">Faker</span><span class="o">-</span><span class="mf">33.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span><span class="w"> </span><span class="p">(</span><span class="mf">1.9</span><span class="w"> </span><span class="n">MB</span><span class="p">)</span>
+<span class="err"></span><span class="p">[</span><span class="mi">2</span><span class="n">K</span><span class="w">   </span><span class="err"></span><span class="p">[</span><span class="mi">38</span><span class="p">;</span><span class="mi">2</span><span class="p">;</span><span class="mi">114</span><span class="p">;</span><span class="mi">156</span><span class="p">;</span><span class="mi">31</span><span class="n">m</span><span class="err">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span><span class="p">[</span><span class="mi">0</span><span class="n">m</span><span class="w"> </span><span class="err"></span><span class="p">[</span><span class="mi">32</span><span class="n">m1</span><span class="o">.</span><span class="mi">9</span><span class="o">/</span><span class="mf">1.9</span><span class="w"> </span><span class="n">MB</span><span class="err"></span><span class="p">[</span><span class="mi">0</span><span class="n">m</span><span class="w"> </span><span class="err"></span><span class="p">[</span><span class="mi">31</span><span class="n">m14</span><span class="o">.</span><span class="mi">4</span><span class="w"> </span><span class="n">MB</span><span class="o">/</span><span class="n">s</span><span class="err"></span><span class="p">[</span><span class="mi">0</span><span class="n">m</span><span class="w"> </span><span class="n">eta</span><span class="w"> </span><span class="err"></span><span class="p">[</span><span class="mi">36</span><span class="n">m0</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="err"></span><span class="p">[</span><span class="mi">0</span><span class="n">m</span>
+<span class="err"></span><span class="p">[</span><span class="err">?</span><span class="mi">25</span><span class="n">hInstalling</span><span class="w"> </span><span class="n">collected</span><span class="w"> </span><span class="n">packages</span><span class="p">:</span><span class="w"> </span><span class="n">faker</span>
+<span class="n">Successfully</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="n">faker</span><span class="o">-</span><span class="mf">33.0</span><span class="o">.</span><span class="mi">0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">SUITE_NO</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fake</span><span class="o">.</span><span class="n">random_int</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">99</span><span class="p">)</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">fake</span><span class="o">.</span><span class="n">random_int</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">70</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>    <span class="n">STREET_NAME</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">street_name</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">SUITE_NO</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">STREET_NAME</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">80</span><span class="o">/</span><span class="mf">63</span><span class="w"> </span><span class="n">Kim</span><span class="w"> </span><span class="n">Pike</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">SUITE_NO</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">STREET_NAME</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">80</span><span class="o">/</span><span class="mf">63</span><span class="w"> </span><span class="n">Kim</span><span class="w"> </span><span class="n">Pike</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">SUITE_NO</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fake</span><span class="o">.</span><span class="n">random_int</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">60</span><span class="p">)</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">fake</span><span class="o">.</span><span class="n">random_int</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">70</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">STREET_NAME</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">street_name</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">SUITE_NO</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">STREET_NAME</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">28</span><span class="o">/</span><span class="mf">68</span><span class="w"> </span><span class="n">Sloan</span><span class="w"> </span><span class="n">Hill</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">STREET_NAME</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">street_name</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">SUITE_NO</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">STREET_NAME</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">28</span><span class="o">/</span><span class="mf">68</span><span class="w"> </span><span class="n">Lin</span><span class="w"> </span><span class="n">Isle</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+
+</p>
+
+
+
+            </article>
+
+
+                <hr  class="gradient"/>
+
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/2-address.html"><h3 class="article-title">2-Address</h3></a>
+<h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">SUITE_NO</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fake</span><span class="o">.</span><span class="n">random_int</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">99</span><span class="p">)</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">fake</span><span class="o">.</span><span class="n">random_int</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">99</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>    <span class="n">STREET_NAME</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">street_name</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">SUITE_NO</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">STREET_NAME</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">23</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">55</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Gabriel</span><span class="w"> </span><span class="n">Summit</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">SUITE_NO</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fake</span><span class="o">.</span><span class="n">random_int</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">fake</span><span class="o">.</span><span class="n">random_int</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">60</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">STREET_NAME</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">street_name …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/2-address.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/divisibility.html"><h3 class="article-title">Divisibility</h3></a>
 <h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
 </h6>
@@ -59,48 +186,15 @@ Prints "Divisible by both" or "Not divisible by both."</p>
         <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39; The number </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> is divisible by 3 and 5&#39;</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The number </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> is not divisible by 3 and 5&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">get_divisibility</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39; The number 30 is divisible by 3 and 5&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">get_divisibility</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;The number 22 is not divisible by 3 and 5&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">get_divisibility</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;The number 40 is not divisible by 3 and 5&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The number …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
 
 </p>
 
 
 
-            </article>
-
-
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/divisibility.html">Read More</a>
                 <hr  class="gradient"/>
-
+            </article>
 
         
 
@@ -367,90 +461,13 @@ Prints the result.</p>
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/swapped-values.html"><h3 class="article-title">Swapped Values</h3></a>
-<h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
-</h6>
-
-
-<p>Takes two variables.
-Swaps their values without using a third variable.
-Prints the swapped values.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">swap_two_variables</span><span class="p">():</span>
-    <span class="n">a</span><span class="o">=</span><span class="mi">10</span>
-    <span class="n">b</span><span class="o">=</span><span class="mi">20</span>
-    <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span><span class="n">a</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1"> is now swapped&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">swap_two_variables</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;The (20, 10) is now swapped&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/swapped-values.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/word-count.html"><h3 class="article-title">Word Count</h3></a>
-<h6 class="subheader" title="2024-11-20T00:00:00-05:00">Wed 20 November 2024
-</h6>
-
-
-<p>word count
-Nov 20 2024</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">word_count</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-    <span class="n">word_list</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
-    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">word_count</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">))</span>  
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">2</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/word-count.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 1</h6>
+<h6 class="subheader">Page 1 of 2</h6>
 
 <p>
 
+        <a href="https://madhuriankara.github.io/pynotes/category/assignments2.html">Next &raquo;</a>
 </p>
 </div>
 
