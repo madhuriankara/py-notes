@@ -89,6 +89,50 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/simple-join.html"><h3 class="article-title">Simple-Join</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
+
+<span class="c1"># Define tables</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
+<span class="n">orders</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;orders&quot;</span><span class="p">)</span>
+
+<span class="c1"># Build a JOIN query</span>
+<span class="n">query</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">orders</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">orders</span><span class="o">.</span><span class="n">user_id</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">orders</span><span class="o">.</span><span class="n">order_date</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>SELECT &quot;users&quot;.&quot;name&quot;,&quot;orders&quot;.&quot;order_date&quot; FROM &quot;users&quot; JOIN &quot;orders&quot; ON &quot;users&quot;.&quot;id&quot;=&quot;orders&quot;.&quot;user_id&quot;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score …</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-join.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/simple-select.html"><h3 class="article-title">Simple-Select</h3></a>
 <h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
@@ -208,6 +252,26 @@
 
 
                 <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/untitled.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/updated-row.html"><h3 class="article-title">Updated-Row</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/updated-row.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
