@@ -2,13 +2,21 @@
 title: Simple-Join
 date: 2024-11-22
 author: Your Name
-cell_count: 3
-score: 0
+cell_count: 5
+score: 5
 ---
 
 ```python
 from pypika import Query, Table
+```
 
+
+```python
+
+```
+
+
+```python
 # Define tables
 users = Table("users")
 orders = Table("orders")
@@ -20,9 +28,6 @@ query = (
     .on(users.id == orders.user_id)
     .select(users.name, orders.order_date)
 )
-
-
-
 ```
 
 
@@ -40,4 +45,4 @@ print(query)
 
 
 ---
-**Score: 0**
+**Score: 5**
