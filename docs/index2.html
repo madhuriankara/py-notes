@@ -47,6 +47,74 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/max-min.html"><h3 class="article-title">Max-Min</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<p>Assignment 4
+Find Minimum and Maximum
+Write a program that:</p>
+<p>Takes a list of numbers as input.
+Finds and prints the smallest and largest numbers in the list.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_max_min</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is maximum&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is minimum&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_max_min</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;50 is minimum …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/max-min.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/name-generator.html"><h3 class="article-title">Name-Generator</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_random_name</span><span class="p">():</span>
+    <span class="n">first_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;Diana&quot;</span><span class="p">,</span> <span class="s2">&quot;Eve&quot;</span><span class="p">,</span> <span class="s2">&quot;Frank&quot;</span><span class="p">,</span> <span class="s2">&quot;Grace&quot;</span><span class="p">,</span> <span class="s2">&quot;Hank&quot;</span><span class="p">]</span>
+    <span class="n">last_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="s2">&quot;Johnson&quot;</span><span class="p">,</span> <span class="s2">&quot;Williams&quot;</span><span class="p">,</span> <span class="s2">&quot;Brown&quot;</span><span class="p">,</span> <span class="s2">&quot;Jones&quot;</span><span class="p">,</span> <span class="s2">&quot;Garcia&quot;</span><span class="p">,</span> <span class="s2">&quot;Miller&quot;</span><span class="p">,</span> <span class="s2">&quot;Davis&quot;</span><span class="p">]</span>
+    <span class="n">first_name</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">first_names</span><span class="p">)</span>
+    <span class="n">last_name</span>  <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">last_names</span><span class="p">)</span>
+    <span class="n">full_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">first_name</span><span class="si">}{</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="n">full_name</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Randomly Generated Names:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">generate_random_name …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/name-generator.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/odd-even.html"><h3 class="article-title">Odd Even</h3></a>
 <h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
@@ -72,6 +140,34 @@ The number 4 …</code></pre></div><p class="subheader">Category: <a href="https
 
 
                 <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/odd-even.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/pie-matplot.html"><h3 class="article-title">Pie-Matplot</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Data for plotting</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Banana&#39;</span><span class="p">,</span> <span class="s1">&#39;Cherry&#39;</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>  <span class="c1"># The percentage share of each category</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#ff9999&#39;</span><span class="p">,</span><span class="s1">&#39;#66b3ff&#39;</span><span class="p">,</span><span class="s1">&#39;#99ff99&#39;</span><span class="p">,</span><span class="s1">&#39;#ffcc99&#39;</span><span class="p">]</span>  <span class="c1"># Custom colors for each slice</span>
+<span class="n">explode</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># &quot;Explode&quot; the first slice (Apple) slightly</span>
+
+<span class="c1"># Create a pie chart …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/pie-matplot.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -114,6 +210,41 @@ Prints "Prime" or "Not Prime."</p>
 
 
                 <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/prime-numbers.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/regex.html"><h3 class="article-title">Regex</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;My email addresses are madhuri@gmail.com, ankaraboyina@yahoo.com, and keerthi@hotmail.com.&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">email_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">emails</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">email_pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found email addresses:&quot;</span><span class="p">,</span> <span class="n">emails</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Found</span><span class="w"> </span><span class="nx">email</span><span class="w"> </span><span class="nx">addresses</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&#39;</span><span class="nx">madhuri</span><span class="err">@</span><span class="nx">gmail</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">ankaraboyina</span><span class="err">@</span><span class="nx">yahoo</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">keerthi</span><span class="err">@</span><span class="nx">hotmail</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text_with_placeholder</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">email_pattern …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/regex.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -264,165 +395,6 @@ Reverse the given list</p>
 
 
                 <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-select.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/simple-update.html"><h3 class="article-title">Simple-Update</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
-
-<span class="c1"># Define a table</span>
-<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
-
-<span class="c1"># Build an UPDATE query</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;Jane Doe&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>  <span class="c1"># Output: UPDATE &quot;users&quot; SET &quot;name&quot;=&#39;Jane Doe&#39; WHERE &quot;id&quot;=1</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>UPDATE &quot;users&quot; SET &quot;name&quot;=&#39;Jane Doe&#39; WHERE &quot;id&quot;=1
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score …</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-update.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/simple-where.html"><h3 class="article-title">Simple-Where</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
-
-<span class="c1"># Define a table</span>
-<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
-
-<span class="c1"># Build a SELECT query with a WHERE clause</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">users</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>  <span class="c1"># Output: SELECT &quot;id&quot;,&quot;name&quot; FROM &quot;users&quot; WHERE &quot;age&quot;&gt;30</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>SELECT &quot;id&quot;,&quot;name&quot; FROM &quot;users&quot; WHERE &quot;age …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-where.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/small-large.html"><h3 class="article-title">Small Large</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<p>Finds and prints the smallest and largest numbers in the list.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_large_small</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is smallest&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is largest&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">get_large_small</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>The number is smallest
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">get_large_small</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>The number is largest
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_large_small</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-
-    <span class="k">if …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/small-large.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/sum-numbers.html"><h3 class="article-title">Sum-Numbers</h3></a>
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
-</h6>
-
-
-<p>Calculates the sum of its digits.
-Prints the result.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_sum_of_numbers</span><span class="p">():</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
-    <span class="nb">sum</span><span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-
-    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;result = </span><span class="si">{</span><span class="nb">sum</span><span class="si">}</span><span class="s1">&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">get_sum_of_numbers</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;result = 30&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/sum-numbers.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
