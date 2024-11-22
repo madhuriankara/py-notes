@@ -14,9 +14,6 @@ users = Table("users")
 
 # Build an INSERT query
 query = Query.into(users).columns("id", "name", "age").insert(1, "John Doe", 28)
-
-
-
 ```
 
 
