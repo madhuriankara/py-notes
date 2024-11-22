@@ -1,0 +1,10 @@
+john.doe@example.com
+jane.smith@testmail.com
+alex.taylor@domain.com
+emma.wilson@mailbox.org
+michael.brown@fastmail.com
+sarah.johnson@outlook.com
+chris.davis@protonmail.com
+olivia.martin@gmail.com
+daniel.thomas@yahoo.com
+sophia.lee@customdomain.net
