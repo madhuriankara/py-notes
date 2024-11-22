@@ -1,6 +1,6 @@
 ---
 title: Small Large
-date: 2024-11-20
+date: 2024-11-22
 author: Your Name
 cell_count: 9
 score: 5
