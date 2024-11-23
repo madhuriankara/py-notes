@@ -1,6 +1,6 @@
 ---
 title: Divisibility
-date: 2024-11-22
+date: 2024-11-23
 author: Your Name
 cell_count: 8
 score: 5
