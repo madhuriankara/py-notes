@@ -2,26 +2,29 @@
 title: Simple-Where
 date: 2024-11-23
 author: Your Name
-cell_count: 3
-score: 0
+cell_count: 6
+score: 5
 ---
 
 ```python
 from pypika import Query, Table
-
-# Define a table
-users = Table("users")
-
-# Build a SELECT query with a WHERE clause
-query = Query.from_(users).select(users.id, users.name).where(users.age > 30)
-
-
-
 ```
 
 
 ```python
-print(query)  # Output: SELECT "id","name" FROM "users" WHERE "age">30
+# Define a table
+users = Table("users")
+```
+
+
+```python
+# Build a SELECT query with a WHERE clause
+query = Query.from_(users).select(users.id, users.name).where(users.age > 30)
+```
+
+
+```python
+print(query)
 ```
 
     SELECT "id","name" FROM "users" WHERE "age">30
@@ -33,5 +36,10 @@ print(query)  # Output: SELECT "id","name" FROM "users" WHERE "age">30
 ```
 
 
+```python
+
+```
+
+
 ---
-**Score: 0**
+**Score: 5**

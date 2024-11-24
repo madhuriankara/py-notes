@@ -2,17 +2,13 @@
 title: Election-Results
 date: 2024-11-23
 author: Your Name
-cell_count: 4
-score: 0
+cell_count: 5
+score: 5
 ---
 
 ```python
-
-
 import requests
 from bs4 import BeautifulSoup
-
-
 ```
 
 
@@ -42,6 +38,13 @@ def main():
         #item_list =  item_list + ',' +str(item.get_text())
     
     #print(item_list)
+        
+
+```
+
+
+```python
+
         
 
 ```
@@ -103,4 +106,4 @@ if __name__ == '__main__':
 
 
 ---
-**Score: 0**
+**Score: 5**

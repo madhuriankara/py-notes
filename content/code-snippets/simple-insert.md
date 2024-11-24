@@ -2,32 +2,50 @@
 title: Simple-Insert
 date: 2024-11-23
 author: Your Name
-cell_count: 4
-score: 0
+cell_count: 7
+score: 5
 ---
+
+```python
+
+```
+
+
+```python
+
+```
+
 
 ```python
 from pypika import Query, Table
 
-# Define a table
-users = Table("users")
 
-# Build an INSERT query
-query = Query.into(users).columns("id", "name", "age").insert(1, "John Doe", 28)
 ```
 
 
 ```python
-print(query)  # Output: INSERT INTO "users" ("id","name","age") VALUES (1,'John Doe',28)
+# Define the table
+users = Table('users')
+
+
 ```
-
-    INSERT INTO "users" ("id","name","age") VALUES (1,'John Doe',28)
-
 
 
 ```python
+# Build the INSERT query
+query = Query.into(users).columns('name', 'age').insert('Alice', 25)
+
 
 ```
+
+
+```python
+# Print the query
+print(str(query))
+```
+
+    INSERT INTO "users" ("name","age") VALUES ('Alice',25)
+
 
 
 ```python
@@ -36,4 +54,4 @@ print(query)  # Output: INSERT INTO "users" ("id","name","age") VALUES (1,'John 
 
 
 ---
-**Score: 0**
+**Score: 5**

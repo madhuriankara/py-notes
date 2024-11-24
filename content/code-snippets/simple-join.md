@@ -2,7 +2,7 @@
 title: Simple-Join
 date: 2024-11-23
 author: Your Name
-cell_count: 5
+cell_count: 6
 score: 5
 ---
 
@@ -21,6 +21,11 @@ from pypika import Query, Table
 users = Table("users")
 orders = Table("orders")
 
+
+```
+
+
+```python
 # Build a JOIN query
 query = (
     Query.from_(users)

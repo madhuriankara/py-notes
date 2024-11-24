@@ -2,7 +2,7 @@
 title: Simple-Select
 date: 2024-11-23
 author: Your Name
-cell_count: 6
+cell_count: 8
 score: 5
 ---
 
@@ -25,21 +25,28 @@ from pypika import Query, Table
 
 
 ```python
-
 # Define a table
 users = Table("users")
+```
 
+
+```python
 # Build a SELECT query
 query = Query.from_(users).select(users.id, users.name)
 ```
 
 
 ```python
-print(query)  # Output: SELECT "id","name" FROM "users"
+print(query)
 ```
 
     SELECT "id","name" FROM "users"
 
+
+
+```python
+
+```
 
 
 ```python
