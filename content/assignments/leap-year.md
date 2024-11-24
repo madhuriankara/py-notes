@@ -2,8 +2,8 @@
 title: Leap-Year
 date: 2024-11-23
 author: Your Name
-cell_count: 3
-score: 0
+cell_count: 7
+score: 5
 ---
 
 Assignment 3
@@ -34,9 +34,50 @@ get_leap_year(2024)
 
 
 ```python
+get_leap_year(2050)
+```
+
+
+
+
+    '2050 is not a leap year'
+
+
+
+
+```python
+get_leap_year(2020)
+```
+
+
+
+
+    '2020 is leap year'
+
+
+
+
+```python
+get_leap_year(2026)
+```
+
+
+
+
+    '2026 is not a leap year'
+
+
+
+
+```python
+
+```
+
+
+```python
 
 ```
 
 
 ---
-**Score: 0**
+**Score: 5**

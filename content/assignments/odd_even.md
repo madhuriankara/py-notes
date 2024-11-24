@@ -2,8 +2,8 @@
 title: Odd Even
 date: 2024-11-23
 author: Your Name
-cell_count: 2
-score: 0
+cell_count: 6
+score: 5
 ---
 
 ```python
@@ -34,5 +34,25 @@ odd_even()
 ```
 
 
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
 ---
-**Score: 0**
+**Score: 5**

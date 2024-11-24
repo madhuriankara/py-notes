@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>Leap-Year</title>
+    <title>Schedule-Basic</title>
 
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
@@ -44,47 +44,70 @@
     <div class="large-9 columns">
 <article>
     <header>
-        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/leap-year.html" rel="bookmark"
-        title="Permalink to Leap-Year">Leap-Year</a></h3>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/schedule-basic.html" rel="bookmark"
+        title="Permalink to Schedule-Basic">Schedule-Basic</a></h3>
     </header>
 
 <h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
 </h6>
 
 
-    <p>Assignment 3
- Check Leap Year
-Write a program that:</p>
-<p>Takes a year as input.
-Checks if it is a leap year or not.
-Prints "Leap Year" or "Not a Leap Year."</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1"> is leap year&#39;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1"> is not a leap year&#39;</span>
-<span class="n">get_leap_year</span><span class="p">(</span><span class="mi">2024</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">schedule</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># Define the task function</span>
+<span class="k">def</span> <span class="nf">job</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Job is running!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Schedule the job to run every 2 seconds</span>
+<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">seconds</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+
+<span class="c1"># Keep the program running</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">schedule</span><span class="o">.</span><span class="n">run_pending</span><span class="p">()</span>  <span class="c1"># Run all pending tasks</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&#39;2024 is leap year&#39;
+<div class="highlight"><pre><span></span><code>Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
+Job is running!
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">get_leap_year</span><span class="p">(</span><span class="mi">2050</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&#39;2050 is not a leap year&#39;
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">get_leap_year</span><span class="p">(</span><span class="mi">2020</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&#39;2020 is leap year&#39;
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">get_leap_year</span><span class="p">(</span><span class="mi">2026</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&#39;2026 is not a leap year&#39;
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
@@ -94,8 +117,8 @@ Prints "Leap Year" or "Not a Leap Year."</p>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 5</strong></p>
-<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+<p><strong>Score: 10</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
 
 </p>
 

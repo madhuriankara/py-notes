@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>Leap-Year</title>
+    <title>Py Notes</title>
 
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
@@ -42,67 +42,54 @@
 
     <!-- Main Blog Content -->
     <div class="large-9 columns">
-<article>
-    <header>
-        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/leap-year.html" rel="bookmark"
-        title="Permalink to Leap-Year">Leap-Year</a></h3>
-    </header>
+        
+        
 
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/untitled.html"><h3 class="article-title">Untitled</h3></a>
+<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
 </h6>
 
 
-    <p>Assignment 3
- Check Leap Year
-Write a program that:</p>
-<p>Takes a year as input.
-Checks if it is a leap year or not.
-Prints "Leap Year" or "Not a Leap Year."</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1"> is leap year&#39;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1"> is not a leap year&#39;</span>
-<span class="n">get_leap_year</span><span class="p">(</span><span class="mi">2024</span><span class="p">)</span>
+<p>Created on November 22, 2024</p>
+<p>Course work: </p>
+<p>@author: Madhuri</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pandas_datareader</span> <span class="kn">import</span> <span class="n">data</span> <span class="k">as</span> <span class="n">pdr</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&#39;2024 is leap year&#39;
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">end</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
 
-<div class="highlight"><pre><span></span><code><span class="n">get_leap_year</span><span class="p">(</span><span class="mi">2050</span><span class="p">)</span>
-</code></pre></div>
+<span class="n">begin</span><span class="o">=</span><span class="n">end</span><span class="o">-</span><span class="n">pd</span><span class="o">.</span><span class="n">DateOffset</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
 
-<div class="highlight"><pre><span></span><code>&#39;2050 is not a leap year&#39;
-</code></pre></div>
+<span class="n">st</span><span class="o">=</span><span class="n">begin</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
 
-<div class="highlight"><pre><span></span><code><span class="n">get_leap_year</span><span class="p">(</span><span class="mi">2020</span><span class="p">)</span>
-</code></pre></div>
+<span class="n">ed</span><span class="o">=</span><span class="n">end</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
 
-<div class="highlight"><pre><span></span><code>&#39;2020 is leap year&#39;
-</code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">get_leap_year</span><span class="p">(</span><span class="mi">2026</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;2026 is not a leap year&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p>
-<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pdr</span><span class="o">.</span><span class="n">get_data_google …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
 
 </p>
 
 
 
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/untitled.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
 
-</article>
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 6 of 6</h6>
+
+<p>
+            <a href="https://madhuriankara.github.io/pynotes/index5.html">&laquo; Prev</a>
+
+</p>
+</div>
+
     </div>
     <!-- End Main Content -->
 

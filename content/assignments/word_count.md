@@ -2,8 +2,8 @@
 title: Word Count
 date: 2024-11-23
 author: Your Name
-cell_count: 4
-score: 0
+cell_count: 5
+score: 5
 ---
 
 word count
@@ -23,8 +23,19 @@ print(word_count("hello world"))
 
 
 ```python
-
+print(word_count("My name is Madhuri"))  
 ```
+
+    4
+
+
+
+```python
+print(word_count("List all the values that are between 2 cities"))  
+```
+
+    9
+
 
 
 ```python
@@ -33,4 +44,4 @@ print(word_count("hello world"))
 
 
 ---
-**Score: 0**
+**Score: 5**
