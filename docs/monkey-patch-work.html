@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Monkey-Patch-Work</title>
+
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://madhuriankara.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://madhuriankara.github.io/pynotes">Py Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/monkey-patch-work.html" rel="bookmark"
+        title="Permalink to Monkey-Patch-Work">Monkey-Patch-Work</a></h3>
+    </header>
+
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">gevent</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">gevent</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="mf">24.11</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">zope</span><span class="o">.</span><span class="n">event</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">gevent</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span>
+<span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">zope</span><span class="o">.</span><span class="n">interface</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">gevent</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mf">7.1</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">greenlet</span><span class="o">&gt;=</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">1</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">gevent</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">setuptools</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">zope</span><span class="o">.</span><span class="n">event</span><span class="o">-&gt;</span><span class="n">gevent</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mf">75.1</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">gevent</span> <span class="kn">import</span> <span class="n">monkey</span><span class="p">,</span> <span class="n">sleep</span>
+<span class="n">monkey</span><span class="o">.</span><span class="n">patch_all</span><span class="p">()</span>
+
+<span class="kn">import</span> <span class="nn">threading</span> 
+
+
+<span class="k">class</span> <span class="nc">ExampleThread</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;working&#39;</span><span class="p">)</span>
+            <span class="n">sleep</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">worker</span> <span class="o">=</span> <span class="n">ExampleThread</span><span class="p">()</span>
+    <span class="n">worker</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;this will be printed after the first call to sleep&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>working
+this will be printed after the first call to sleep
+working
+working
+working
+working
+working
+working
+working
+working
+working
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://madhuriankara.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Py Notes by Madhuri Ankaraboyina</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

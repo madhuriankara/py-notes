@@ -1,85 +1,32 @@
 ---
 title: Untitled
-date: 2024-11-23
+date: 2024-11-24
 author: Your Name
-cell_count: 6
-score: 5
+cell_count: 3
+score: 0
 ---
 
 ```python
-from scrapy import project, signals
-from scrapy.conf import settings
-from scrapy.crawler import CrawlerProcess
-from scrapy.xlib.pydispatch import dispatcher
-from multiprocessing.queues import Queue
-import multiprocessing
-
-
-class CrawlerWorker(multiprocessing.Process):
-
-    def __init__(self, spider, result_queue):
-        multiprocessing.Process.__init__(self)
-        self.result_queue = result_queue
-
-        self.crawler = CrawlerProcess(settings)
-        if not hasattr(project, 'crawler'):
-            self.crawler.install()
-        self.crawler.configure()
-
-        self.items = []
-        self.spider = spider
-        dispatcher.connect(self._item_passed, signals.item_passed)
-
-    def _item_passed(self, item):
-        self.items.append(item)
-
-    def run(self):
-        self.crawler.crawl(self.spider)
-        self.crawler.start()
-        self.crawler.stop()
-        self.result_queue.put(self.items)
-
-def main():
-    result_queue = Queue()
-    crawler = CrawlerWorker(MySpider(myArgs), result_queue)
-    crawler.start()
-    for item in result_queue.get():
-        yield item
-    
-if __name__ == '__main__':
-    main()
+import nmap                         # import nmap.py module
+nm = nmap.PortScanner()             # instantiate nmap.PortScanner object
+nm.scan('127.0.0.1', '22-443')      # scan host 127.0.0.1, ports from 22 to 443
+nm.command_line()                   # get command line used for the scan : nmap -oX - -p 22-443 127.0.0.1
+nm.scaninfo()                       # get nmap scan informations {'tcp': {'services': '22-443', 'method': 'connect'}}
 ```
 
 
     ---------------------------------------------------------------------------
 
-    ImportError                               Traceback (most recent call last)
+    ModuleNotFoundError                       Traceback (most recent call last)
 
-    Cell In[7], line 1
-    ----> 1 from scrapy import project, signals
-          2 from scrapy.conf import settings
-          3 from scrapy.crawler import CrawlerProcess
-
-
-    ImportError: cannot import name 'project' from 'scrapy' (/opt/homebrew/Caskroom/miniconda/base/envs/py312/lib/python3.12/site-packages/scrapy/__init__.py)
+    Cell In[4], line 1
+    ----> 1 import nmap                         # import nmap.py module
+          2 nm = nmap.PortScanner()             # instantiate nmap.PortScanner object
+          3 nm.scan('127.0.0.1', '22-443')      # scan host 127.0.0.1, ports from 22 to 443
 
 
+    ModuleNotFoundError: No module named 'nmap'
 
-```python
-
-```
-
-
-```python
-
-
-
-```
-
-
-```python
-
-```
 
 
 ```python
@@ -93,4 +40,4 @@ if __name__ == '__main__':
 
 
 ---
-**Score: 5**
+**Score: 0**

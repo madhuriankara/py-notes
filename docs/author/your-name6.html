@@ -47,8 +47,108 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/square-error.html"><h3 class="article-title">Square-Error</h3></a>
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1">#print(&quot;inside main method&quot;)</span>
+
+    <span class="n">y_actual</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+    <span class="n">y_predicted</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+    <span class="n">rms</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_actual</span><span class="p">,</span> <span class="n">y_predicted</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">rms</span><span class="p">)</span>    
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0.5773502691896257</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/square-error.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/star-graph.html"><h3 class="article-title">Star-Graph</h3></a>
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">z</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;&gt;&quot;</span><span class="p">)</span>
+
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">plt.subplot(322)</span>
+<span class="sd">plt.scatter(x, y, s=80, c=z, marker …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/star-graph.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/sum-numbers.html"><h3 class="article-title">Sum-Numbers</h3></a>
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
 </h6>
 
 
@@ -90,7 +190,7 @@ Prints the result.</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/swapped-values.html"><h3 class="article-title">Swapped Values</h3></a>
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
 </h6>
 
 
@@ -133,7 +233,7 @@ Prints the swapped values.</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/tables-rich.html"><h3 class="article-title">Tables-Rich</h3></a>
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
 </h6>
 
 
@@ -166,7 +266,7 @@ Prints the swapped values.</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/temp-analyser.html"><h3 class="article-title">Temp-Analyser</h3></a>
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
 </h6>
 
 
@@ -192,7 +292,7 @@ Prints the swapped values.</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/twitter-analysis.html"><h3 class="article-title">Twitter-Analysis</h3></a>
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
 </h6>
 
 
@@ -222,26 +322,15 @@ Prints the swapped values.</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/untitled.html"><h3 class="article-title">Untitled</h3></a>
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">scrapy</span> <span class="kn">import</span> <span class="n">project</span><span class="p">,</span> <span class="n">signals</span>
-<span class="kn">from</span> <span class="nn">scrapy.conf</span> <span class="kn">import</span> <span class="n">settings</span>
-<span class="kn">from</span> <span class="nn">scrapy.crawler</span> <span class="kn">import</span> <span class="n">CrawlerProcess</span>
-<span class="kn">from</span> <span class="nn">scrapy.xlib.pydispatch</span> <span class="kn">import</span> <span class="n">dispatcher</span>
-<span class="kn">from</span> <span class="nn">multiprocessing.queues</span> <span class="kn">import</span> <span class="n">Queue</span>
-<span class="kn">import</span> <span class="nn">multiprocessing</span>
-
-
-<span class="k">class</span> <span class="nc">CrawlerWorker</span><span class="p">(</span><span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">):</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spider</span><span class="p">,</span> <span class="n">result_queue</span><span class="p">):</span>
-        <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">result_queue</span> <span class="o">=</span> <span class="n">result_queue</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">crawler</span> <span class="o">=</span> <span class="n">CrawlerProcess</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">nmap</span>                         <span class="c1"># import nmap.py module</span>
+<span class="n">nm</span> <span class="o">=</span> <span class="n">nmap</span><span class="o">.</span><span class="n">PortScanner</span><span class="p">()</span>             <span class="c1"># instantiate nmap.PortScanner object</span>
+<span class="n">nm</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="s1">&#39;22-443&#39;</span><span class="p">)</span>      <span class="c1"># scan host 127.0.0.1, ports from 22 to 443</span>
+<span class="n">nm</span><span class="o">.</span><span class="n">command_line</span><span class="p">()</span>                   <span class="c1"># get command line used for the scan : nmap -oX - -p 22-443 127.0.0.1</span>
+<span class="n">nm</span><span class="o">.</span><span class="n">scaninfo …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
 
 </p>
 
@@ -255,8 +344,31 @@ Prints the swapped values.</p>
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/untitled1.html"><h3 class="article-title">Untitled1</h3></a>
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/untitled1.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/updated-row.html"><h3 class="article-title">Updated-Row</h3></a>
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
 </h6>
 
 
@@ -280,60 +392,14 @@ Prints the swapped values.</p>
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/word-count.html"><h3 class="article-title">Word Count</h3></a>
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
-</h6>
-
-
-<p>word count
-Nov 20 2024</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">word_count</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-    <span class="n">word_list</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
-    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">word_count</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">))</span>  
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">2</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">word_count</span><span class="p">(</span><span class="s2">&quot;My name is Madhuri&quot;</span><span class="p">))</span>  
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">4</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">word_count</span><span class="p">(</span><span class="s2">&quot;List all the values that are between 2 cities&quot;</span><span class="p">))</span>  
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">9</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/word-count.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 6 of 6</h6>
+<h6 class="subheader">Page 6 of 7</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/author/your-name5.html">&laquo; Prev</a>
 
+        <a href="https://madhuriankara.github.io/pynotes/author/your-name7.html">Next &raquo;</a>
 </p>
 </div>
 

@@ -47,8 +47,67 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/tables-rich.html"><h3 class="article-title">Tables-Rich</h3></a>
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">rich.console</span> <span class="kn">import</span> <span class="n">Console</span>
+<span class="kn">from</span> <span class="nn">rich.table</span> <span class="kn">import</span> <span class="n">Table</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a table object</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Example Table&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Add columns to the table</span>
+<span class="n">table</span><span class="o">.</span><span class="n">add_column</span><span class="p">(</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;cyan&quot;</span><span class="p">,</span> <span class="n">no_wrap</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">add_column</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;magenta&quot;</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">add_column</span><span class="p">(</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="n">justify</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Add rows to the table …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/tables-rich.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/temp-analyser.html"><h3 class="article-title">Temp-Analyser</h3></a>
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">selenium</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="nl">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">selenium</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="mf">4.26.1</span><span class="p">)</span>
+<span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="nl">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">urllib3</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">1.26</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="k">from</span><span class="w"> </span><span class="n">urllib3</span><span class="o">[</span><span class="n">socks</span><span class="o">]&lt;</span><span class="mi">3</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">1.26</span><span class="o">-&gt;</span><span class="n">selenium …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/temp-analyser.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/twitter-analysis.html"><h3 class="article-title">Twitter-Analysis</h3></a>
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
 </h6>
 
 
@@ -78,26 +137,15 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/untitled.html"><h3 class="article-title">Untitled</h3></a>
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">scrapy</span> <span class="kn">import</span> <span class="n">project</span><span class="p">,</span> <span class="n">signals</span>
-<span class="kn">from</span> <span class="nn">scrapy.conf</span> <span class="kn">import</span> <span class="n">settings</span>
-<span class="kn">from</span> <span class="nn">scrapy.crawler</span> <span class="kn">import</span> <span class="n">CrawlerProcess</span>
-<span class="kn">from</span> <span class="nn">scrapy.xlib.pydispatch</span> <span class="kn">import</span> <span class="n">dispatcher</span>
-<span class="kn">from</span> <span class="nn">multiprocessing.queues</span> <span class="kn">import</span> <span class="n">Queue</span>
-<span class="kn">import</span> <span class="nn">multiprocessing</span>
-
-
-<span class="k">class</span> <span class="nc">CrawlerWorker</span><span class="p">(</span><span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">):</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spider</span><span class="p">,</span> <span class="n">result_queue</span><span class="p">):</span>
-        <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">result_queue</span> <span class="o">=</span> <span class="n">result_queue</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">crawler</span> <span class="o">=</span> <span class="n">CrawlerProcess</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">nmap</span>                         <span class="c1"># import nmap.py module</span>
+<span class="n">nm</span> <span class="o">=</span> <span class="n">nmap</span><span class="o">.</span><span class="n">PortScanner</span><span class="p">()</span>             <span class="c1"># instantiate nmap.PortScanner object</span>
+<span class="n">nm</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="s1">&#39;22-443&#39;</span><span class="p">)</span>      <span class="c1"># scan host 127.0.0.1, ports from 22 to 443</span>
+<span class="n">nm</span><span class="o">.</span><span class="n">command_line</span><span class="p">()</span>                   <span class="c1"># get command line used for the scan : nmap -oX - -p 22-443 127.0.0.1</span>
+<span class="n">nm</span><span class="o">.</span><span class="n">scaninfo …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
 
 </p>
 
@@ -111,8 +159,31 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/untitled1.html"><h3 class="article-title">Untitled1</h3></a>
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/untitled1.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/updated-row.html"><h3 class="article-title">Updated-Row</h3></a>
-<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
+<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
 </h6>
 
 

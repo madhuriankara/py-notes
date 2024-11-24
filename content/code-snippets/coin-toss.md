@@ -1,6 +1,6 @@
 ---
 title: Coin-Toss
-date: 2024-11-23
+date: 2024-11-24
 author: Your Name
 cell_count: 6
 score: 5
