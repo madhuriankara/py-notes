@@ -1,72 +1,85 @@
 ---
 title: Untitled
-date: 2024-11-22
+date: 2024-11-23
 author: Your Name
-cell_count: 5
+cell_count: 6
 score: 5
 ---
 
-Created on November 22, 2024
-
-Course work: 
-
-@author: Madhuri
-
-
-
 ```python
-import pandas as pd
-from pandas_datareader import data as pdr
-import numpy as np
-import datetime
-```
+from scrapy import project, signals
+from scrapy.conf import settings
+from scrapy.crawler import CrawlerProcess
+from scrapy.xlib.pydispatch import dispatcher
+from multiprocessing.queues import Queue
+import multiprocessing
 
 
-```python
-end = datetime.date.today()
+class CrawlerWorker(multiprocessing.Process):
 
-begin=end-pd.DateOffset(365*10)
+    def __init__(self, spider, result_queue):
+        multiprocessing.Process.__init__(self)
+        self.result_queue = result_queue
 
-st=begin.strftime('%Y-%m-%d')
+        self.crawler = CrawlerProcess(settings)
+        if not hasattr(project, 'crawler'):
+            self.crawler.install()
+        self.crawler.configure()
 
-ed=end.strftime('%Y-%m-%d')
+        self.items = []
+        self.spider = spider
+        dispatcher.connect(self._item_passed, signals.item_passed)
 
+    def _item_passed(self, item):
+        self.items.append(item)
 
-df = pdr.get_data_google("AAPL",st,ed)
+    def run(self):
+        self.crawler.crawl(self.spider)
+        self.crawler.start()
+        self.crawler.stop()
+        self.result_queue.put(self.items)
 
-
-no_of_std = 12
-
-
-
-def bollinger_strat(df,window,std):
-    rolling_mean = df['Close'].rolling(window).mean()
-    rolling_std = df['Close'].rolling(window).std()
-
-    df['Bollinger High'] = rolling_mean + (rolling_std * no_of_std)
-    df['Bollinger Low'] = rolling_mean - (rolling_std * no_of_std)
-
-
-data = [1, 2, 4, 5, 5, 3]
-
-bollinger_strat(data,20,2)
+def main():
+    result_queue = Queue()
+    crawler = CrawlerWorker(MySpider(myArgs), result_queue)
+    crawler.start()
+    for item in result_queue.get():
+        yield item
+    
+if __name__ == '__main__':
+    main()
 ```
 
 
     ---------------------------------------------------------------------------
 
-    AttributeError                            Traceback (most recent call last)
+    ImportError                               Traceback (most recent call last)
 
-    Cell In[2], line 10
-          5 st=begin.strftime('%Y-%m-%d')
-          7 ed=end.strftime('%Y-%m-%d')
-    ---> 10 df = pdr.get_data_google("AAPL",st,ed)
-         13 no_of_std = 12
-         17 def bollinger_strat(df,window,std):
+    Cell In[7], line 1
+    ----> 1 from scrapy import project, signals
+          2 from scrapy.conf import settings
+          3 from scrapy.crawler import CrawlerProcess
 
 
-    AttributeError: module 'pandas_datareader.data' has no attribute 'get_data_google'
+    ImportError: cannot import name 'project' from 'scrapy' (/opt/homebrew/Caskroom/miniconda/base/envs/py312/lib/python3.12/site-packages/scrapy/__init__.py)
 
+
+
+```python
+
+```
+
+
+```python
+
+
+
+```
+
+
+```python
+
+```
 
 
 ```python

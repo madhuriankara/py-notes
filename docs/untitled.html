@@ -48,61 +48,73 @@
         title="Permalink to Untitled">Untitled</a></h3>
     </header>
 
-<h6 class="subheader" title="2024-11-22T00:00:00-05:00">Fri 22 November 2024
+<h6 class="subheader" title="2024-11-23T00:00:00-05:00">Sat 23 November 2024
 </h6>
 
 
-    <p>Created on November 22, 2024</p>
-<p>Course work: </p>
-<p>@author: Madhuri</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">pandas_datareader</span> <span class="kn">import</span> <span class="n">data</span> <span class="k">as</span> <span class="n">pdr</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">datetime</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">end</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-
-<span class="n">begin</span><span class="o">=</span><span class="n">end</span><span class="o">-</span><span class="n">pd</span><span class="o">.</span><span class="n">DateOffset</span><span class="p">(</span><span class="mi">365</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
-
-<span class="n">st</span><span class="o">=</span><span class="n">begin</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="n">ed</span><span class="o">=</span><span class="n">end</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">scrapy</span> <span class="kn">import</span> <span class="n">project</span><span class="p">,</span> <span class="n">signals</span>
+<span class="kn">from</span> <span class="nn">scrapy.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+<span class="kn">from</span> <span class="nn">scrapy.crawler</span> <span class="kn">import</span> <span class="n">CrawlerProcess</span>
+<span class="kn">from</span> <span class="nn">scrapy.xlib.pydispatch</span> <span class="kn">import</span> <span class="n">dispatcher</span>
+<span class="kn">from</span> <span class="nn">multiprocessing.queues</span> <span class="kn">import</span> <span class="n">Queue</span>
+<span class="kn">import</span> <span class="nn">multiprocessing</span>
 
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pdr</span><span class="o">.</span><span class="n">get_data_google</span><span class="p">(</span><span class="s2">&quot;AAPL&quot;</span><span class="p">,</span><span class="n">st</span><span class="p">,</span><span class="n">ed</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">CrawlerWorker</span><span class="p">(</span><span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">):</span>
 
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spider</span><span class="p">,</span> <span class="n">result_queue</span><span class="p">):</span>
+        <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result_queue</span> <span class="o">=</span> <span class="n">result_queue</span>
 
-<span class="n">no_of_std</span> <span class="o">=</span> <span class="mi">12</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crawler</span> <span class="o">=</span> <span class="n">CrawlerProcess</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="s1">&#39;crawler&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">crawler</span><span class="o">.</span><span class="n">install</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crawler</span><span class="o">.</span><span class="n">configure</span><span class="p">()</span>
 
+        <span class="bp">self</span><span class="o">.</span><span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spider</span> <span class="o">=</span> <span class="n">spider</span>
+        <span class="n">dispatcher</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_item_passed</span><span class="p">,</span> <span class="n">signals</span><span class="o">.</span><span class="n">item_passed</span><span class="p">)</span>
 
+    <span class="k">def</span> <span class="nf">_item_passed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">bollinger_strat</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">window</span><span class="p">,</span><span class="n">std</span><span class="p">):</span>
-    <span class="n">rolling_mean</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-    <span class="n">rolling_std</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crawler</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spider</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crawler</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">crawler</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">)</span>
 
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Bollinger High&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rolling_mean</span> <span class="o">+</span> <span class="p">(</span><span class="n">rolling_std</span> <span class="o">*</span> <span class="n">no_of_std</span><span class="p">)</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Bollinger Low&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rolling_mean</span> <span class="o">-</span> <span class="p">(</span><span class="n">rolling_std</span> <span class="o">*</span> <span class="n">no_of_std</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">result_queue</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
+    <span class="n">crawler</span> <span class="o">=</span> <span class="n">CrawlerWorker</span><span class="p">(</span><span class="n">MySpider</span><span class="p">(</span><span class="n">myArgs</span><span class="p">),</span> <span class="n">result_queue</span><span class="p">)</span>
+    <span class="n">crawler</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">result_queue</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+        <span class="k">yield</span> <span class="n">item</span>
 
-
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-
-<span class="n">bollinger_strat</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="o">---------------------------------------------------------------------------</span>
 
-<span class="n">AttributeError</span><span class="w">                            </span><span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="kr">last</span><span class="p">)</span>
+<span class="n">ImportError</span><span class="w">                               </span><span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">last</span><span class="p">)</span>
 
-<span class="n">Cell</span><span class="w"> </span><span class="kr">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">10</span>
-<span class="w">      </span><span class="mi">5</span><span class="w"> </span><span class="n">st</span><span class="o">=</span><span class="n">begin</span><span class="p">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&#39;%Y-%m-%d&#39;</span><span class="p">)</span>
-<span class="w">      </span><span class="mi">7</span><span class="w"> </span><span class="n">ed</span><span class="o">=</span><span class="kd">end.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&#39;%Y-%m-%d&#39;</span><span class="p">)</span>
-<span class="o">---&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pdr</span><span class="p">.</span><span class="n">get_data_google</span><span class="p">(</span><span class="s">&quot;AAPL&quot;</span><span class="p">,</span><span class="n">st</span><span class="p">,</span><span class="n">ed</span><span class="p">)</span>
-<span class="w">     </span><span class="mi">13</span><span class="w"> </span><span class="n">no_of_std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span>
-<span class="w">     </span><span class="mi">17</span><span class="w"> </span><span class="n">def</span><span class="w"> </span><span class="n">bollinger_strat</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">window</span><span class="p">,</span><span class="n">std</span><span class="p">)</span><span class="o">:</span>
+<span class="n">Cell</span><span class="w"> </span><span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">----&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="kn">from</span><span class="w"> </span><span class="nn">scrapy</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">project</span><span class="p">,</span><span class="w"> </span><span class="n">signals</span>
+<span class="w">      </span><span class="mi">2</span><span class="w"> </span><span class="kn">from</span><span class="w"> </span><span class="nn">scrapy.conf</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">settings</span>
+<span class="w">      </span><span class="mi">3</span><span class="w"> </span><span class="kn">from</span><span class="w"> </span><span class="nn">scrapy.crawler</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">CrawlerProcess</span>
 
 
-<span class="n">AttributeError</span><span class="o">:</span><span class="w"> </span><span class="kr">module</span><span class="w"> </span><span class="s">&#39;pandas_datareader.data&#39;</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">attribute</span><span class="w"> </span><span class="s">&#39;get_data_google&#39;</span>
+<span class="n">ImportError</span><span class="p">:</span><span class="w"> </span><span class="n">cannot</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">name</span><span class="w"> </span><span class="s1">&#39;project&#39;</span><span class="w"> </span><span class="kn">from</span><span class="w"> </span><span class="s1">&#39;scrapy&#39;</span><span class="w"> </span><span class="p">(</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">scrapy</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
