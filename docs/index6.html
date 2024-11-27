@@ -47,6 +47,47 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/signal-enum.html"><h3 class="article-title">Signal-Enum</h3></a>
+<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">TrafficLight</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">YELLOW</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">traffic_light_action</span><span class="p">(</span><span class="n">light</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">light</span> <span class="o">==</span> <span class="n">TrafficLight</span><span class="o">.</span><span class="n">RED</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Stop&quot;</span>
+    <span class="k">elif</span> <span class="n">light</span> <span class="o">==</span> <span class="n">TrafficLight</span><span class="o">.</span><span class="n">YELLOW</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Slow down&quot;</span>
+    <span class="k">elif</span> <span class="n">light</span> <span class="o">==</span> <span class="n">TrafficLight</span><span class="o">.</span><span class="n">GREEN</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Go&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Invalid light&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage</span>
+<span class="n">light</span> <span class="o">=</span> <span class="n">TrafficLight</span><span class="o">.</span><span class="n">RED</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Traffic light is </span><span class="si">{</span><span class="n">light …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/signal-enum.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/simple-insert.html"><h3 class="article-title">Simple-Insert</h3></a>
 <h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
 </h6>
@@ -454,49 +495,6 @@ Prints the result.</p>
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/swapped-values.html"><h3 class="article-title">Swapped Values</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
-</h6>
-
-
-<p>Takes two variables.
-Swaps their values without using a third variable.
-Prints the swapped values.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">swap_two_variables</span><span class="p">():</span>
-    <span class="n">a</span><span class="o">=</span><span class="mi">10</span>
-    <span class="n">b</span><span class="o">=</span><span class="mi">20</span>
-    <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span><span class="n">a</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1"> is now swapped&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">swap_two_variables</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;The (20, 10) is now swapped&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/swapped-values.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
 <h6 class="subheader">Page 6 of 7</h6>
@@ -524,6 +522,7 @@ Prints the swapped values.</p>
         <ul class="side-nav">
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
