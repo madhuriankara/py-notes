@@ -48,38 +48,72 @@
         title="Permalink to Untitled">Untitled</a></h3>
     </header>
 
-<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
+<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
 </h6>
 
 
-    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">nmap</span>                         <span class="c1"># import nmap.py module</span>
-<span class="n">nm</span> <span class="o">=</span> <span class="n">nmap</span><span class="o">.</span><span class="n">PortScanner</span><span class="p">()</span>             <span class="c1"># instantiate nmap.PortScanner object</span>
-<span class="n">nm</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="s1">&#39;22-443&#39;</span><span class="p">)</span>      <span class="c1"># scan host 127.0.0.1, ports from 22 to 443</span>
-<span class="n">nm</span><span class="o">.</span><span class="n">command_line</span><span class="p">()</span>                   <span class="c1"># get command line used for the scan : nmap -oX - -p 22-443 127.0.0.1</span>
-<span class="n">nm</span><span class="o">.</span><span class="n">scaninfo</span><span class="p">()</span>                       <span class="c1"># get nmap scan informations {&#39;tcp&#39;: {&#39;services&#39;: &#39;22-443&#39;, &#39;method&#39;: &#39;connect&#39;}}</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="o">---------------------------------------------------------------------------</span>
-
-<span class="n">ModuleNotFoundError</span><span class="w">                       </span><span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">last</span><span class="p">)</span>
-
-<span class="n">Cell</span><span class="w"> </span><span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">1</span>
-<span class="o">----&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">nmap</span><span class="w">                         </span><span class="c1"># import nmap.py module</span>
-<span class="w">      </span><span class="mi">2</span><span class="w"> </span><span class="n">nm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nmap</span><span class="o">.</span><span class="n">PortScanner</span><span class="p">()</span><span class="w">             </span><span class="c1"># instantiate nmap.PortScanner object</span>
-<span class="w">      </span><span class="mi">3</span><span class="w"> </span><span class="n">nm</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;22-443&#39;</span><span class="p">)</span><span class="w">      </span><span class="c1"># scan host 127.0.0.1, ports from 22 to 443</span>
-
-
-<span class="n">ModuleNotFoundError</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">module</span><span class="w"> </span><span class="n">named</span><span class="w"> </span><span class="s1">&#39;nmap&#39;</span>
+    <div class="highlight"><pre><span></span><code><span class="c1">#Reverse a string</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">rev_string</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rev_string</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>olleh
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">reverse_string</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">word</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">sentence</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">sentence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">reverse_string</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;dlrow olleH&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#2.4. Find the Largest Element in an Array</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_largest_number</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span><span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">find_largest_number</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">89</span><span class="p">,</span><span class="mi">99</span><span class="p">]))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">99</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#6. Find Duplicates in an Array</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#count vowels</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">count_vowels</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">vowels</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">aeiou</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">count_vowels</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;function count_vowels at 0x1068ef060&gt;
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 0</strong></p>
+<p><strong>Score: 10</strong></p>
 <p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
 
 </p>
@@ -105,7 +139,9 @@
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
    
         </ul>
 

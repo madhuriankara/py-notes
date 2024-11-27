@@ -1,21 +1,22 @@
 ---
 title: Gnb
-date: 2024-11-24
+date: 2024-11-27
 author: Your Name
-cell_count: 4
-score: 0
+cell_count: 9
+score: 5
 ---
 
 ```python
-
 from sklearn import datasets
-from sklearn.naive_bayes import GaussianNB
-
 ```
 
 
 ```python
+from sklearn.naive_bayes import GaussianNB
+```
 
+
+```python
 iris = datasets.load_iris()
 
 
@@ -38,5 +39,25 @@ print("Number of mislabeled points out of a total %d points : %d" % (iris.data.s
 ```
 
 
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
 ---
-**Score: 0**
+**Score: 5**

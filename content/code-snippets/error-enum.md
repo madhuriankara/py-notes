@@ -1,6 +1,6 @@
 ---
 title: Error-Enum
-date: 2024-11-24
+date: 2024-11-27
 author: Your Name
 cell_count: 7
 score: 5
