@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Cricket-Score-Poc</title>
+
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://madhuriankara.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://madhuriankara.github.io/pynotes">Py Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/cricket-score-poc.html" rel="bookmark"
+        title="Permalink to Cricket-Score-Poc">Cricket-Score-Poc</a></h3>
+    </header>
+
+<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">get_random_number</span><span class="p">(</span><span class="n">minimum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">maximum</span> <span class="o">=</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_random_run</span><span class="p">():</span>
+    <span class="n">r_run</span> <span class="o">=</span> <span class="n">get_random_number</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">r_run</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">4</span>
+
+    <span class="k">return</span> <span class="n">r_run</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#First over</span>
+<span class="n">current_over_balls</span>  <span class="o">=</span> <span class="mi">6</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">current_ball</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">current_over_balls</span><span class="p">):</span>
+
+    <span class="n">current_batsman</span> <span class="o">=</span> <span class="s2">&quot;Dhoni&quot;</span>
+
+    <span class="n">c_run</span> <span class="o">=</span> <span class="n">get_random_run</span><span class="p">()</span>
+
+    <span class="n">ball_commentary</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">current_ball</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">]: </span><span class="si">{</span><span class="n">current_batsman</span><span class="si">}</span><span class="s1"> scored: </span><span class="si">{</span><span class="n">c_run</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ball_commentary</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[1]: Dhoni scored: 1
+[2]: Dhoni scored: 2
+[3]: Dhoni scored: 4
+[4]: Dhoni scored: 4
+[5]: Dhoni scored: 6
+[6]: Dhoni scored: 1
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">current_over_balls</span>  <span class="o">=</span> <span class="mi">6</span>
+<span class="n">over_count</span>          <span class="o">=</span> <span class="mi">2</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">current_over</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">over_count</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">current_ball</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">current_over_balls</span><span class="p">):</span>
+
+        <span class="n">current_batsman</span> <span class="o">=</span> <span class="s2">&quot;Dhoni&quot;</span>
+
+        <span class="n">c_run</span> <span class="o">=</span> <span class="n">get_random_run</span><span class="p">()</span>
+
+        <span class="n">ball_commentary</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">current_ball</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">]: </span><span class="si">{</span><span class="n">current_batsman</span><span class="si">}</span><span class="s1"> scored: </span><span class="si">{</span><span class="n">c_run</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ball_commentary</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current_over</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> over is completed&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[1]: Dhoni scored: 1
+[2]: Dhoni scored: 3
+[3]: Dhoni scored: 0
+[4]: Dhoni scored: 6
+[5]: Dhoni scored: 0
+[6]: Dhoni scored: 3
+1 over is completed
+[1]: Dhoni scored: 1
+[2]: Dhoni scored: 2
+[3]: Dhoni scored: 1
+[4]: Dhoni scored: 4
+[5]: Dhoni scored: 2
+[6]: Dhoni scored: 0
+2 over is completed
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">current_over_balls</span>  <span class="o">=</span> <span class="mi">6</span>
+<span class="n">over_count</span>          <span class="o">=</span> <span class="mi">2</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">current_over</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">over_count</span><span class="p">):</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">playing : over </span><span class="si">{</span><span class="n">current_over</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">current_ball</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">current_over_balls</span><span class="p">):</span>
+
+        <span class="n">current_batsman</span> <span class="o">=</span> <span class="s2">&quot;Dhoni&quot;</span>
+
+        <span class="n">c_run</span> <span class="o">=</span> <span class="n">get_random_run</span><span class="p">()</span>
+        <span class="n">ball_commentary</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">current_ball</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">]: </span><span class="si">{</span><span class="n">current_batsman</span><span class="si">}</span><span class="s1"> scored: </span><span class="si">{</span><span class="n">c_run</span><span class="si">}</span><span class="s1">&#39;</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ball_commentary</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">playing</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">--------------------</span>
+
+<span class="o">[</span><span class="mi">1</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">6</span>
+<span class="o">[</span><span class="mi">2</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="o">[</span><span class="mi">3</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="o">[</span><span class="mi">4</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="o">[</span><span class="mi">5</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="o">[</span><span class="mi">6</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="n">playing</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="mi">2</span>
+<span class="o">--------------------</span>
+
+<span class="o">[</span><span class="mi">1</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">6</span>
+<span class="o">[</span><span class="mi">2</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">6</span>
+<span class="o">[</span><span class="mi">3</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="o">[</span><span class="mi">4</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">[</span><span class="mi">5</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="o">[</span><span class="mi">6</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">time</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_random_number</span><span class="p">(</span><span class="n">minimum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">maximum</span> <span class="o">=</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_random_run</span><span class="p">():</span>
+    <span class="n">r_run</span> <span class="o">=</span> <span class="n">get_random_number</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">r_run</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">4</span>
+
+    <span class="k">return</span> <span class="n">r_run</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">play_inninings</span><span class="p">():</span>
+
+    <span class="n">current_over_balls</span>  <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">over_count</span>          <span class="o">=</span> <span class="mi">2</span>
+
+    <span class="k">for</span> <span class="n">current_over</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">over_count</span><span class="p">):</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">playing : over </span><span class="si">{</span><span class="n">current_over</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">current_ball</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">current_over_balls</span><span class="p">):</span>
+            <span class="n">current_batsman</span> <span class="o">=</span> <span class="s2">&quot;Dhoni&quot;</span>
+
+            <span class="n">c_run</span> <span class="o">=</span> <span class="n">get_random_run</span><span class="p">()</span>
+
+            <span class="n">ball_commentary</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">current_ball</span><span class="si">}</span><span class="s1">]: </span><span class="si">{</span><span class="n">current_batsman</span><span class="si">}</span><span class="s1"> scored: </span><span class="si">{</span><span class="n">c_run</span><span class="si">}</span><span class="s1">&#39;</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ball_commentary</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+
+
+<span class="n">play_inninings</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">playing</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">--------------------</span>
+
+<span class="o">[</span><span class="mi">0</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="o">[</span><span class="mi">1</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="o">[</span><span class="mi">2</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="o">[</span><span class="mi">3</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="o">[</span><span class="mi">4</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="o">[</span><span class="mi">5</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="n">playing</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="mi">2</span>
+<span class="o">--------------------</span>
+
+<span class="o">[</span><span class="mi">0</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="o">[</span><span class="mi">1</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="o">[</span><span class="mi">2</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="o">[</span><span class="mi">3</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="o">[</span><span class="mi">4</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">6</span>
+<span class="o">[</span><span class="mi">5</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">show</span> <span class="n">langchain</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Name</span><span class="o">:</span><span class="w"> </span><span class="n">langchain</span>
+<span class="n">Version</span><span class="o">:</span><span class="w"> </span><span class="mf">0.3</span><span class="o">.</span><span class="mi">8</span>
+<span class="n">Summary</span><span class="o">:</span><span class="w"> </span><span class="n">Building</span><span class="w"> </span><span class="n">applications</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">LLMs</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">composability</span>
+<span class="n">Home</span><span class="o">-</span><span class="n">page</span><span class="o">:</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">github</span><span class="o">.</span><span class="na">com</span><span class="sr">/langchain-ai/</span><span class="n">langchain</span>
+<span class="n">Author</span><span class="o">:</span><span class="w"> </span>
+<span class="n">Author</span><span class="o">-</span><span class="n">email</span><span class="o">:</span><span class="w"> </span>
+<span class="n">License</span><span class="o">:</span><span class="w"> </span><span class="n">MIT</span>
+<span class="n">Location</span><span class="o">:</span><span class="w"> </span><span class="sr">/opt/homebrew/Caskroom/miniconda/base/envs/py312/lib/python3.12/si</span><span class="n">te</span><span class="o">-</span><span class="n">packages</span>
+<span class="n">Requires</span><span class="o">:</span><span class="w"> </span><span class="n">aiohttp</span><span class="o">,</span><span class="w"> </span><span class="n">langchain</span><span class="o">-</span><span class="n">core</span><span class="o">,</span><span class="w"> </span><span class="n">langchain</span><span class="o">-</span><span class="n">text</span><span class="o">-</span><span class="n">splitters</span><span class="o">,</span><span class="w"> </span><span class="n">langsmith</span><span class="o">,</span><span class="w"> </span><span class="n">numpy</span><span class="o">,</span><span class="w"> </span><span class="n">pydantic</span><span class="o">,</span><span class="w"> </span><span class="n">PyYAML</span><span class="o">,</span><span class="w"> </span><span class="n">requests</span><span class="o">,</span><span class="w"> </span><span class="n">SQLAlchemy</span><span class="o">,</span><span class="w"> </span><span class="n">tenacity</span>
+<span class="n">Required</span><span class="o">-</span><span class="n">by</span><span class="o">:</span><span class="w"> </span><span class="n">langchain</span><span class="o">-</span><span class="n">community</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="kn">from</span> <span class="nn">langchain.llms</span> <span class="kn">import</span> <span class="n">Ollama</span>
+<span class="kn">from</span> <span class="nn">langchain.prompts</span> <span class="kn">import</span> <span class="n">PromptTemplate</span>
+<span class="kn">from</span> <span class="nn">langchain.chains</span> <span class="kn">import</span> <span class="n">LLMChain</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">llm</span> <span class="o">=</span> <span class="n">Ollama</span><span class="p">(</span>
+    <span class="n">model</span>       <span class="o">=</span> <span class="s2">&quot;mistral&quot;</span><span class="p">,</span>
+    <span class="n">base_url</span>    <span class="o">=</span> <span class="s2">&quot;http://localhost:11434&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">26</span><span class="o">/</span><span class="mi">1</span><span class="n">_zstvd1579g9j700z2jnmp40000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_21328</span><span class="o">/</span><span class="mf">1983929500.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="n">LangChainDeprecationWarning</span><span class="p">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="err">`</span><span class="nc">Ollama</span><span class="err">`</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">deprecated</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">LangChain</span><span class="w"> </span><span class="mf">0.3.1</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">removed</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="mf">1.0.0</span><span class="o">.</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">exists</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="p">:</span><span class="n">class</span><span class="p">:</span><span class="err">`</span><span class="o">~</span><span class="n">langchain</span><span class="o">-</span><span class="n">ollama</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">instead</span><span class="o">.</span><span class="w"> </span><span class="n">To</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="err">`</span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">-</span><span class="n">U</span><span class="w"> </span><span class="p">:</span><span class="n">class</span><span class="p">:</span><span class="err">`</span><span class="o">~</span><span class="n">langchain</span><span class="o">-</span><span class="n">ollama</span><span class="err">`</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">as</span><span class="w"> </span><span class="err">`</span><span class="kn">from</span><span class="w"> </span><span class="p">:</span><span class="n">class</span><span class="p">:</span><span class="err">`</span><span class="o">~</span><span class="n">langchain_ollama</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">OllamaLLM</span><span class="err">``</span><span class="o">.</span>
+<span class="w">  </span><span class="n">llm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ollama</span><span class="p">(</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">You are a Cricket Commentator who makes one line Criket Commentary. Please provide one line commentary about the given run.</span>
+<span class="s2">Your commentary shoud be between 20 to 40 words:</span>
+
+<span class="si">{run}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">prompt</span> <span class="o">=</span> <span class="n">PromptTemplate</span><span class="p">(</span>
+    <span class="n">input_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">],</span>
+    <span class="n">template</span>        <span class="o">=</span> <span class="n">template</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">llm_chain</span> <span class="o">=</span> <span class="n">LLMChain</span><span class="p">(</span>
+    <span class="n">llm</span>     <span class="o">=</span> <span class="n">llm</span><span class="p">,</span>
+    <span class="n">prompt</span>  <span class="o">=</span> <span class="n">prompt</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">26</span><span class="o">/</span><span class="n">1_zstvd1579g9j700z2jnmp40000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_21328</span><span class="o">/</span><span class="mf">1737174222.</span><span class="n">py</span><span class="o">:</span><span class="mi">1</span><span class="o">:</span><span class="w"> </span><span class="n">LangChainDeprecationWarning</span><span class="o">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">class</span><span class="w"> </span><span class="n n-Quoted">`LLMChain`</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">deprecated</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">LangChain</span><span class="w"> </span><span class="mf">0.1.17</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">removed</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mf">1.0</span><span class="p">.</span><span class="w"> </span><span class="k">Use</span><span class="w"> </span><span class="o">:</span><span class="n">meth</span><span class="o">:</span><span class="n n-Quoted">`~RunnableSequence, e.g., `</span><span class="n">prompt</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">llm</span><span class="n n-Quoted">``</span><span class="w"> </span><span class="n">instead</span><span class="p">.</span>
+<span class="w">  </span><span class="n">llm_chain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LLMChain</span><span class="p">(</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_magic_commentary</span><span class="p">(</span><span class="n">score</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">llm_chain</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">score</span> <span class="o">=</span> <span class="n">score</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">langchain.llms</span> <span class="kn">import</span> <span class="n">Ollama</span>
+<span class="kn">from</span> <span class="nn">langchain.prompts</span> <span class="kn">import</span> <span class="n">PromptTemplate</span>
+<span class="kn">from</span> <span class="nn">langchain.chains</span> <span class="kn">import</span> <span class="n">LLMChain</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize the Ollama LLM with the Mistral model</span>
+<span class="n">llm</span> <span class="o">=</span> <span class="n">Ollama</span><span class="p">(</span>
+    <span class="n">model</span>       <span class="o">=</span> <span class="s2">&quot;mistral&quot;</span><span class="p">,</span>
+    <span class="n">base_url</span>    <span class="o">=</span> <span class="s2">&quot;http://localhost:11434&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Define a prompt template</span>
+<span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">You are a Cricket Commentator who makes one line Criket Commentary. Please provide one line commentary about the given run.</span>
+<span class="s2">Its a plain commentary for a ball, dont add batsmen name.</span>
+<span class="s2">You commentary shoud be between 20 to 40 words:</span>
+
+<span class="si">{run}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">PromptTemplate</span><span class="p">(</span>
+    <span class="n">input_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">],</span>
+    <span class="n">template</span>        <span class="o">=</span> <span class="n">template</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Create a chain</span>
+<span class="n">llm_chain</span> <span class="o">=</span> <span class="n">LLMChain</span><span class="p">(</span>
+    <span class="n">llm</span>     <span class="o">=</span> <span class="n">llm</span><span class="p">,</span>
+    <span class="n">prompt</span>  <span class="o">=</span> <span class="n">prompt</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">q</span><span class="p">(</span><span class="n">run</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">llm_chain</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">run</span> <span class="o">=</span> <span class="n">run</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_magic_commentary</span><span class="p">(</span><span class="n">run</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">llm_chain</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">run</span> <span class="o">=</span> <span class="n">run</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">get_magic_commentary</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code> A towering six over midwicket! Boundary brings momentum swinging back in favor of the batsman.
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">langchain.llms</span> <span class="kn">import</span> <span class="n">Ollama</span>
+<span class="kn">from</span> <span class="nn">langchain.prompts</span> <span class="kn">import</span> <span class="n">PromptTemplate</span>
+<span class="kn">from</span> <span class="nn">langchain.chains</span> <span class="kn">import</span> <span class="n">LLMChain</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">play_inninings</span><span class="p">():</span>
+
+    <span class="n">over_count</span>          <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">current_over_balls</span>  <span class="o">=</span> <span class="mi">6</span>
+
+    <span class="k">for</span> <span class="n">current_over</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">over_count</span><span class="p">):</span>
+
+        <span class="n">log_content</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">playing : over </span><span class="si">{</span><span class="n">current_over</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">yield</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">log_content</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="k">for</span> <span class="n">current_ball</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">current_over_balls</span><span class="p">):</span>
+            <span class="n">current_ball</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="n">current_batsman</span> <span class="o">=</span> <span class="s2">&quot;Sachin&quot;</span>
+
+            <span class="n">c_run</span> <span class="o">=</span> <span class="n">get_random_run</span><span class="p">()</span>
+
+            <span class="n">magic_commentary</span> <span class="o">=</span> <span class="n">get_magic_commentary</span><span class="p">(</span><span class="n">c_run</span><span class="p">)</span>
+            <span class="n">ball_commentary</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">current_over</span><span class="si">}</span><span class="s1">.</span><span class="si">{</span><span class="n">current_ball</span><span class="si">}</span><span class="s1">]: </span><span class="si">{</span><span class="n">current_batsman</span><span class="si">}</span><span class="s1"> scored: </span><span class="si">{</span><span class="n">c_run</span><span class="si">}</span><span class="s1">   </span><span class="si">{</span><span class="n">magic_commentary</span><span class="si">}</span><span class="s1">&#39;</span>
+
+            <span class="k">yield</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ball_commentary</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">play_inninings</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">playing</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">[</span><span class="mf">0.1</span><span class="o">]:</span><span class="w"> </span><span class="n">Sachin</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="n">Three</span><span class="w"> </span><span class="n">runs</span><span class="o">,</span><span class="w"> </span><span class="n">beautifully</span><span class="w"> </span><span class="n">orchestrated</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">delicate</span><span class="w"> </span><span class="n">touch</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">accurate</span><span class="w"> </span><span class="n">placement</span><span class="o">,</span><span class="w"> </span><span class="n">reminiscent</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">artist</span><span class="w"> </span><span class="n">painting</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">precision</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">0.2</span><span class="o">]:</span><span class="w"> </span><span class="n">Sachin</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="w">    </span><span class="n">Four</span><span class="o">!</span><span class="w"> </span><span class="n">Cleanly</span><span class="w"> </span><span class="n">dispatched</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">mid</span><span class="o">-</span><span class="n">wicket</span><span class="o">,</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">chance</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">fielder</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">0.3</span><span class="o">]:</span><span class="w"> </span><span class="n">Sachin</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="w">    </span><span class="n">Single</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">delicate</span><span class="w"> </span><span class="n">wrists</span><span class="o">,</span><span class="w"> </span><span class="n">neatly</span><span class="w"> </span><span class="n">placed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">easy</span><span class="w"> </span><span class="n">pickings</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">0.4</span><span class="o">]:</span><span class="w"> </span><span class="n">Sachin</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="w">    </span><span class="n">Four</span><span class="o">!</span><span class="w"> </span><span class="n">Cleanly</span><span class="w"> </span><span class="n">dispatched</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ropes</span><span class="o">,</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">chance</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">fielders</span><span class="w"> </span><span class="n">there</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">0.5</span><span class="o">]:</span><span class="w"> </span><span class="n">Sachin</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="n">Three</span><span class="w"> </span><span class="n">runs</span><span class="w"> </span><span class="n">off</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">well</span><span class="o">-</span><span class="n">timed</span><span class="w"> </span><span class="n">drive</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">swift</span><span class="w"> </span><span class="n">scamper</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">batsmen</span><span class="o">.</span><span class="w"> </span><span class="n">Fine</span><span class="w"> </span><span class="n">execution</span><span class="w"> </span><span class="n">under</span><span class="w"> </span><span class="n">pressure</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">0.6</span><span class="o">]:</span><span class="w"> </span><span class="n">Sachin</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="n">Dot</span><span class="w"> </span><span class="n">ball</span><span class="o">!</span><span class="w"> </span><span class="n">Batsman</span><span class="w"> </span><span class="n">looking</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="k">break</span><span class="w"> </span><span class="n">free</span><span class="o">,</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">bowler</span><span class="w"> </span><span class="n">maintains</span><span class="w"> </span><span class="n">tight</span><span class="w"> </span><span class="n">lines</span><span class="o">.</span>
+
+<span class="n">playing</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="mi">2</span>
+<span class="o">[</span><span class="mf">1.1</span><span class="o">]:</span><span class="w"> </span><span class="n">Sachin</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="n">Three</span><span class="w"> </span><span class="n">runs</span><span class="w"> </span><span class="n">scampered</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">mix</span><span class="o">-</span><span class="n">up</span><span class="o">,</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">direct</span><span class="w"> </span><span class="n">hit</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">deep</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">1.2</span><span class="o">]:</span><span class="w"> </span><span class="n">Sachin</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="n">Three</span><span class="w"> </span><span class="n">runs</span><span class="w"> </span><span class="n">scampered</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">tight</span><span class="w"> </span><span class="n">fielding</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">batsman</span><span class="w"> </span><span class="n">made</span><span class="w"> </span><span class="n">full</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">gap</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">1.3</span><span class="o">]:</span><span class="w"> </span><span class="n">Sachin</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">6</span><span class="w">    </span><span class="n">Six</span><span class="o">!</span><span class="w"> </span><span class="n">Cleanly</span><span class="w"> </span><span class="n">dispatched</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ropes</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">crowd</span><span class="w"> </span><span class="n">erupts</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">delight</span><span class="o">.</span><span class="w"> </span><span class="n">Superb</span><span class="w"> </span><span class="n">shot</span><span class="o">!</span>
+<span class="o">[</span><span class="mf">1.4</span><span class="o">]:</span><span class="w"> </span><span class="n">Sachin</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="w">    </span><span class="n">Run</span><span class="w"> </span><span class="n">missed</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">delivery</span><span class="w"> </span><span class="n">slides</span><span class="w"> </span><span class="n">past</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">batsman</span><span class="s1">&#39;s attempted drive, narrowly avoiding the stumps.</span>
+<span class="s1">[1.5]: Sachin scored: 3    Three runs scampered through a mix-up, narrowly avoiding an incoming fielder&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">grab</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">1.6</span><span class="o">]:</span><span class="w"> </span><span class="n">Sachin</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span><span class="w">    </span><span class="n">Two</span><span class="w"> </span><span class="n">runs</span><span class="w"> </span><span class="n">scampered</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">mix</span><span class="o">-</span><span class="n">up</span><span class="o">,</span><span class="w"> </span><span class="n">close</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">striker</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">end</span><span class="o">.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!pip install nest_asyncio</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="kn">from</span> <span class="nn">langchain.llms</span> <span class="kn">import</span> <span class="n">Ollama</span>
+<span class="kn">from</span> <span class="nn">langchain.prompts</span> <span class="kn">import</span> <span class="n">PromptTemplate</span>
+<span class="kn">from</span> <span class="nn">langchain.chains</span> <span class="kn">import</span> <span class="n">LLMChain</span>
+
+<span class="c1"># Initialize the Ollama LLM with the Mistral model</span>
+<span class="n">llm</span> <span class="o">=</span> <span class="n">Ollama</span><span class="p">(</span>
+    <span class="n">model</span>       <span class="o">=</span> <span class="s2">&quot;mistral&quot;</span><span class="p">,</span>
+    <span class="n">base_url</span>    <span class="o">=</span> <span class="s2">&quot;http://localhost:11434&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Define a prompt template</span>
+<span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">You are a Cricket Commentator who makes one line Criket Commentary. Please provide one line commentary about the given run.</span>
+<span class="s2">Its a plain commentary for a ball, dont add batsmen name.</span>
+<span class="s2">You commentary shoud be between 20 to 40 words:</span>
+
+<span class="si">{run}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">PromptTemplate</span><span class="p">(</span>
+    <span class="n">input_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">],</span>
+    <span class="n">template</span>        <span class="o">=</span> <span class="n">template</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Create a chain</span>
+<span class="n">llm_chain</span> <span class="o">=</span> <span class="n">LLMChain</span><span class="p">(</span>
+    <span class="n">llm</span>     <span class="o">=</span> <span class="n">llm</span><span class="p">,</span>
+    <span class="n">prompt</span>  <span class="o">=</span> <span class="n">prompt</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">q</span><span class="p">(</span><span class="n">run</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">llm_chain</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">run</span> <span class="o">=</span> <span class="n">run</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_magic_commentary</span><span class="p">(</span><span class="n">run</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">llm_chain</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">run</span> <span class="o">=</span> <span class="n">run</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_random_number</span><span class="p">(</span><span class="n">minimum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">maximum</span> <span class="o">=</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_random_run</span><span class="p">():</span>
+    <span class="n">r_run</span> <span class="o">=</span> <span class="n">get_random_number</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">r_run</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">4</span>
+
+    <span class="k">return</span> <span class="n">r_run</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">play_inninings</span><span class="p">():</span>
+
+    <span class="n">over_count</span>          <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">current_over_balls</span>  <span class="o">=</span> <span class="mi">6</span>
+
+    <span class="k">for</span> <span class="n">current_over</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">over_count</span><span class="p">):</span>
+
+        <span class="n">log_content</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">playing : over </span><span class="si">{</span><span class="n">current_over</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">yield</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">log_content</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="k">for</span> <span class="n">current_ball</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">current_over_balls</span><span class="p">):</span>
+            <span class="n">current_ball</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="n">current_batsman</span> <span class="o">=</span> <span class="s2">&quot;Dhoni&quot;</span>
+
+            <span class="n">c_run</span> <span class="o">=</span> <span class="n">get_random_run</span><span class="p">()</span>
+
+            <span class="n">magic_commentary</span> <span class="o">=</span> <span class="n">get_magic_commentary</span><span class="p">(</span><span class="n">c_run</span><span class="p">)</span>
+            <span class="n">ball_commentary</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">current_over</span><span class="si">}</span><span class="s1">.</span><span class="si">{</span><span class="n">current_ball</span><span class="si">}</span><span class="s1">]: </span><span class="si">{</span><span class="n">current_batsman</span><span class="si">}</span><span class="s1"> scored: </span><span class="si">{</span><span class="n">c_run</span><span class="si">}</span><span class="s1">   </span><span class="si">{</span><span class="n">magic_commentary</span><span class="si">}</span><span class="s1">&#39;</span>
+
+            <span class="k">yield</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ball_commentary</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">play_inninings</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">playing</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">[</span><span class="mf">0.1</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="w">    </span><span class="n">Four</span><span class="o">!</span><span class="w"> </span><span class="n">Beautifully</span><span class="w"> </span><span class="n">timed</span><span class="o">,</span><span class="w"> </span><span class="n">finds</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">gap</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">third</span><span class="w"> </span><span class="n">man</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">deep</span><span class="w"> </span><span class="n">backward</span><span class="w"> </span><span class="n">point</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">0.2</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="w">    </span><span class="n">Single</span><span class="w"> </span><span class="n">secured</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">well</span><span class="o">-</span><span class="n">timed</span><span class="w"> </span><span class="n">push</span><span class="w"> </span><span class="n">towards</span><span class="w"> </span><span class="n">cover</span><span class="o">,</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">need</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">dash</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">time</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">0.3</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="w">    </span><span class="n">Four</span><span class="o">!</span><span class="w"> </span><span class="n">Majestic</span><span class="w"> </span><span class="n">drive</span><span class="w"> </span><span class="n">finds</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">boundary</span><span class="o">,</span><span class="w"> </span><span class="n">cleanly</span><span class="w"> </span><span class="n">timed</span><span class="o">.</span><span class="w"> </span><span class="n">Great</span><span class="w"> </span><span class="n">shot</span><span class="o">!</span>
+<span class="o">[</span><span class="mf">0.4</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="n">well</span><span class="o">-</span><span class="n">timed</span><span class="w"> </span><span class="n">drive</span><span class="w"> </span><span class="n">finds</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">gap</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">batsman</span><span class="w"> </span><span class="n">races</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">four</span><span class="w"> </span><span class="n">runs</span><span class="o">!</span>
+<span class="o">[</span><span class="mf">0.5</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="w">    </span><span class="n">Four</span><span class="o">!</span><span class="w"> </span><span class="n">Beautifully</span><span class="w"> </span><span class="n">dispatched</span><span class="o">,</span><span class="w"> </span><span class="n">that</span><span class="s1">&#39;s raced away to the boundary!</span>
+<span class="s1">[0.6]: Dhoni scored: 4    Four! Cleanly dispatched over the rope for another boundary. Timing perfect from the batsman.</span>
+
+<span class="s1">playing : over 2</span>
+<span class="s1">[1.1]: Dhoni scored: 6    Six! Clean hit over long-on, crowd goes wild!</span>
+<span class="s1">[1.2]: Dhoni scored: 4    Four! Boundary off the edges, perfect placement from the batsman.</span>
+<span class="s1">[1.3]: Dhoni scored: 2    Fluent drive, perfectly timed, pair adds another twosome to the tally.</span>
+<span class="s1">[1.4]: Dhoni scored: 6    Six! Powerful hit clears the ropes for another maximum. Spectacular shot!</span>
+<span class="s1">[1.5]: Dhoni scored: 4    Four! Superbly timed drive finds the gap, clean as a whistle.</span>
+<span class="s1">[1.6]: Dhoni scored: 1    Single converted, fielders&#39;</span><span class="w"> </span><span class="n">concentration</span><span class="w"> </span><span class="n">wanes</span><span class="w"> </span><span class="n">under</span><span class="w"> </span><span class="n">pressure</span><span class="o">.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="kn">from</span> <span class="nn">langchain.llms</span> <span class="kn">import</span> <span class="n">Ollama</span>
+<span class="kn">from</span> <span class="nn">langchain.prompts</span> <span class="kn">import</span> <span class="n">PromptTemplate</span>
+<span class="kn">from</span> <span class="nn">langchain.chains</span> <span class="kn">import</span> <span class="n">LLMChain</span>
+
+<span class="c1"># Initialize the Ollama LLM with the Mistral model</span>
+<span class="n">llm</span> <span class="o">=</span> <span class="n">Ollama</span><span class="p">(</span>
+    <span class="n">model</span>       <span class="o">=</span> <span class="s2">&quot;mistral&quot;</span><span class="p">,</span>
+    <span class="n">base_url</span>    <span class="o">=</span> <span class="s2">&quot;http://localhost:11434&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Define a prompt template</span>
+<span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">You are a Cricket Commentator who makes one line Cricket Commentary. Please provide one line commentary about the given run.</span>
+<span class="s2">It&#39;s a plain commentary for a ball, don&#39;t add batsman&#39;s name.</span>
+<span class="s2">Your commentary should be between 20 to 40 words:</span>
+
+<span class="si">{run}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Define the prompt template and chain</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">PromptTemplate</span><span class="p">(</span>
+    <span class="n">input_variables</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">],</span>
+    <span class="n">template</span><span class="o">=</span><span class="n">template</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Create the chain for generating commentary</span>
+<span class="n">llm_chain</span> <span class="o">=</span> <span class="n">LLMChain</span><span class="p">(</span>
+    <span class="n">llm</span><span class="o">=</span><span class="n">llm</span><span class="p">,</span>
+    <span class="n">prompt</span><span class="o">=</span><span class="n">prompt</span>
+<span class="p">)</span>
+
+<span class="c1"># Function to get magic commentary for a given run</span>
+<span class="k">def</span> <span class="nf">get_magic_commentary</span><span class="p">(</span><span class="n">run</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">llm_chain</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">run</span><span class="o">=</span><span class="n">run</span><span class="p">)</span>
+
+<span class="c1"># Function to generate a random number (0-6) for the run</span>
+<span class="k">def</span> <span class="nf">get_random_number</span><span class="p">(</span><span class="n">minimum</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">maximum</span><span class="o">=</span><span class="mi">6</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">)</span>
+
+<span class="c1"># Function to get a random run (with special case for 5)</span>
+<span class="k">def</span> <span class="nf">get_random_run</span><span class="p">():</span>
+    <span class="n">r_run</span> <span class="o">=</span> <span class="n">get_random_number</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">r_run</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">4</span>  <span class="c1"># Special case for 5; treating it as 4</span>
+    <span class="k">return</span> <span class="n">r_run</span>
+
+<span class="c1"># Asynchronous function to simulate the innings and commentary</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">play_innings</span><span class="p">():</span>
+    <span class="n">over_count</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">current_over_balls</span> <span class="o">=</span> <span class="mi">6</span>
+
+    <span class="c1"># Initialize two batsmen (start with batsman 1)</span>
+    <span class="n">batsmen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Dhoni&quot;</span><span class="p">,</span> <span class="s2">&quot;Kohli&quot;</span><span class="p">]</span>
+    <span class="n">current_batsman_index</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Start with the first batsman</span>
+
+    <span class="k">for</span> <span class="n">current_over</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">over_count</span><span class="p">):</span>
+        <span class="n">log_content</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Playing: over </span><span class="si">{</span><span class="n">current_over</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">yield</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">log_content</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="k">for</span> <span class="n">current_ball</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">current_over_balls</span><span class="p">):</span>
+            <span class="n">current_ball</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="c1"># Get the current batsman</span>
+            <span class="n">current_batsman</span> <span class="o">=</span> <span class="n">batsmen</span><span class="p">[</span><span class="n">current_batsman_index</span><span class="p">]</span>
+
+            <span class="c1"># Generate a random run</span>
+            <span class="n">c_run</span> <span class="o">=</span> <span class="n">get_random_run</span><span class="p">()</span>
+
+            <span class="c1"># If the run is odd, switch the batsman</span>
+            <span class="k">if</span> <span class="n">c_run</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">current_batsman_index</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">current_batsman_index</span>  <span class="c1"># Toggle between 0 and 1</span>
+
+            <span class="c1"># Get the magic commentary for the run</span>
+            <span class="n">magic_commentary</span> <span class="o">=</span> <span class="n">get_magic_commentary</span><span class="p">(</span><span class="n">c_run</span><span class="p">)</span>
+
+            <span class="c1"># Format the ball commentary</span>
+            <span class="n">ball_commentary</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">current_over</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">.</span><span class="si">{</span><span class="n">current_ball</span><span class="si">}</span><span class="s1">]: </span><span class="si">{</span><span class="n">current_batsman</span><span class="si">}</span><span class="s1"> scored: </span><span class="si">{</span><span class="n">c_run</span><span class="si">}</span><span class="s1">   </span><span class="si">{</span><span class="n">magic_commentary</span><span class="si">}</span><span class="s1">&#39;</span>
+
+            <span class="c1"># Yield the ball commentary</span>
+            <span class="k">yield</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ball_commentary</span><span class="si">}</span><span class="s2">&quot;</span>
+
+            <span class="c1"># Wait for a short time before the next ball (simulate time delay between balls)</span>
+            <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+
+        <span class="c1"># Wait for a short time before the next over (simulate break between overs)</span>
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+
+<span class="c1"># Main function to run the simulation</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">play_innings</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="c1"># Run the main function asynchronously</span>
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Playing</span><span class="o">:</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">[</span><span class="mf">1.1</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">6</span><span class="w">    </span><span class="n">Six</span><span class="o">!</span><span class="w"> </span><span class="n">Cleanly</span><span class="w"> </span><span class="n">dispatched</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ropes</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">another</span><span class="w"> </span><span class="n">maximum</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">1.2</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="n">Three</span><span class="w"> </span><span class="n">runs</span><span class="w"> </span><span class="n">scampered</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">mix</span><span class="o">-</span><span class="n">up</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">striker</span><span class="w"> </span><span class="n">short</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">his</span><span class="w"> </span><span class="n">ground</span><span class="o">.</span><span class="w"> </span><span class="n">Tense</span><span class="w"> </span><span class="n">moments</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">outfield</span><span class="o">!</span>
+<span class="o">[</span><span class="mf">1.3</span><span class="o">]:</span><span class="w"> </span><span class="n">Kohli</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="w">    </span><span class="n">Three</span><span class="w"> </span><span class="n">runs</span><span class="w"> </span><span class="n">scampered</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">mix</span><span class="o">-</span><span class="n">up</span><span class="o">,</span><span class="w"> </span><span class="n">fielder</span><span class="s1">&#39;s throw narrowly missing the stumps!</span>
+<span class="s1">[1.4]: Dhoni scored: 6    Six! Cleanly dispatched over the boundary rope, no chance for the fielders. Spectacular strike!</span>
+<span class="s1">[1.5]: Dhoni scored: 1    Single down to long-on, deftly worked by the middle order.</span>
+<span class="s1">[1.6]: Kohli scored: 4    Four! Beautifully timed, finding the gap through point.</span>
+
+<span class="s1">Playing: over 2</span>
+<span class="s1">[2.1]: Kohli scored: 4    A well-timed drive finds the gap, another boundary for the team.</span>
+<span class="s1">[2.2]: Kohli scored: 4    Four! Seamer strays on the pads, batsman makes room and flicks it fine for four.</span>
+<span class="s1">[2.3]: Kohli scored: 0    Nothing much to write home about, just a dot ball.</span>
+<span class="s1">[2.4]: Kohli scored: 4    Another boundary off the free hit, no need for a second invitation!</span>
+<span class="s1">[2.5]: Kohli scored: 3    Three runs scampered through a mix-up, no-one&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">bat</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">sight</span><span class="o">.</span><span class="w"> </span><span class="n">Splendid</span><span class="w"> </span><span class="n">fielding</span><span class="w"> </span><span class="n">keeps</span><span class="w"> </span><span class="n">them</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">toes</span><span class="o">.</span>
+<span class="o">[</span><span class="mf">2.6</span><span class="o">]:</span><span class="w"> </span><span class="n">Dhoni</span><span class="w"> </span><span class="n">scored</span><span class="o">:</span><span class="w"> </span><span class="mi">6</span><span class="w">    </span><span class="n">Six</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="n">deep</span><span class="w"> </span><span class="n">mid</span><span class="o">-</span><span class="n">wicket</span><span class="o">,</span><span class="w"> </span><span class="n">cleanly</span><span class="w"> </span><span class="n">dispatched</span><span class="o">!</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 40</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://madhuriankara.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Py Notes by Madhuri Ankaraboyina</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

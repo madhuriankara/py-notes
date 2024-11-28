@@ -109,6 +109,53 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/cricket-score-poc.html"><h3 class="article-title">Cricket-Score-Poc</h3></a>
+<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">get_random_number</span><span class="p">(</span><span class="n">minimum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">maximum</span> <span class="o">=</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_random_run</span><span class="p">():</span>
+    <span class="n">r_run</span> <span class="o">=</span> <span class="n">get_random_number</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">r_run</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">4</span>
+
+    <span class="k">return</span> <span class="n">r_run</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#First over</span>
+<span class="n">current_over_balls</span>  <span class="o">=</span> <span class="mi">6</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">current_ball</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">current_over_balls</span><span class="p">):</span>
+
+    <span class="n">current_batsman</span> <span class="o">=</span> <span class="s2">&quot;Dhoni&quot;</span>
+
+    <span class="n">c_run</span> <span class="o">=</span> <span class="n">get_random_run</span><span class="p">()</span>
+
+    <span class="n">ball_commentary</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">current_ball</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">]: </span><span class="si">{</span><span class="n">current_batsman</span><span class="si">}</span><span class="s1"> scored: </span><span class="si">{</span><span class="n">c_run</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/cricket-score-poc.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/daily-logs.html"><h3 class="article-title">Daily-Logs</h3></a>
 <h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
 </h6>
@@ -340,46 +387,9 @@ Prints "Divisible by both" or "Not divisible by both."</p>
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/email.html"><h3 class="article-title">Email</h3></a>
-<h6 class="subheader" title="2024-11-27T00:00:00-05:00">Wed 27 November 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">smtplib</span>
-<span class="kn">from</span> <span class="nn">email.mime.multipart</span> <span class="kn">import</span> <span class="n">MIMEMultipart</span>
-<span class="kn">from</span> <span class="nn">email.mime.text</span> <span class="kn">import</span> <span class="n">MIMEText</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Sender and receiver email addresses</span>
-<span class="n">sender_email</span> <span class="o">=</span> <span class="s1">&#39;your_email@gmail.com&#39;</span>
-<span class="n">receiver_email</span> <span class="o">=</span> <span class="s1">&#39;receiver_email@example.com&#39;</span>
-<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;your_email_password&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Create the MIME message</span>
-<span class="n">message</span> <span class="o">=</span> <span class="n">MIMEMultipart</span><span class="p">()</span>
-<span class="n">message</span><span class="p">[</span><span class="s1">&#39;From&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sender_email</span>
-<span class="n">message</span><span class="p">[</span><span class="s1">&#39;To&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">receiver_email</span>
-<span class="n">message</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Test Email from Python&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Body of the …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/email.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 2 of 7</h6>
+<h6 class="subheader">Page 2 of 8</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/author/your-name.html">&laquo; Prev</a>
@@ -406,6 +416,7 @@ Prints "Divisible by both" or "Not divisible by both."</p>
             <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
