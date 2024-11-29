@@ -1,9 +1,9 @@
 ---
 title: Cricket-Score-Poc
-date: 2024-11-27
+date: 2024-11-28
 author: Your Name
-cell_count: 42
-score: 40
+cell_count: 54
+score: 50
 ---
 
 ```python
@@ -725,5 +725,223 @@ asyncio.run(main())
 ```
 
 
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+import random
+import asyncio
+```
+
+
+```python
+from langchain.llms import Ollama
+from langchain.prompts import PromptTemplate
+from langchain.chains import LLMChain
+```
+
+
+```python
+# Initialize the Ollama LLM with the Mistral model
+llm = Ollama(
+    model       = "mistral",
+    base_url    = "http://localhost:11434"
+)
+```
+
+
+```python
+# Define a prompt template
+template = """
+You are a Cricket Commentator who makes one line Cricket Commentary. Please provide one line commentary about the given run.
+It's a plain commentary for a ball, don't add batsman's name.
+Your commentary should be between 20 to 40 words:
+
+{run}
+"""
+```
+
+
+```python
+
+# Define the prompt template and chain
+prompt = PromptTemplate(
+    input_variables=["run"],
+    template=template,
+)
+```
+
+
+```python
+# Create the chain for generating commentary
+llm_chain = LLMChain(
+    llm=llm,
+    prompt=prompt
+)
+
+
+```
+
+
+```python
+# Asynchronous function to simulate the innings and commentary
+async def first_innings():
+    over_count = 2
+    current_over_balls = 6
+
+    # Initialize two batsmen (start with batsman 1)
+    batsmen = ["Dhoni", "Kohli"]
+    current_batsman_index = 0  # Start with the first batsman
+
+    for current_over in range(over_count):
+        log_content = f'\nPlaying: over {current_over + 1}'
+        yield f"{log_content}"
+
+        for current_ball in range(current_over_balls):
+            current_ball += 1
+
+            # Get the current batsman
+            current_batsman = batsmen[current_batsman_index]
+
+            # Generate a random run
+            c_run = get_random_run()
+
+            # If the run is odd, switch the batsman
+            if c_run % 2 != 0:
+                current_batsman_index = 1 - current_batsman_index  # Toggle between 0 and 1
+
+            # Get the magic commentary for the run
+            magic_commentary = get_magic_commentary(c_run)
+
+            # Format the ball commentary
+            ball_commentary = f'[{current_over + 1}.{current_ball}]: {current_batsman} scored: {c_run}   {magic_commentary}'
+
+            # Yield the ball commentary
+            yield f"{ball_commentary}"
+
+            # Wait for a short time before the next ball (simulate time delay between balls)
+            await asyncio.sleep(0.2)
+
+        # Wait for a short time before the next over (simulate break between overs)
+            await asyncio.sleep(0.2)
+    print("The first innings is done")
+   
+
+
+
+
+```
+
+
+```python
+async def second_innings():
+    over_count = 2
+    current_over_balls = 6
+
+    # Initialize two batsmen (start with batsman 1)
+    batsmen = ["Ben Stokes", "Buttler"]
+    current_batsman_index = 0  # Start with the first batsman
+
+    for current_over in range(over_count):
+        log_content = f'\nPlaying: over {current_over + 1}'
+        yield f"{log_content}"
+
+        for current_ball in range(current_over_balls):
+            current_ball += 1
+
+            # Get the current batsman
+            current_batsman = batsmen[current_batsman_index]
+
+            # Generate a random run
+            c_run = get_random_run()
+
+            # If the run is odd, switch the batsman
+            if c_run % 2 != 0:
+                current_batsman_index = 1 - current_batsman_index  # Toggle between 0 and 1
+
+            # Get the magic commentary for the run
+            magic_commentary = get_magic_commentary(c_run)
+
+            # Format the ball commentary
+            ball_commentary = f'[{current_over + 1}.{current_ball}]: {current_batsman} scored: {c_run}   {magic_commentary}'
+
+            # Yield the ball commentary
+            yield f"{ball_commentary}"
+
+            # Wait for a short time before the next ball (simulate time delay between balls)
+            await asyncio.sleep(0.2)
+
+        # Wait for a short time before the next over (simulate break between overs)
+        await asyncio.sleep(0.2)
+    print("The second innings is done")  
+
+
+
+
+```
+
+
+```python
+# Main function to run the simulation
+async def main():
+    async for result in first_innings():
+        print(result)
+    async for result in second_innings():
+        print(result)
+  
+
+# Run the main function asynchronously
+asyncio.run(main())
+```
+
+    
+    Playing: over 1
+    [1.1]: Dhoni scored: 4    A well-timed drive finds the gap as the fielder watches in dismay. Four runs on the card.
+    [1.2]: Dhoni scored: 1    Single down to long-on, neatly executed.
+    [1.3]: Kohli scored: 1    Single down to long-on, clean hit off the middle of the bat.
+    [1.4]: Dhoni scored: 1    Single down to third man, neatly placed by the batsman. Clean hitting on display.
+    [1.5]: Kohli scored: 0    Slippery conditions as another delivery goes straight to the fielder, no runs added.
+    [1.6]: Kohli scored: 1    Single steered past point, easy pickings for the runner at the non-striker's end.
+    
+    Playing: over 2
+    [2.1]: Dhoni scored: 4    Four! Beautifully timed drive finds the boundary ropes. Clean hit!
+    [2.2]: Dhoni scored: 3    Easy pickings for the batsman, straight down the ground.
+    [2.3]: Kohli scored: 4    Four! Cleanly dispatched to the boundary ropes, no need for any extra effort.
+    [2.4]: Kohli scored: 3    Three runs off the over, no boundary hit this time.
+    [2.5]: Dhoni scored: 4    Four! Cleanly dispatched over the ropes, that one. Superb strike!
+    [2.6]: Dhoni scored: 4    Four! Beauty finds its way through the gap, no chance for the fielder there.
+    The first innings is done
+    
+    Playing: over 1
+    [1.1]: Ben Stokes scored: 4    Four! Cleanly struck through the covers, races away to the boundary.
+    [1.2]: Ben Stokes scored: 1    Easy pick-up and convert, straightforward running between the wickets.
+    [1.3]: Buttler scored: 0    Dot ball! Bowler maintains the pressure on the batsman.
+    [1.4]: Buttler scored: 4    A lofted drive finds the gap, four runs added to the total.
+    [1.5]: Buttler scored: 2    A well-timed drive finds the gap, two runs added to the tally.
+    [1.6]: Buttler scored: 4    Four! A well-timed boundary off the back foot, the fielder in the deep has no chance.
+    
+    Playing: over 2
+    [2.1]: Buttler scored: 1    Single converts into a quick two as fielder misses the throw at the non-striker's end. Exciting stuff!
+    [2.2]: Ben Stokes scored: 6    Six! Brilliantly dispatched over the ropes, that one. Clean hitting on show!
+    [2.3]: Ben Stokes scored: 6    Six! Clean hit over mid-wicket, no chance for the fielder.
+    [2.4]: Ben Stokes scored: 0    A dot ball from the pacemaker, maintaining pressure in this tense encounter.
+    [2.5]: Ben Stokes scored: 1    Easy pick-up and deposit; no fuss, just one more to the tally.
+    [2.6]: Buttler scored: 0    A dot ball from Smith, tight bowling maintains pressure.
+    The second innings is done
+
+
+
+```python
+
+```
+
+
 ---
-**Score: 40**
+**Score: 50**

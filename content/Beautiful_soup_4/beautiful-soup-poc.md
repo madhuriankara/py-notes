@@ -1,9 +1,9 @@
 ---
 title: Beautiful-Soup-Poc
-date: 2024-11-27
+date: 2024-11-28
 author: Your Name
-cell_count: 76
-score: 75
+cell_count: 86
+score: 85
 ---
 
 ```python
@@ -846,6 +846,80 @@ items
 
 
 ```python
+#Use CSS selectors with select() to scrape specific elements.
+```
+
+
+```python
+from bs4 import BeautifulSoup
+import requests
+```
+
+
+```python
+url = "https://books.toscrape.com/catalogue/sharp-objects_997/index.html"
+response = requests.get(url)
+soup  = BeautifulSoup(response.content, 'html.parser')
+links = soup.select('a.Mystery')  
+
+for link in links:
+   
+    url = link.get('href')  
+    print(url)  
+```
+
+
+```python
+url
+```
+
+
+
+
+    'https://books.toscrape.com/catalogue/sharp-objects_997/index.html'
+
+
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+from bs4 import BeautifulSoup
+import requests
+```
+
+
+```python
+url = "https://books.toscrape.com/catalogue/sharp-objects_997/index.html"
+response = requests.get(url)
+soup  = BeautifulSoup(response.content, 'html.parser')
+custom_tags = soup.find_all('custom-tag')
+for tag in custom_tags:
+    paragraph = tag.find('p')
+    if paragraph:
+        print(paragraph.text.strip())
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
 
 ```
 
@@ -856,4 +930,4 @@ items
 
 
 ---
-**Score: 75**
+**Score: 85**
