@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>Untitled1</title>
+    <title>Assignment-2</title>
 
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
@@ -44,20 +44,47 @@
     <div class="large-9 columns">
 <article>
     <header>
-        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/untitled1.html" rel="bookmark"
-        title="Permalink to Untitled1">Untitled1</a></h3>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/assignment-2.html" rel="bookmark"
+        title="Permalink to Assignment-2">Assignment-2</a></h3>
     </header>
 
-<h6 class="subheader" title="2024-11-24T00:00:00-05:00">Sun 24 November 2024
+<h6 class="subheader" title="2024-12-02T00:00:00-05:00">Mon 02 December 2024
 </h6>
 
 
-    <div class="highlight"><pre><span></span><code>
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span> <span class="s1">&#39;food.csv&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Food_ID</span><span class="w">      </span><span class="nx">True</span>
+<span class="nx">Food_Name</span><span class="w">    </span><span class="nx">True</span>
+<span class="nx">Category</span><span class="w">     </span><span class="nx">True</span>
+<span class="nx">Price</span><span class="w">        </span><span class="nx">True</span>
+<span class="nx">Calories</span><span class="w">     </span><span class="nx">True</span>
+<span class="nx">Available</span><span class="w">    </span><span class="nx">True</span>
+<span class="nx">dtype</span><span class="p">:</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Price&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">10</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 0</strong></p>
-<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+<p><strong>Score: 5</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a>
 
 </p>
 

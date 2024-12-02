@@ -1,9 +1,9 @@
 ---
 title: Cricket-Score-Poc
-date: 2024-11-28
+date: 2024-12-02
 author: Your Name
-cell_count: 54
-score: 50
+cell_count: 61
+score: 60
 ---
 
 ```python
@@ -738,6 +738,7 @@ asyncio.run(main())
 ```python
 import random
 import asyncio
+import nest_asyncio
 ```
 
 
@@ -791,7 +792,25 @@ llm_chain = LLMChain(
 
 
 ```python
+
+def get_magic_commentary(run):
+    return llm_chain.run(run = run)
+def get_random_number(minimum = 0, maximum = 6):
+    return random.randint(minimum, maximum)
+
+def get_random_run():
+    r_run = get_random_number(0, 6)
+
+    if r_run == 5:
+        return 4
+
+    return r_run
+```
+
+
+```python
 # Asynchronous function to simulate the innings and commentary
+total_score_first_innings = 0
 async def first_innings():
     over_count = 2
     current_over_balls = 6
@@ -799,10 +818,13 @@ async def first_innings():
     # Initialize two batsmen (start with batsman 1)
     batsmen = ["Dhoni", "Kohli"]
     current_batsman_index = 0  # Start with the first batsman
-
+    global total_score_first_innings
+    
     for current_over in range(over_count):
         log_content = f'\nPlaying: over {current_over + 1}'
         yield f"{log_content}"
+
+        total_score_per_over = 0
 
         for current_ball in range(current_over_balls):
             current_ball += 1
@@ -810,8 +832,12 @@ async def first_innings():
             # Get the current batsman
             current_batsman = batsmen[current_batsman_index]
 
+    
             # Generate a random run
             c_run = get_random_run()
+
+            total_score_per_over += c_run
+            
 
             # If the run is odd, switch the batsman
             if c_run % 2 != 0:
@@ -821,8 +847,9 @@ async def first_innings():
             magic_commentary = get_magic_commentary(c_run)
 
             # Format the ball commentary
-            ball_commentary = f'[{current_over + 1}.{current_ball}]: {current_batsman} scored: {c_run}   {magic_commentary}'
+            ball_commentary = f'[{current_over}.{current_ball}]: {current_batsman} scored: {c_run}   {magic_commentary}'
 
+            
             # Yield the ball commentary
             yield f"{ball_commentary}"
 
@@ -831,16 +858,21 @@ async def first_innings():
 
         # Wait for a short time before the next over (simulate break between overs)
             await asyncio.sleep(0.2)
+        total_score_first_innings += total_score_per_over
+    print (f'total score of first innings: {total_score_first_innings}')
     print("The first innings is done")
-   
-
-
 
 
 ```
 
 
 ```python
+
+```
+
+
+```python
+total_score_second_innings = 0
 async def second_innings():
     over_count = 2
     current_over_balls = 6
@@ -849,9 +881,13 @@ async def second_innings():
     batsmen = ["Ben Stokes", "Buttler"]
     current_batsman_index = 0  # Start with the first batsman
 
+    global total_score_second_innings
+
     for current_over in range(over_count):
         log_content = f'\nPlaying: over {current_over + 1}'
         yield f"{log_content}"
+
+        total_score_per_over = 0
 
         for current_ball in range(current_over_balls):
             current_ball += 1
@@ -862,6 +898,8 @@ async def second_innings():
             # Generate a random run
             c_run = get_random_run()
 
+            total_score_per_over += c_run
+
             # If the run is odd, switch the batsman
             if c_run % 2 != 0:
                 current_batsman_index = 1 - current_batsman_index  # Toggle between 0 and 1
@@ -870,7 +908,7 @@ async def second_innings():
             magic_commentary = get_magic_commentary(c_run)
 
             # Format the ball commentary
-            ball_commentary = f'[{current_over + 1}.{current_ball}]: {current_batsman} scored: {c_run}   {magic_commentary}'
+            ball_commentary = f'[{current_over}.{current_ball}]: {current_batsman} scored: {c_run}   {magic_commentary}'
 
             # Yield the ball commentary
             yield f"{ball_commentary}"
@@ -880,62 +918,98 @@ async def second_innings():
 
         # Wait for a short time before the next over (simulate break between overs)
         await asyncio.sleep(0.2)
+        total_score_second_innings += total_score_per_over
+        
+    print(f'total score of second innings: {total_score_second_innings}')
     print("The second innings is done")  
-
-
+    
+    if total_score_first_innings == 0:
+        print("The match is started")
+    elif total_score_first_innings > total_score_second_innings:
+        print("India won the match")
+    else:
+        print("England won the match")
+    
+    
 
 
 ```
 
 
 ```python
-# Main function to run the simulation
+
+    
+```
+
+
+```python
+nest_asyncio.apply()
+```
+
+
+```python
 async def main():
     async for result in first_innings():
         print(result)
     async for result in second_innings():
         print(result)
-  
 
-# Run the main function asynchronously
 asyncio.run(main())
 ```
 
     
     Playing: over 1
-    [1.1]: Dhoni scored: 4    A well-timed drive finds the gap as the fielder watches in dismay. Four runs on the card.
-    [1.2]: Dhoni scored: 1    Single down to long-on, neatly executed.
-    [1.3]: Kohli scored: 1    Single down to long-on, clean hit off the middle of the bat.
-    [1.4]: Dhoni scored: 1    Single down to third man, neatly placed by the batsman. Clean hitting on display.
-    [1.5]: Kohli scored: 0    Slippery conditions as another delivery goes straight to the fielder, no runs added.
-    [1.6]: Kohli scored: 1    Single steered past point, easy pickings for the runner at the non-striker's end.
+    [0.1]: Dhoni scored: 1    Easy pickings off the pads, no chance for the keeper.
+    [0.2]: Kohli scored: 3    Three runs scampered through a mix-up, neatly executed under pressure.
+    [0.3]: Dhoni scored: 6    Six off the over! Sweeper cover boundary is alive today.
+    [0.4]: Dhoni scored: 3    Three runs scampered through a misfield off the full toss, fielders need to hold their catches today!
+    [0.5]: Kohli scored: 0    A measured delivery finds the mark, no runs added. Pitch holding firm.
+    [0.6]: Kohli scored: 1    Single down to long-on, neatly executed by the batsman.
     
     Playing: over 2
-    [2.1]: Dhoni scored: 4    Four! Beautifully timed drive finds the boundary ropes. Clean hit!
-    [2.2]: Dhoni scored: 3    Easy pickings for the batsman, straight down the ground.
-    [2.3]: Kohli scored: 4    Four! Cleanly dispatched to the boundary ropes, no need for any extra effort.
-    [2.4]: Kohli scored: 3    Three runs off the over, no boundary hit this time.
-    [2.5]: Dhoni scored: 4    Four! Cleanly dispatched over the ropes, that one. Superb strike!
-    [2.6]: Dhoni scored: 4    Four! Beauty finds its way through the gap, no chance for the fielder there.
+    [1.1]: Dhoni scored: 1    Single taken with a well-timed drive down third man, fielders hot on the heels but just not able to cut it off.
+    [1.2]: Kohli scored: 0    Dot delivery! Batsman plays it defensively, no runs added. Fielders maintain their positions.
+    [1.3]: Kohli scored: 3    Three runs scampered through an errant throw at midwicket.
+    [1.4]: Dhoni scored: 4    Another boundary from the bat; clean hit finds the ropes yet again.
+    [1.5]: Dhoni scored: 4    Four! Beautifully timed, a boundary to beat the field.
+    [1.6]: Dhoni scored: 3    Triple! Well-timed drive finds gap in the field, three runs added.
+    total score of first innings: 29
     The first innings is done
     
     Playing: over 1
-    [1.1]: Ben Stokes scored: 4    Four! Cleanly struck through the covers, races away to the boundary.
-    [1.2]: Ben Stokes scored: 1    Easy pick-up and convert, straightforward running between the wickets.
-    [1.3]: Buttler scored: 0    Dot ball! Bowler maintains the pressure on the batsman.
-    [1.4]: Buttler scored: 4    A lofted drive finds the gap, four runs added to the total.
-    [1.5]: Buttler scored: 2    A well-timed drive finds the gap, two runs added to the tally.
-    [1.6]: Buttler scored: 4    Four! A well-timed boundary off the back foot, the fielder in the deep has no chance.
+    [0.1]: Ben Stokes scored: 4    Four! Cleanly dispatched to the ropes, a treat for the spectators.
+    [0.2]: Ben Stokes scored: 6    Six! Cleanly dispatched over the ropes for maximum impact. A delightful stroke from the middle!
+    [0.3]: Ben Stokes scored: 6    Six over deep mid-wicket! Clean strike from the batsman.
+    [0.4]: Ben Stokes scored: 0    Dot ball! Batsman playing defensively, bowler keeping things tight.
+    [0.5]: Ben Stokes scored: 3    Three runs scampered through a mix-up before the throw finds the non-striker short, narrowly avoiding a run out.
+    [0.6]: Buttler scored: 6    Six! Cleanly dispatched over the boundary rope, that one.
     
     Playing: over 2
-    [2.1]: Buttler scored: 1    Single converts into a quick two as fielder misses the throw at the non-striker's end. Exciting stuff!
-    [2.2]: Ben Stokes scored: 6    Six! Brilliantly dispatched over the ropes, that one. Clean hitting on show!
-    [2.3]: Ben Stokes scored: 6    Six! Clean hit over mid-wicket, no chance for the fielder.
-    [2.4]: Ben Stokes scored: 0    A dot ball from the pacemaker, maintaining pressure in this tense encounter.
-    [2.5]: Ben Stokes scored: 1    Easy pick-up and deposit; no fuss, just one more to the tally.
-    [2.6]: Buttler scored: 0    A dot ball from Smith, tight bowling maintains pressure.
+    [1.1]: Buttler scored: 4    Cleanly timed through covers for four; perfect placement meets power.
+    [1.2]: Buttler scored: 4    A well-timed drive finds the gap, four runs on offer.
+    [1.3]: Buttler scored: 4    Four! Cleanly dispatched over mid-wicket, that one. No fielder in sight.
+    [1.4]: Buttler scored: 3    Three runs scampered through a mix-up on the leg side.
+    [1.5]: Ben Stokes scored: 6    Six! Cleanly dispatched over the rope for maximum points.
+    [1.6]: Ben Stokes scored: 0    A perfectly placed yorker, just missing the tail-end, as it finds its mark on the stumps. Near miss!
+    total score of second innings: 46
     The second innings is done
+    England won the match
 
+
+
+```python
+
+```
+
+
+```python
+
+```
+
+
+```python
+
+```
 
 
 ```python
@@ -944,4 +1018,4 @@ asyncio.run(main())
 
 
 ---
-**Score: 50**
+**Score: 60**
