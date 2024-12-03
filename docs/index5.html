@@ -47,8 +47,245 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/first-three-characters.html"><h3 class="article-title">First-Three-Characters</h3></a>
+<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Extract the first three characters of each Food_Name.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span> <span class="s1">&#39;Food_Name&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span>
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Food_ID</th>
+      <th>Food_Name …</th></tr></thead></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/first-three-characters.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/food-analysis.html"><h3 class="article-title">Food-Analysis</h3></a>
+<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span> <span class="s1">&#39;food.csv&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Food_ID</th>
+      <th>Food_Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Calories</th>
+      <th>Available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Pizza</td>
+      <td>Fast Food</td>
+      <td>8.99</td>
+      <td>300</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Burger …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/food-analysis.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/food-items.html"><h3 class="article-title">Food-Items</h3></a>
+<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Count the number of food items available (Available = &quot;Yes&quot;) in each Category.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span><span class="s1">&#39;food.csv&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span>
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Food_ID</th>
+      <th>Food_Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Calories</th>
+      <th>Available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1 …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/food-items.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/food-unique.html"><h3 class="article-title">Food Unique</h3></a>
+<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span> <span class="s1">&#39;food.csv&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">Category</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0</span><span class="w">    </span><span class="n">Fast</span><span class="w"> </span><span class="n">Food</span>
+<span class="mf">1</span><span class="w">    </span><span class="n">Fast</span><span class="w"> </span><span class="n">Food</span>
+<span class="mf">2</span><span class="w">      </span><span class="n">Italian</span>
+<span class="mf">3</span><span class="w">     </span><span class="n">Japanese</span>
+<span class="mf">4</span><span class="w">      </span><span class="n">Mexican</span>
+<span class="mf">5</span><span class="w">      </span><span class="n">Healthy</span>
+<span class="mf">6</span><span class="w">        </span><span class="n">Asian</span>
+<span class="mf">7</span><span class="w">      </span><span class="n">Dessert</span>
+<span class="mf">8</span><span class="w">        </span><span class="n">Grill</span>
+<span class="mf">9</span><span class="w">      </span><span class="n">Healthy</span>
+<span class="n">Name</span><span class="p">:</span><span class="w"> </span><span class="n">Category</span><span class="p">,</span><span class="w"> </span><span class="n">dtype</span><span class="p">:</span><span class="w"> </span><span class="n">object</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/food-unique.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/gnb.html"><h3 class="article-title">Gnb</h3></a>
-<h6 class="subheader" title="2024-12-02T00:00:00-05:00">Mon 02 December 2024
+<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
 </h6>
 
 
@@ -83,7 +320,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/greater-than.html"><h3 class="article-title">Greater-Than</h3></a>
-<h6 class="subheader" title="2024-12-02T00:00:00-05:00">Mon 02 December 2024
+<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
 </h6>
 
 
@@ -154,7 +391,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/highest-calories-per-dollar.html"><h3 class="article-title">Highest Calories-Per-Dollar</h3></a>
-<h6 class="subheader" title="2024-12-02T00:00:00-05:00">Mon 02 December 2024
+<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
 </h6>
 
 
@@ -199,7 +436,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/histogram-calories.html"><h3 class="article-title">Histogram-Calories</h3></a>
-<h6 class="subheader" title="2024-12-02T00:00:00-05:00">Mon 02 December 2024
+<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
 </h6>
 
 
@@ -256,7 +493,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/langchain-basics.html"><h3 class="article-title">Langchain-Basics</h3></a>
-<h6 class="subheader" title="2024-12-02T00:00:00-05:00">Mon 02 December 2024
+<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
 </h6>
 
 
@@ -298,7 +535,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/leap-year.html"><h3 class="article-title">Leap-Year</h3></a>
-<h6 class="subheader" title="2024-12-02T00:00:00-05:00">Mon 02 December 2024
+<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
 </h6>
 
 
@@ -322,219 +559,9 @@ Prints "Leap Year" or "Not a Leap Year."</p>
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/lessthan.html"><h3 class="article-title">Lessthan</h3></a>
-<h6 class="subheader" title="2024-12-02T00:00:00-05:00">Mon 02 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span><span class="s1">&#39;food.csv&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Calories&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">]</span> <span class="p">[[</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">,</span><span class="s1">&#39;Calories&#39;</span><span class="p">]]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span>
-</code></pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Food_Name</th>
-      <th>Calories</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>5</th>
-      <td>Salad</td>
-      <td>150</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Soup</td>
-      <td>100</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/lessthan.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/loc-command.html"><h3 class="article-title">Loc-Command</h3></a>
-<h6 class="subheader" title="2024-12-02T00:00:00-05:00">Mon 02 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Filter all food items with prices between $5 and $10 (inclusive).</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;Food_Name&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span>
-</code></pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align …</style></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-7.html">Assignment-7</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/loc-command.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/lower-case-pd.html"><h3 class="article-title">Lower-Case-Pd</h3></a>
-<h6 class="subheader" title="2024-12-02T00:00:00-05:00">Mon 02 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Assignment 8: String Operations</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Convert all Food_Name values to lowercase.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span> <span class="s1">&#39;Food_Name&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span>
-</code></pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right …</style></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/lower-case-pd.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/magic-attr.html"><h3 class="article-title">Magic-Attr</h3></a>
-<h6 class="subheader" title="2024-12-02T00:00:00-05:00">Mon 02 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">magicattr</span> <span class="kn">import</span> <span class="n">get</span><span class="p">,</span> <span class="nb">set</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">magicattr</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">magicattr</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.1.6</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Address</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">country</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">city</span> <span class="o">=</span> <span class="n">city</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">country</span> <span class="o">=</span> <span class="n">country</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">address</span><span class="p">):</span>
-        <span class="bp">self …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/magic-attr.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 5 of 11</h6>
+<h6 class="subheader">Page 5 of 12</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/index4.html">&laquo; Prev</a>
@@ -575,6 +602,7 @@ Prints "Leap Year" or "Not a Leap Year."</p>
             <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
    
         </ul>

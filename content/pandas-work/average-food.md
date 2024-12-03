@@ -1,6 +1,6 @@
 ---
 title: Average-Food
-date: 2024-12-02
+date: 2024-12-03
 author: Your Name
 cell_count: 6
 score: 5

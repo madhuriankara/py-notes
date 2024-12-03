@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Confidence-Interval</title>
+
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://madhuriankara.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://madhuriankara.github.io/pynotes">Py Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/confidence-interval.html" rel="bookmark"
+        title="Permalink to Confidence-Interval">Confidence-Interval</a></h3>
+    </header>
+
+<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">days_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">len</span><span class="p">(</span><span class="n">days_list</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">learners_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">score_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="mi">535</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">510</span><span class="p">,</span><span class="mi">580</span><span class="p">,</span><span class="mi">205</span><span class="p">,</span>
+    <span class="mi">880</span><span class="p">,</span><span class="mi">490</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">625</span><span class="p">,</span><span class="mi">205</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;days&#39;</span><span class="p">:</span>  <span class="n">days_list</span><span class="p">,</span>
+    <span class="s1">&#39;learners&#39;</span><span class="p">:</span> <span class="n">learners_list</span><span class="p">,</span>
+    <span class="s1">&#39;score&#39;</span> <span class="p">:</span> <span class="n">score_list</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df_wide</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span><span class="s1">&#39;days&#39;</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;learners&#39;</span><span class="p">,</span> <span class="n">values</span> <span class="o">=</span> <span class="s1">&#39;score&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">std_dev</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df_wide</span><span class="p">[</span><span class="s1">&#39;score_upper&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_wide</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">std_dev</span>
+<span class="n">df_wide</span><span class="p">[</span><span class="s1">&#39;score_lower&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_wide</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">std_dev</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">---------------------------------------------------------------------------</span>
+
+<span class="n">KeyError</span><span class="w">                                  </span><span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="k">last</span><span class="p">)</span>
+
+<span class="k">File</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">indexes</span><span class="o">/</span><span class="n">base</span><span class="p">.</span><span class="nl">py</span><span class="p">:</span><span class="mi">3805</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">Index</span><span class="p">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="k">key</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">3804</span><span class="w"> </span><span class="k">try</span><span class="err">:</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">3805</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">_engine</span><span class="p">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">3806</span><span class="w"> </span><span class="ow">except</span><span class="w"> </span><span class="n">KeyError</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nl">err</span><span class="p">:</span>
+
+
+<span class="k">File</span><span class="w"> </span><span class="k">index</span><span class="p">.</span><span class="nl">pyx</span><span class="p">:</span><span class="mi">167</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">pandas</span><span class="p">.</span><span class="n">_libs</span><span class="p">.</span><span class="k">index</span><span class="p">.</span><span class="n">IndexEngine</span><span class="p">.</span><span class="n">get_loc</span><span class="p">()</span>
+
+
+<span class="k">File</span><span class="w"> </span><span class="k">index</span><span class="p">.</span><span class="nl">pyx</span><span class="p">:</span><span class="mi">196</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">pandas</span><span class="p">.</span><span class="n">_libs</span><span class="p">.</span><span class="k">index</span><span class="p">.</span><span class="n">IndexEngine</span><span class="p">.</span><span class="n">get_loc</span><span class="p">()</span>
+
+
+<span class="k">File</span><span class="w"> </span><span class="n">pandas</span><span class="o">/</span><span class="n">_libs</span><span class="o">/</span><span class="n">hashtable_class_helper</span><span class="p">.</span><span class="nl">pxi</span><span class="p">:</span><span class="mi">7081</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">pandas</span><span class="p">.</span><span class="n">_libs</span><span class="p">.</span><span class="n">hashtable</span><span class="p">.</span><span class="n">PyObjectHashTable</span><span class="p">.</span><span class="n">get_item</span><span class="p">()</span>
+
+
+<span class="k">File</span><span class="w"> </span><span class="n">pandas</span><span class="o">/</span><span class="n">_libs</span><span class="o">/</span><span class="n">hashtable_class_helper</span><span class="p">.</span><span class="nl">pxi</span><span class="p">:</span><span class="mi">7089</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">pandas</span><span class="p">.</span><span class="n">_libs</span><span class="p">.</span><span class="n">hashtable</span><span class="p">.</span><span class="n">PyObjectHashTable</span><span class="p">.</span><span class="n">get_item</span><span class="p">()</span>
+
+
+<span class="nl">KeyError</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;score&#39;</span>
+
+
+<span class="n">The</span><span class="w"> </span><span class="n">above</span><span class="w"> </span><span class="k">exception</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">direct</span><span class="w"> </span><span class="n">cause</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="k">exception</span><span class="err">:</span>
+
+
+<span class="n">KeyError</span><span class="w">                                  </span><span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="k">last</span><span class="p">)</span>
+
+<span class="n">Cell</span><span class="w"> </span><span class="ow">In</span><span class="o">[</span><span class="n">18</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">----&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">df_wide</span><span class="o">[</span><span class="n">&#39;score_upper&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_wide</span><span class="o">[</span><span class="n">&#39;score&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std_dev</span>
+<span class="w">      </span><span class="mi">2</span><span class="w"> </span><span class="n">df_wide</span><span class="o">[</span><span class="n">&#39;score_lower&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df_wide</span><span class="o">[</span><span class="n">&#39;score&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">std_dev</span>
+
+
+<span class="k">File</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">frame</span><span class="p">.</span><span class="nl">py</span><span class="p">:</span><span class="mi">4102</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">DataFrame</span><span class="p">.</span><span class="n">__getitem__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="k">key</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">4100</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">columns</span><span class="p">.</span><span class="n">nlevels</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span>
+<span class="w">   </span><span class="mi">4101</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="k">key</span><span class="p">)</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">4102</span><span class="w"> </span><span class="n">indexer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">columns</span><span class="p">.</span><span class="n">get_loc</span><span class="p">(</span><span class="k">key</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">4103</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">)</span><span class="err">:</span>
+<span class="w">   </span><span class="mi">4104</span><span class="w">     </span><span class="n">indexer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">indexer</span><span class="o">]</span>
+
+
+<span class="k">File</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">indexes</span><span class="o">/</span><span class="n">base</span><span class="p">.</span><span class="nl">py</span><span class="p">:</span><span class="mi">3812</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">Index</span><span class="p">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="k">key</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">3807</span><span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="n">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span><span class="w"> </span><span class="n">slice</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="p">(</span>
+<span class="w">   </span><span class="mi">3808</span><span class="w">         </span><span class="n">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span><span class="w"> </span><span class="n">abc</span><span class="p">.</span><span class="n">Iterable</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">3809</span><span class="w">         </span><span class="ow">and</span><span class="w"> </span><span class="ow">any</span><span class="p">(</span><span class="n">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">slice</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">casted_key</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">3810</span><span class="w">     </span><span class="p">)</span><span class="err">:</span>
+<span class="w">   </span><span class="mi">3811</span><span class="w">         </span><span class="n">raise</span><span class="w"> </span><span class="n">InvalidIndexError</span><span class="p">(</span><span class="k">key</span><span class="p">)</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">3812</span><span class="w">     </span><span class="n">raise</span><span class="w"> </span><span class="n">KeyError</span><span class="p">(</span><span class="k">key</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">err</span>
+<span class="w">   </span><span class="mi">3813</span><span class="w"> </span><span class="ow">except</span><span class="w"> </span><span class="nl">TypeError</span><span class="p">:</span>
+<span class="w">   </span><span class="mi">3814</span><span class="w">     </span><span class="err">#</span><span class="w"> </span><span class="k">If</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">listlike</span><span class="w"> </span><span class="k">key</span><span class="p">,</span><span class="w"> </span><span class="n">_check_indexing_error</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">raise</span>
+<span class="w">   </span><span class="mi">3815</span><span class="w">     </span><span class="err">#</span><span class="w">  </span><span class="n">InvalidIndexError</span><span class="p">.</span><span class="w"> </span><span class="n">Otherwise</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">fall</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">re</span><span class="o">-</span><span class="n">raise</span>
+<span class="w">   </span><span class="mi">3816</span><span class="w">     </span><span class="err">#</span><span class="w">  </span><span class="n">the</span><span class="w"> </span><span class="n">TypeError</span><span class="p">.</span>
+<span class="w">   </span><span class="mi">3817</span><span class="w">     </span><span class="n">self</span><span class="p">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="k">key</span><span class="p">)</span>
+
+
+<span class="nl">KeyError</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;score&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://madhuriankara.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-12.html">Assignment-12</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-14.html">Assignment-14</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-3.html">Assignment-3</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-5.html">Assignment-5</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-7.html">Assignment-7</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-9.html">Assignment-9</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Py Notes by Madhuri Ankaraboyina</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
