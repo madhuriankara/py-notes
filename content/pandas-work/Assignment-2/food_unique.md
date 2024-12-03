@@ -1,5 +1,5 @@
 ---
-title: Unique-Food
+title: Food Unique
 date: 2024-12-02
 author: Your Name
 cell_count: 5

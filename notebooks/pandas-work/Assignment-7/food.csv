@@ -1,0 +1,11 @@
+Food_ID,Food_Name,Category,Price,Calories,Available
+1,Pizza,Fast Food,8.99,300,Yes
+2,Burger,Fast Food,5.49,450,Yes
+3,Pasta,Italian,7.99,400,No
+4,Sushi,Japanese,12.99,250,Yes
+5,Tacos,Mexican,6.99,200,No
+6,Salad,Healthy,4.99,150,Yes
+7,Fried Rice,Asian,5.99,350,Yes
+8,Ice Cream,Dessert,3.99,200,Yes
+9,Steak,Grill,14.99,700,No
+10,Soup,Healthy,3.49,100,Yes
