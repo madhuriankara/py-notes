@@ -1,6 +1,6 @@
 ---
 title: Swarm-Plot-Seaborn-Copy1
-date: 2024-12-03
+date: 2024-12-05
 author: Your Name
 cell_count: 14
 score: 10
@@ -89,15 +89,13 @@ df_wide['score_category'] = df_wide['score'].apply(categorize_score)
 plt.figure(figsize=(10, 6))
 sns.barplot(data = df_wide, x = "days",y = "score_category", hue ="learners",estimator=len)
 plt.title("Count of Days in Each Score Category for Each Learner")
-plt.xlabel("Learners")
-plt.ylabel("Count of Days")
 plt.legend(title="Score Category", bbox_to_anchor=(1.05, 1), loc='upper left')
 ```
 
 
 
 
-    <matplotlib.legend.Legend at 0x161e08bf0>
+    <matplotlib.legend.Legend at 0x16385a0c0>
 
 
 

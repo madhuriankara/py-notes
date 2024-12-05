@@ -47,7 +47,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/age-calculator.html"><h3 class="article-title">Age-Calculator</h3></a>
-<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
+<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
 </h6>
 
 
@@ -92,7 +92,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/enumerate-args.html"><h3 class="article-title">Enumerate-Args</h3></a>
-<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
+<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
 </h6>
 
 
@@ -128,8 +128,94 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/hexvalidator.html"><h3 class="article-title">Hexvalidator</h3></a>
+<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">webcolors</span>
+
+<span class="k">def</span> <span class="nf">is_valid_hex_color</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">webcolors</span><span class="o">.</span><span class="n">hex_to_rgb</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+<span class="c1"># Examples</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#FFF&quot;</span><span class="p">))</span>  <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#123ABC&quot;</span><span class="p">))</span>  <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#123ABCG&quot;</span><span class="p">))</span>  <span class="c1"># False</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>True
+True
+False
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/hexvalidator.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/postal-code.html"><h3 class="article-title">Postal-Code</h3></a>
+<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">postal_code</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">Zipcode_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is an Indian code&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is an Canadian postalcode&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">postal_code</span><span class="p">(</span><span class="s2">&quot;M1E5E6&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>This is an Canadian postalcode
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">postal_code</span><span class="p">(</span><span class="s2">&quot;1234567&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>This is an Indian code
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/postal-code.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/time.html"><h3 class="article-title">%%Time</h3></a>
-<h6 class="subheader" title="2024-12-03T00:00:00-05:00">Tue 03 December 2024
+<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
 </h6>
 
 
@@ -188,7 +274,6 @@ Wall time: 95.2 ms
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-7.html">Assignment-7</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a></li>
-            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-9.html">Assignment-9</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>

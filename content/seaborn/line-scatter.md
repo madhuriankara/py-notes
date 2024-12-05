@@ -1,6 +1,6 @@
 ---
 title: Line-Scatter
-date: 2024-12-03
+date: 2024-12-05
 author: Your Name
 cell_count: 10
 score: 10
@@ -65,8 +65,8 @@ df_wide = pd.DataFrame(data)
 
 
 ```python
-sns.lineplot(data = df_wide, x = "learners", y = "score",hue="learners", linestyle="-", linewidth=2,)
-sns.scatterplot(data = df_wide, x = "learners", y = "score",hue="learners", style="learners")
+sns.lineplot(data = df_wide, x = "learners", y = "score",hue="learners", linestyle="dashed", linewidth=2,)
+sns.scatterplot(data = df_wide, x = "learners", y = "score",hue="learners",style="learners")
 plt.xlabel("Learners")
 plt.ylabel("Score")
 plt.show()

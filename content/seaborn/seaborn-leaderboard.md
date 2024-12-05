@@ -1,13 +1,14 @@
 ---
 title: Seaborn-Leaderboard
-date: 2024-12-03
+date: 2024-12-05
 author: Your Name
-cell_count: 16
+cell_count: 17
 score: 15
 ---
 
 ```python
 import pandas as pd
+import matplotlib.pyplot as plt
 ```
 
 
@@ -305,19 +306,58 @@ import seaborn as sns
 
 
 ```python
-sns.lineplot(data = df_wide)
+df_wide = pd.DataFrame(data)
 ```
 
 
+```python
+fig, ax = plt.subplots()
+sns.lineplot(data = df_wide, x = "days",y="score",hue = "learners").set(title = "LeaderBoard")
+sns.distplot(data, ax = ax)
+ax.set_xlim(1, 70) 
+plt.show()
+```
+
+    /var/folders/26/1_zstvd1579g9j700z2jnmp40000gn/T/ipykernel_54999/242401477.py:3: UserWarning: 
+    
+    `distplot` is a deprecated function and will be removed in seaborn v0.14.0.
+    
+    Please adapt your code to use either `displot` (a figure-level function with
+    similar flexibility) or `histplot` (an axes-level function for histograms).
+    
+    For a guide to updating your code to use the new functions, please see
+    https://gist.github.com/mwaskom/de44147ed2974457ad6372750bbe5751
+    
+      sns.distplot(data, ax = ax)
 
 
-    <Axes: xlabel='days'>
 
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    Cell In[59], line 3
+          1 fig, ax = plt.subplots()
+          2 sns.lineplot(data = df_wide, x = "days",y="score",hue = "learners").set(title = "LeaderBoard")
+    ----> 3 sns.distplot(data, ax = ax)
+          4 ax.set_xlim(1, 70) 
+          5 plt.show()
+
+
+    File /opt/homebrew/Caskroom/miniconda/base/envs/py312/lib/python3.12/site-packages/seaborn/distributions.py:2443, in distplot(a, bins, hist, kde, rug, fit, hist_kws, kde_kws, rug_kws, fit_kws, color, vertical, norm_hist, axlabel, label, ax, x)
+       2440     a = x
+       2442 # Make a a 1-d float array
+    -> 2443 a = np.asarray(a, float)
+       2444 if a.ndim > 1:
+       2445     a = a.squeeze()
+
+
+    TypeError: float() argument must be a string or a real number, not 'dict'
 
 
 
     
-![png](seaborn-leaderboard_files/seaborn-leaderboard_14_1.png)
+![png](seaborn-leaderboard_files/seaborn-leaderboard_15_2.png)
     
 
 

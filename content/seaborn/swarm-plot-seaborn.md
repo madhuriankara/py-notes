@@ -1,6 +1,6 @@
 ---
 title: Swarm-Plot-Seaborn
-date: 2024-12-03
+date: 2024-12-05
 author: Your Name
 cell_count: 10
 score: 10
@@ -66,8 +66,6 @@ df_wide = pd.DataFrame(data)
 
 ```python
 sns.swarmplot(data = df_wide, x = "days", y = "score",hue="learners")
-plt.xlabel("Learners")
-plt.ylabel("Score")
 plt.show()
 ```
 

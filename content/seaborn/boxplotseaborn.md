@@ -1,6 +1,6 @@
 ---
 title: Boxplotseaborn
-date: 2024-12-03
+date: 2024-12-05
 author: Your Name
 cell_count: 12
 score: 10
@@ -69,16 +69,14 @@ df_wide = pd.DataFrame(data)
 
 
 ```python
-sns.boxplot(data=df_wide, x="learners", y="score")
-plt.title("Score Distribution for Each Learner")
-plt.xlabel("Learners")
-plt.ylabel("Scores")
+sns.boxplot(data=df_wide, x="learners", y="score").set(title = "Score Distribution")
+
 ```
 
 
 
 
-    Text(0, 0.5, 'Scores')
+    [Text(0.5, 1.0, 'Score Distribution')]
 
 
 

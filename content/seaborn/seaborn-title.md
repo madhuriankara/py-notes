@@ -1,8 +1,8 @@
 ---
 title: Seaborn-Title
-date: 2024-12-03
+date: 2024-12-05
 author: Your Name
-cell_count: 20
+cell_count: 21
 score: 20
 ---
 
@@ -318,7 +318,7 @@ import seaborn as sns
 
 ```python
 sns.lineplot(data = df_wide).set(title= "Learners Leaderboard")
-bar = sns.barplot(data, x = "days", y ="score")
+bar = sns.barplot(data, x = "days", y ="score",color = "green")
 bar.set(xlabel = "days", ylabel = "score")
 bar
 plt.legend(labels = ['Learners','Days','Score'])
@@ -327,7 +327,7 @@ plt.legend(labels = ['Learners','Days','Score'])
 
 
 
-    <matplotlib.legend.Legend at 0x2809441a0>
+    <matplotlib.legend.Legend at 0x147592780>
 
 
 
@@ -339,7 +339,12 @@ plt.legend(labels = ['Learners','Days','Score'])
 
 
 ```python
-import matplotlib.pyplot as plt
+
+```
+
+
+```python
+
 ```
 
 
