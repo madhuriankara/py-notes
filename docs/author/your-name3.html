@@ -47,12 +47,12 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/contains-letter.html"><h3 class="article-title">Contains-Letter</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/calories-dollar.html"><h3 class="article-title">Calories-Dollar</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Find all food items where the Category column contains the letter &quot;e&quot;.</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#Add a new column that calculates Calories per Dollar (Calories / Price).</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -64,10 +64,13 @@
 <div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="n">ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ratings.csv&#39;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span> <span class="s1">&#39;Food_Name&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ratings</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="n">df</span>
@@ -75,21 +78,13 @@
 
 <div>
 <style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th …</style></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a>
+    .dataframe …</style></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/contains-letter.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/calories-dollar.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -97,34 +92,38 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/cricket-2.html"><h3 class="article-title">Cricket-2</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/coin-toss.html"><h3 class="article-title">Coin-Toss</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">asyncio</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">langchain.llms</span> <span class="kn">import</span> <span class="n">Ollama</span>
-<span class="kn">from</span> <span class="nn">langchain.prompts</span> <span class="kn">import</span> <span class="n">PromptTemplate</span>
-<span class="kn">from</span> <span class="nn">langchain.chains</span> <span class="kn">import</span> <span class="n">LLMChain</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize all_walks</span>
+<span class="n">all_walks</span> <span class="o">=</span> <span class="p">[];</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Initialize the Ollama LLM with the Mistral model</span>
-<span class="n">llm</span> <span class="o">=</span> <span class="n">Ollama</span><span class="p">(</span>
-    <span class="n">model</span>       <span class="o">=</span> <span class="s2">&quot;mistral&quot;</span><span class="p">,</span>
-    <span class="n">base_url</span>    <span class="o">=</span> <span class="s2">&quot;http://localhost:11434&quot;</span>
-<span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">:</span>
 
-<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">26</span><span class="o">/</span><span class="mi">1</span><span class="n">_zstvd1579g9j700z2jnmp40000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_41177</span><span class="o">/</span><span class="mf">2325888272.</span><span class="n">py</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="n">LangChainDeprecationWarning</span><span class="p">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="err">`</span><span class="nc">Ollama</span><span class="err">`</span><span class="w"> </span><span class="n">was …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a>
+    <span class="c1"># Code from before</span>
+    <span class="n">random_walk</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">step</span> <span class="o">=</span> <span class="n">random_walk</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">dice</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">dice</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">step</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">step</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">dice</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">step</span> <span class="o">=</span> <span class="n">step</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/cricket-2.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/coin-toss.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -132,192 +131,8 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/cricket-score-poc.html"><h3 class="article-title">Cricket-Score-Poc</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="k">def</span> <span class="nf">get_random_number</span><span class="p">(</span><span class="n">minimum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">maximum</span> <span class="o">=</span> <span class="mi">6</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_random_run</span><span class="p">():</span>
-    <span class="n">r_run</span> <span class="o">=</span> <span class="n">get_random_number</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">r_run</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">4</span>
-
-    <span class="k">return</span> <span class="n">r_run</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#First over</span>
-<span class="n">current_over_balls</span>  <span class="o">=</span> <span class="mi">6</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">current_ball</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">current_over_balls</span><span class="p">):</span>
-
-    <span class="n">current_batsman</span> <span class="o">=</span> <span class="s2">&quot;Dhoni&quot;</span>
-
-    <span class="n">c_run</span> <span class="o">=</span> <span class="n">get_random_run</span><span class="p">()</span>
-
-    <span class="n">ball_commentary</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">current_ball</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">]: </span><span class="si">{</span><span class="n">current_batsman</span><span class="si">}</span><span class="s1"> scored: </span><span class="si">{</span><span class="n">c_run</span><span class="si">}</span><span class="s1">&#39;</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/cricket-score-poc.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/daily-logs.html"><h3 class="article-title">Daily-Logs</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">datetime</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span><span class="n">timedelta</span>
-<span class="kn">import</span> <span class="nn">os.path</span>
-<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">file_exists</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
-    <span class="n">file_valid</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
-    <span class="c1"># print (&quot;Name of the file: &quot;, file_valid.name)</span>
-    <span class="c1"># print (&quot;Closed or not : &quot;, file_valid.closed)</span>
-    <span class="c1"># print (&quot;Opening mode : &quot;, file_valid.mode)</span>
-    <span class="c1"># print(&quot;Current cursor position is : &quot; + str(file_valid.tell()))</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">file_valid</span><span class="o">.</span><span class="n">tell …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/daily-logs.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/dash-linechart.html"><h3 class="article-title">Dash-Linechart</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">dash</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">dash</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="mf">2.18</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">Flask</span><span class="o">&lt;</span><span class="mf">3.1</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">4</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">dash</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">3 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/dash-linechart.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/dashed-dotted.html"><h3 class="article-title">Dashed-Dotted</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">days_list</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span>
-<span class="p">]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">len</span><span class="p">(</span><span class="n">days_list</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">15</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">learners_list</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span>
-<span class="p">]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">score_list</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="mi">0 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/dashed-dotted.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/days-enum.html"><h3 class="article-title">Days-Enum</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span><span class="p">,</span> <span class="n">auto</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Define an enumeration for days of the week</span>
-<span class="k">class</span> <span class="nc">Weekday</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-    <span class="n">MONDAY</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">TUESDAY</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">WEDNESDAY</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">THURSDAY</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">FRIDAY</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">SATURDAY</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-    <span class="n">SUNDAY</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code> <span class="c1">#Function to check if a given day is a weekday or weekend</span>
-<span class="k">def</span> <span class="nf">is_weekend</span><span class="p">(</span><span class="n">day</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">day</span> <span class="ow">in</span> <span class="p">(</span><span class="n">Weekday</span><span class="o">.</span><span class="n">SATURDAY …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/days-enum.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/descending-order.html"><h3 class="article-title">Descending-Order</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/column-healthy.html"><h3 class="article-title">Column-Healthy</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
 </h6>
 
 
@@ -373,13 +188,13 @@
       <th>1</th>
       <td>2</td>
       <td>Burger</td>
-      <td>Fast Food …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-3.html">Assignment-3</a>
+      <td>Fast Food …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/descending-order.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/column-healthy.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -387,26 +202,44 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/divisibility.html"><h3 class="article-title">Divisibility</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/confidence-interval.html"><h3 class="article-title">Confidence-Interval</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
 </h6>
 
 
-<p>10
-Takes a number 
-Checks if it is divisible by both 5 and 3.
-Prints "Divisible by both" or "Not divisible by both."</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_divisibility</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39; The number </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> is divisible by 3 and 5&#39;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The number …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">days_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">len</span><span class="p">(</span><span class="n">days_list</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">learners_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">score_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">0 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/divisibility.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/confidence-interval.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -414,44 +247,217 @@ Prints "Divisible by both" or "Not divisible by both."</p>
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/dns.html"><h3 class="article-title">Dns</h3></a>
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/console-rich.html"><h3 class="article-title">Console-Rich</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Created on Nov 22, 2024</span>
-
-<span class="sd">Course work: </span>
-
-<span class="sd">@author: Madhuri Ankaraboyina</span>
-
-<span class="sd">Source:</span>
-<span class="sd">    http://www.pythonforbeginners.com/python/dns-lookup-python</span>
-<span class="sd">&#39;&#39;&#39;</span>
-
-<span class="c1"># Import necessary modules</span>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">rich</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="s1">&#39;\nCreated on Nov 22, 2024\n\nCourse work: \n\n@author: Madhuri Ankaraboyina\n\nSource:\n    http://www.pythonforbeginners.com/python/dns-lookup-python\n&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">addr1</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostbyname</span><span class="p">(</span><span class="s1">&#39;google.com …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+<div class="highlight"><pre><span></span><code><span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">rich</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">13.9.4</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">markdown</span><span class="o">-</span><span class="nx">it</span><span class="o">-</span><span class="nx">py</span><span class="o">&gt;=</span><span class="m m-Double">2.2.0</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">rich</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">3.0.0 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/dns.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/console-rich.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/contains-letter.html"><h3 class="article-title">Contains-Letter</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Find all food items where the Category column contains the letter &quot;e&quot;.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span> <span class="s1">&#39;Food_Name&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span>
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th …</style></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/contains-letter.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/cricket-2.html"><h3 class="article-title">Cricket-2</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">langchain.llms</span> <span class="kn">import</span> <span class="n">Ollama</span>
+<span class="kn">from</span> <span class="nn">langchain.prompts</span> <span class="kn">import</span> <span class="n">PromptTemplate</span>
+<span class="kn">from</span> <span class="nn">langchain.chains</span> <span class="kn">import</span> <span class="n">LLMChain</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize the Ollama LLM with the Mistral model</span>
+<span class="n">llm</span> <span class="o">=</span> <span class="n">Ollama</span><span class="p">(</span>
+    <span class="n">model</span>       <span class="o">=</span> <span class="s2">&quot;mistral&quot;</span><span class="p">,</span>
+    <span class="n">base_url</span>    <span class="o">=</span> <span class="s2">&quot;http://localhost:11434&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">26</span><span class="o">/</span><span class="mi">1</span><span class="n">_zstvd1579g9j700z2jnmp40000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_41177</span><span class="o">/</span><span class="mf">2325888272.</span><span class="n">py</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="n">LangChainDeprecationWarning</span><span class="p">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="err">`</span><span class="nc">Ollama</span><span class="err">`</span><span class="w"> </span><span class="n">was …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/cricket-2.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/cricket-score-poc.html"><h3 class="article-title">Cricket-Score-Poc</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">get_random_number</span><span class="p">(</span><span class="n">minimum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">maximum</span> <span class="o">=</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">minimum</span><span class="p">,</span> <span class="n">maximum</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_random_run</span><span class="p">():</span>
+    <span class="n">r_run</span> <span class="o">=</span> <span class="n">get_random_number</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">r_run</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">4</span>
+
+    <span class="k">return</span> <span class="n">r_run</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#First over</span>
+<span class="n">current_over_balls</span>  <span class="o">=</span> <span class="mi">6</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">current_ball</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">current_over_balls</span><span class="p">):</span>
+
+    <span class="n">current_batsman</span> <span class="o">=</span> <span class="s2">&quot;Dhoni&quot;</span>
+
+    <span class="n">c_run</span> <span class="o">=</span> <span class="n">get_random_run</span><span class="p">()</span>
+
+    <span class="n">ball_commentary</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">current_ball</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">]: </span><span class="si">{</span><span class="n">current_batsman</span><span class="si">}</span><span class="s1"> scored: </span><span class="si">{</span><span class="n">c_run</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/cricket-score-poc.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/daily-logs.html"><h3 class="article-title">Daily-Logs</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span><span class="n">timedelta</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">file_exists</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+    <span class="n">file_valid</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
+    <span class="c1"># print (&quot;Name of the file: &quot;, file_valid.name)</span>
+    <span class="c1"># print (&quot;Closed or not : &quot;, file_valid.closed)</span>
+    <span class="c1"># print (&quot;Opening mode : &quot;, file_valid.mode)</span>
+    <span class="c1"># print(&quot;Current cursor position is : &quot; + str(file_valid.tell()))</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">file_valid</span><span class="o">.</span><span class="n">tell …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/daily-logs.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/dash-linechart.html"><h3 class="article-title">Dash-Linechart</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">dash</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">dash</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="mf">2.18</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Requirement</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">satisfied</span><span class="p">:</span><span class="w"> </span><span class="n">Flask</span><span class="o">&lt;</span><span class="mf">3.1</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">4</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="n">dash</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">3 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/dash-linechart.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 3 of 12</h6>
+<h6 class="subheader">Page 3 of 14</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/author/your-name2.html">&laquo; Prev</a>
@@ -489,6 +495,7 @@ Prints "Divisible by both" or "Not divisible by both."</p>
             <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>

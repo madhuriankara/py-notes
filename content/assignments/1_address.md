@@ -1,6 +1,6 @@
 ---
 title: 1 Address
-date: 2024-12-05
+date: 2024-12-10
 author: Your Name
 cell_count: 12
 score: 10

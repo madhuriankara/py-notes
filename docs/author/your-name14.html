@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Py Notes - Your Name</title>
+
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://madhuriankara.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://madhuriankara.github.io/pynotes">Py Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/total-revenue.html"><h3 class="article-title">Total-Revenue</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Load the food_sales.csv data into another DataFrame.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span> <span class="s1">&#39;food.csv&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">food</span>
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Food_ID</th>
+      <th>Food_Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Calories</th>
+      <th>Available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Pizza</td>
+      <td>Fast Food</td>
+      <td>8 …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-5.html">Assignment-5</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/total-revenue.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/twitter-analysis.html"><h3 class="article-title">Twitter-Analysis</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">nltk</span><span class="p">;</span>
+<span class="kn">from</span> <span class="nn">nltk.probability</span> <span class="kn">import</span> <span class="n">FreqDist</span><span class="p">,</span> <span class="n">DictionaryProbDist</span><span class="p">,</span> <span class="n">ELEProbDist</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">pos_tweets</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;I love this car&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
+              <span class="p">(</span><span class="s1">&#39;This view is amazing&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
+              <span class="p">(</span><span class="s1">&#39;I feel great this morning&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
+              <span class="p">(</span><span class="s1">&#39;I am so excited about the concert&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
+              <span class="p">(</span><span class="s1">&#39;He is my best friend&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">)]</span>
+
+<span class="n">neg_tweets</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;I do not like this car&#39;</span><span class="p">,</span> <span class="s1">&#39;negative&#39;</span><span class="p">),</span>
+              <span class="p">(</span><span class="s1">&#39;This view …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/twitter-analysis.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/updated-row.html"><h3 class="article-title">Updated-Row</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span><span class="p">,</span> <span class="n">functions</span> <span class="k">as</span> <span class="n">fn</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>  <span class="c1"># Use your preferred database connector (e.g., psycopg2 for PostgreSQL)</span>
+
+<span class="c1"># Define the table</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
+
+<span class="c1"># Build a query to fetch updated rows based on an `updated_at` column</span>
+<span class="n">last_checked_time</span> <span class="o">=</span> <span class="s2">&quot;2024-11-01 00:00:00&quot;</span>
+<span class="n">query</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/updated-row.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/various.html"><h3 class="article-title">Various</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Reverse a string</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">rev_string</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rev_string</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>olleh
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">reverse_string</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">word</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">sentence</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">sentence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">reverse_string</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;dlrow olleH&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#2.4. Find the Largest Element in an Array</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_largest_number</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span><span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+<span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/various.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/violin-plot-seaborn.html"><h3 class="article-title">Violin-Plot-Seaborn</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">days_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">learners_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">score_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/violin-plot-seaborn.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/word-count.html"><h3 class="article-title">Word Count</h3></a>
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+<p>word count
+Nov 20 2024</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">word_count</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">word_list</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_count</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">))</span>  
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">2</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">word_count</span><span class="p">(</span><span class="s2">&quot;My name is Madhuri&quot;</span><span class="p">))</span>  
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">4</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">word_count</span><span class="p">(</span><span class="s2">&quot;List all the values that are between 2 cities&quot;</span><span class="p">))</span>  
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">9</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/word-count.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 14 of 14</h6>
+
+<p>
+            <a href="https://madhuriankara.github.io/pynotes/author/your-name13.html">&laquo; Prev</a>
+
+</p>
+</div>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://madhuriankara.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-12.html">Assignment-12</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-14.html">Assignment-14</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-3.html">Assignment-3</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-5.html">Assignment-5</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-7.html">Assignment-7</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Py Notes by Madhuri Ankaraboyina</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

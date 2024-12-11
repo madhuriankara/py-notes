@@ -1,6 +1,6 @@
 ---
 title: Loc-Command
-date: 2024-12-05
+date: 2024-12-10
 author: Your Name
 cell_count: 26
 score: 25

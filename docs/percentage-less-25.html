@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Percentage-Less-25</title>
+
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://madhuriankara.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://madhuriankara.github.io/pynotes">Py Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/percentage-less-25.html" rel="bookmark"
+        title="Permalink to Percentage-Less-25">Percentage-Less-25</a></h3>
+    </header>
+
+<h6 class="subheader" title="2024-12-10T00:00:00-05:00">Tue 10 December 2024
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="c1">#Find students whose test scores are in the bottom 25% of the class.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project</span><span class="p">.</span><span class="w"> </span><span class="nx">You</span><span class="w"> </span><span class="nx">might</span><span class="w"> </span><span class="nx">receive</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="s">&quot;quota exceeded&quot;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="s">&quot;API not enabled&quot;</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="w"> </span><span class="nx">See</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">following</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">troubleshooting</span><span class="p">:</span><span class="w"> </span><span class="nx">https</span><span class="p">:</span><span class="c1">//cloud.google.com/docs/authentication/adc-troubleshooting/user-creds. </span>
+<span class="w">  </span><span class="nx">warnings</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="nx">_CLOUD_SDK_CREDENTIALS_WARNING</span><span class="p">)</span>
+<span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project</span><span class="p">.</span><span class="w"> </span><span class="nx">You</span><span class="w"> </span><span class="nx">might</span><span class="w"> </span><span class="nx">receive</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="s">&quot;quota exceeded&quot;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="s">&quot;API not enabled&quot;</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="w"> </span><span class="nx">See</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">following</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">troubleshooting</span><span class="p">:</span><span class="w"> </span><span class="nx">https</span><span class="p">:</span><span class="c1">//cloud.google.com/docs/authentication/adc-troubleshooting/user-creds. </span>
+<span class="w">  </span><span class="nx">warnings</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="nx">_CLOUD_SDK_CREDENTIALS_WARNING</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">query_bigquery</span><span class="p">():</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    SELECT student_name, test_scores, COUNT(*) AS percentage_students FROM `plucky-order-444214-g8.student_data.student_data_madhuri`</span>
+<span class="s2">    WHERE test_scores &lt;= 25</span>
+<span class="s2">    GROUP BY student_name</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of students who scored below 25%:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">student_name</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">test_scores</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">query_bigquery</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="n">who</span><span class="w"> </span><span class="n">scored</span><span class="w"> </span><span class="n">below</span><span class="w"> </span><span class="mi">25</span><span class="o">%</span><span class="p">:</span>
+
+
+
+<span class="o">---------------------------------------------------------------------------</span>
+
+<span class="n">BadRequest</span><span class="w">                                </span><span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">last</span><span class="p">)</span>
+
+<span class="n">Cell</span><span class="w"> </span><span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">],</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">----&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">query_bigquery</span><span class="p">()</span>
+
+
+<span class="n">Cell</span><span class="w"> </span><span class="n">In</span><span class="p">[</span><span class="mi">30</span><span class="p">],</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">query_bigquery</span><span class="p">()</span>
+<span class="w">      </span><span class="mi">8</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="w">      </span><span class="mi">9</span><span class="w"> </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of students who scored below 25%:&quot;</span><span class="p">)</span>
+<span class="o">---&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">result</span><span class="p">:</span>
+<span class="w">     </span><span class="mi">11</span><span class="w">     </span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;{row.student_name} - {row.test_scores}&quot;</span><span class="p">)</span>
+
+
+<span class="n">File</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">google</span><span class="o">/</span><span class="n">cloud</span><span class="o">/</span><span class="n">bigquery</span><span class="o">/</span><span class="n">job</span><span class="o">/</span><span class="n">query</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">2164</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">QueryJob</span><span class="o">.</span><span class="n">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">2163</span><span class="w"> </span><span class="n">def</span><span class="w"> </span><span class="n">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">2164</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">())</span>
+
+
+<span class="n">File</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">google</span><span class="o">/</span><span class="n">cloud</span><span class="o">/</span><span class="n">bigquery</span><span class="o">/</span><span class="n">job</span><span class="o">/</span><span class="n">query</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1681</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">QueryJob</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">page_size</span><span class="p">,</span><span class="w"> </span><span class="n">max_results</span><span class="p">,</span><span class="w"> </span><span class="n">retry</span><span class="p">,</span><span class="w"> </span><span class="n">timeout</span><span class="p">,</span><span class="w"> </span><span class="n">start_index</span><span class="p">,</span><span class="w"> </span><span class="n">job_retry</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1676</span><span class="w">     </span><span class="n">remaining_timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">None</span>
+<span class="w">   </span><span class="mi">1678</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">remaining_timeout</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">None</span><span class="p">:</span>
+<span class="w">   </span><span class="mi">1679</span><span class="w">     </span><span class="c1"># Since is_job_done() calls jobs.getQueryResults, which is a</span>
+<span class="w">   </span><span class="mi">1680</span><span class="w">     </span><span class="c1"># long-running API, don&#39;t delay the next request at all.</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1681</span><span class="w">     </span><span class="k">while</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">is_job_done</span><span class="p">():</span>
+<span class="w">   </span><span class="mi">1682</span><span class="w">         </span><span class="k">pass</span>
+<span class="w">   </span><span class="mi">1683</span><span class="w"> </span><span class="k">else</span><span class="p">:</span>
+<span class="w">   </span><span class="mi">1684</span><span class="w">     </span><span class="c1"># Use a monotonic clock since we don&#39;t actually care about</span>
+<span class="w">   </span><span class="mi">1685</span><span class="w">     </span><span class="c1"># daylight savings or similar, just the elapsed time.</span>
+
+
+<span class="n">File</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">google</span><span class="o">/</span><span class="n">api_core</span><span class="o">/</span><span class="n">retry</span><span class="o">/</span><span class="n">retry_unary</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">293</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Retry</span><span class="o">.</span><span class="n">__call__</span><span class="o">.&lt;</span><span class="n">locals</span><span class="o">&gt;.</span><span class="n">retry_wrapped_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">289</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="k">func</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">290</span><span class="w"> </span><span class="n">sleep_generator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">exponential_sleep_generator</span><span class="p">(</span>
+<span class="w">    </span><span class="mi">291</span><span class="w">     </span><span class="bp">self</span><span class="o">.</span><span class="n">_initial</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">_maximum</span><span class="p">,</span><span class="w"> </span><span class="n">multiplier</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_multiplier</span>
+<span class="w">    </span><span class="mi">292</span><span class="w"> </span><span class="p">)</span>
+<span class="o">--&gt;</span><span class="w"> </span><span class="mi">293</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">retry_target</span><span class="p">(</span>
+<span class="w">    </span><span class="mi">294</span><span class="w">     </span><span class="n">target</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">295</span><span class="w">     </span><span class="bp">self</span><span class="o">.</span><span class="n">_predicate</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">296</span><span class="w">     </span><span class="n">sleep_generator</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">297</span><span class="w">     </span><span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_timeout</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">298</span><span class="w">     </span><span class="n">on_error</span><span class="o">=</span><span class="n">on_error</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">299</span><span class="w"> </span><span class="p">)</span>
+
+
+<span class="n">File</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">google</span><span class="o">/</span><span class="n">api_core</span><span class="o">/</span><span class="n">retry</span><span class="o">/</span><span class="n">retry_unary</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">153</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">retry_target</span><span class="p">(</span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="n">sleep_generator</span><span class="p">,</span><span class="w"> </span><span class="n">timeout</span><span class="p">,</span><span class="w"> </span><span class="n">on_error</span><span class="p">,</span><span class="w"> </span><span class="n">exception_factory</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">149</span><span class="w"> </span><span class="c1"># pylint: disable=broad-except</span>
+<span class="w">    </span><span class="mi">150</span><span class="w"> </span><span class="c1"># This function explicitly must deal with broad exceptions.</span>
+<span class="w">    </span><span class="mi">151</span><span class="w"> </span><span class="n">except</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">exc</span><span class="p">:</span>
+<span class="w">    </span><span class="mi">152</span><span class="w">     </span><span class="c1"># defer to shared logic for handling errors</span>
+<span class="o">--&gt;</span><span class="w"> </span><span class="mi">153</span><span class="w">     </span><span class="n">_retry_error_helper</span><span class="p">(</span>
+<span class="w">    </span><span class="mi">154</span><span class="w">         </span><span class="n">exc</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">155</span><span class="w">         </span><span class="n">deadline</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">156</span><span class="w">         </span><span class="n">sleep</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">157</span><span class="w">         </span><span class="n">error_list</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">158</span><span class="w">         </span><span class="n">predicate</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">159</span><span class="w">         </span><span class="n">on_error</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">160</span><span class="w">         </span><span class="n">exception_factory</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">161</span><span class="w">         </span><span class="n">timeout</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">162</span><span class="w">     </span><span class="p">)</span>
+<span class="w">    </span><span class="mi">163</span><span class="w">     </span><span class="c1"># if exception not raised, sleep before next attempt</span>
+<span class="w">    </span><span class="mi">164</span><span class="w">     </span><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep</span><span class="p">)</span>
+
+
+<span class="n">File</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">google</span><span class="o">/</span><span class="n">api_core</span><span class="o">/</span><span class="n">retry</span><span class="o">/</span><span class="n">retry_base</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">212</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">_retry_error_helper</span><span class="p">(</span><span class="n">exc</span><span class="p">,</span><span class="w"> </span><span class="n">deadline</span><span class="p">,</span><span class="w"> </span><span class="n">next_sleep</span><span class="p">,</span><span class="w"> </span><span class="n">error_list</span><span class="p">,</span><span class="w"> </span><span class="n">predicate_fn</span><span class="p">,</span><span class="w"> </span><span class="n">on_error_fn</span><span class="p">,</span><span class="w"> </span><span class="n">exc_factory_fn</span><span class="p">,</span><span class="w"> </span><span class="n">original_timeout</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">206</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">predicate_fn</span><span class="p">(</span><span class="n">exc</span><span class="p">):</span>
+<span class="w">    </span><span class="mi">207</span><span class="w">     </span><span class="n">final_exc</span><span class="p">,</span><span class="w"> </span><span class="n">source_exc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">exc_factory_fn</span><span class="p">(</span>
+<span class="w">    </span><span class="mi">208</span><span class="w">         </span><span class="n">error_list</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">209</span><span class="w">         </span><span class="n">RetryFailureReason</span><span class="o">.</span><span class="n">NON_RETRYABLE_ERROR</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">210</span><span class="w">         </span><span class="n">original_timeout</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">211</span><span class="w">     </span><span class="p">)</span>
+<span class="o">--&gt;</span><span class="w"> </span><span class="mi">212</span><span class="w">     </span><span class="n">raise</span><span class="w"> </span><span class="n">final_exc</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">source_exc</span>
+<span class="w">    </span><span class="mi">213</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">on_error_fn</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">None</span><span class="p">:</span>
+<span class="w">    </span><span class="mi">214</span><span class="w">     </span><span class="n">on_error_fn</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span>
+
+
+<span class="n">File</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">google</span><span class="o">/</span><span class="n">api_core</span><span class="o">/</span><span class="n">retry</span><span class="o">/</span><span class="n">retry_unary</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">144</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">retry_target</span><span class="p">(</span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="n">sleep_generator</span><span class="p">,</span><span class="w"> </span><span class="n">timeout</span><span class="p">,</span><span class="w"> </span><span class="n">on_error</span><span class="p">,</span><span class="w"> </span><span class="n">exception_factory</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">142</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">sleep</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">sleep_generator</span><span class="p">:</span>
+<span class="w">    </span><span class="mi">143</span><span class="w">     </span><span class="n">try</span><span class="p">:</span>
+<span class="o">--&gt;</span><span class="w"> </span><span class="mi">144</span><span class="w">         </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="p">()</span>
+<span class="w">    </span><span class="mi">145</span><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="n">inspect</span><span class="o">.</span><span class="n">isawaitable</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
+<span class="w">    </span><span class="mi">146</span><span class="w">             </span><span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">_ASYNC_RETRY_WARNING</span><span class="p">)</span>
+
+
+<span class="n">File</span><span class="w"> </span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">homebrew</span><span class="o">/</span><span class="n">Caskroom</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">base</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">py312</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">google</span><span class="o">/</span><span class="n">cloud</span><span class="o">/</span><span class="n">bigquery</span><span class="o">/</span><span class="n">job</span><span class="o">/</span><span class="n">query</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1630</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">QueryJob</span><span class="o">.</span><span class="n">result</span><span class="o">.&lt;</span><span class="n">locals</span><span class="o">&gt;.</span><span class="n">is_job_done</span><span class="p">()</span>
+<span class="w">   </span><span class="mi">1607</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">job_failed_exception</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">None</span><span class="p">:</span>
+<span class="w">   </span><span class="mi">1608</span><span class="w">     </span><span class="c1"># Only try to restart the query job if the job failed for</span>
+<span class="w">   </span><span class="mi">1609</span><span class="w">     </span><span class="c1"># a retriable reason. For example, don&#39;t restart the query</span>
+<span class="w">   </span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1627</span><span class="w">     </span><span class="c1"># into an exception that can be processed by the</span>
+<span class="w">   </span><span class="mi">1628</span><span class="w">     </span><span class="c1"># `job_retry` predicate.</span>
+<span class="w">   </span><span class="mi">1629</span><span class="w">     </span><span class="n">restart_query_job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">True</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1630</span><span class="w">     </span><span class="n">raise</span><span class="w"> </span><span class="n">job_failed_exception</span>
+<span class="w">   </span><span class="mi">1631</span><span class="w"> </span><span class="k">else</span><span class="p">:</span>
+<span class="w">   </span><span class="mi">1632</span><span class="w">     </span><span class="c1"># Make sure that the _query_results are cached so we</span>
+<span class="w">   </span><span class="mi">1633</span><span class="w">     </span><span class="c1"># can return a complete RowIterator.</span>
+<span class="w">   </span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1639</span><span class="w">     </span><span class="c1"># making any extra API calls if the previous loop</span>
+<span class="w">   </span><span class="mi">1640</span><span class="w">     </span><span class="c1"># iteration fetched the finished job.</span>
+<span class="w">   </span><span class="mi">1641</span><span class="w">     </span><span class="bp">self</span><span class="o">.</span><span class="n">_reload_query_results</span><span class="p">(</span>
+<span class="w">   </span><span class="mi">1642</span><span class="w">         </span><span class="n">retry</span><span class="o">=</span><span class="n">retry</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">reload_query_results_kwargs</span>
+<span class="w">   </span><span class="mi">1643</span><span class="w">     </span><span class="p">)</span>
+
+
+<span class="n">BadRequest</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="w"> </span><span class="n">SELECT</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="n">references</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="n">test_scores</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">neither</span><span class="w"> </span><span class="n">grouped</span><span class="w"> </span><span class="n">nor</span><span class="w"> </span><span class="n">aggregated</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">26</span><span class="p">];</span><span class="w"> </span><span class="n">reason</span><span class="p">:</span><span class="w"> </span><span class="n">invalidQuery</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">:</span><span class="w"> </span><span class="n">query</span><span class="p">,</span><span class="w"> </span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="n">SELECT</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="n">references</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="n">test_scores</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">neither</span><span class="w"> </span><span class="n">grouped</span><span class="w"> </span><span class="n">nor</span><span class="w"> </span><span class="n">aggregated</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">26</span><span class="p">]</span>
+
+<span class="n">Location</span><span class="p">:</span><span class="w"> </span><span class="n">northamerica</span><span class="o">-</span><span class="n">northeast2</span>
+<span class="n">Job</span><span class="w"> </span><span class="n">ID</span><span class="p">:</span><span class="w"> </span><span class="mf">5e235067</span><span class="o">-</span><span class="mi">736</span><span class="n">b</span><span class="o">-</span><span class="mi">49</span><span class="n">ad</span><span class="o">-</span><span class="n">be88</span><span class="o">-</span><span class="mi">7</span><span class="n">cd2f92861e0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://madhuriankara.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-12.html">Assignment-12</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-14.html">Assignment-14</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-3.html">Assignment-3</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-5.html">Assignment-5</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-7.html">Assignment-7</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Py Notes by Madhuri Ankaraboyina</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
