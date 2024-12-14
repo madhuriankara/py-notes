@@ -1,6 +1,6 @@
 ---
 title: Particluar-Column
-date: 2024-12-10
+date: 2024-12-13
 author: Your Name
 cell_count: 7
 score: 5
