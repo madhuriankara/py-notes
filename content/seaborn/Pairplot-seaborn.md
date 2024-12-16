@@ -1,6 +1,6 @@
 ---
 title: Pairplot-Seaborn
-date: 2024-12-13
+date: 2024-12-15
 author: Your Name
 cell_count: 10
 score: 10

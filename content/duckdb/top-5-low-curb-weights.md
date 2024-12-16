@@ -1,6 +1,6 @@
 ---
 title: Top-5-Low-Curb-Weights
-date: 2024-12-13
+date: 2024-12-15
 author: Your Name
 cell_count: 12
 score: 10

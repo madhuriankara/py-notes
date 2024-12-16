@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Sort-Fueltype-Then-Price</title>
+
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://madhuriankara.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://madhuriankara.github.io/pynotes">Py Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/sort-fueltype-then-price.html" rel="bookmark"
+        title="Permalink to Sort-Fueltype-Then-Price">Sort-Fueltype-Then-Price</a></h3>
+    </header>
+
+<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x107a918b0&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Sort the dataset first by fuel-type and then by price.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT make,&quot;fuel-type&quot;,price</span>
+<span class="s2">                       FROM automobile</span>
+<span class="s2">                    WHERE price != &#39;?&#39;</span>
+<span class="s2">                    ORDER BY &quot;fuel-type&quot;,price ASC &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;toyota&#39;, &#39;diesel&#39;, &#39;10698&#39;),
+ (&#39;mazda&#39;, &#39;diesel&#39;, &#39;10795&#39;),
+ (&#39;peugot&#39;, &#39;diesel&#39;, &#39;13200&#39;),
+ (&#39;volkswagen&#39;, &#39;diesel&#39;, &#39;13845&#39;),
+ (&#39;peugot&#39;, &#39;diesel&#39;, &#39;13860&#39;),
+ (&#39;peugot&#39;, &#39;diesel&#39;, &#39;16900&#39;),
+ (&#39;peugot&#39;, &#39;diesel&#39;, &#39;17075&#39;),
+ (&#39;peugot&#39;, &#39;diesel&#39;, &#39;17950&#39;),
+ (&#39;mazda&#39;, &#39;diesel&#39;, &#39;18344&#39;),
+ (&#39;volvo&#39;, &#39;diesel&#39;, &#39;22470&#39;),
+ (&#39;mercedes-benz&#39;, &#39;diesel&#39;, &#39;25552&#39;),
+ (&#39;mercedes-benz&#39;, &#39;diesel&#39;, &#39;28176&#39;),
+ (&#39;mercedes-benz&#39;, &#39;diesel&#39;, &#39;28248&#39;),
+ (&#39;mercedes-benz&#39;, &#39;diesel&#39;, &#39;31600&#39;),
+ (&#39;nissan&#39;, &#39;diesel&#39;, &#39;7099&#39;),
+ (&#39;volkswagen&#39;, &#39;diesel&#39;, &#39;7775&#39;),
+ (&#39;toyota&#39;, &#39;diesel&#39;, &#39;7788&#39;),
+ (&#39;toyota&#39;, &#39;diesel&#39;, &#39;7898&#39;),
+ (&#39;volkswagen&#39;, &#39;diesel&#39;, &#39;7995&#39;),
+ (&#39;volkswagen&#39;, &#39;diesel&#39;, &#39;9495&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;10198&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;10245&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;10295&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;10345&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;10595&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;10898&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;10945&#39;),
+ (&#39;isuzu&#39;, &#39;gas&#39;, &#39;11048&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;11199&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;11245&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;11248&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;11259&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;11549&#39;),
+ (&#39;volkswagen&#39;, &#39;gas&#39;, &#39;11595&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;11694&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;11845&#39;),
+ (&#39;saab&#39;, &#39;gas&#39;, &#39;11850&#39;),
+ (&#39;peugot&#39;, &#39;gas&#39;, &#39;11900&#39;),
+ (&#39;saab&#39;, &#39;gas&#39;, &#39;12170&#39;),
+ (&#39;volkswagen&#39;, &#39;gas&#39;, &#39;12290&#39;),
+ (&#39;peugot&#39;, &#39;gas&#39;, &#39;12440&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;12629&#39;),
+ (&#39;plymouth&#39;, &#39;gas&#39;, &#39;12764&#39;),
+ (&#39;volvo&#39;, &#39;gas&#39;, &#39;12940&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;12945&#39;),
+ (&#39;dodge&#39;, &#39;gas&#39;, &#39;12964&#39;),
+ (&#39;volkswagen&#39;, &#39;gas&#39;, &#39;13295&#39;),
+ (&#39;volvo&#39;, &#39;gas&#39;, &#39;13415&#39;),
+ (&#39;alfa-romero&#39;, &#39;gas&#39;, &#39;13495&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;13499&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;13499&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;13645&#39;),
+ (&#39;audi&#39;, &#39;gas&#39;, &#39;13950&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;14399&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;14489&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;14869&#39;),
+ (&#39;saab&#39;, &#39;gas&#39;, &#39;15040&#39;),
+ (&#39;audi&#39;, &#39;gas&#39;, &#39;15250&#39;),
+ (&#39;saab&#39;, &#39;gas&#39;, &#39;15510&#39;),
+ (&#39;peugot&#39;, &#39;gas&#39;, &#39;15580&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;15645&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;15690&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;15750&#39;),
+ (&#39;volvo&#39;, &#39;gas&#39;, &#39;15985&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;15998&#39;),
+ (&#39;bmw&#39;, &#39;gas&#39;, &#39;16430&#39;),
+ (&#39;alfa-romero&#39;, &#39;gas&#39;, &#39;16500&#39;),
+ (&#39;alfa-romero&#39;, &#39;gas&#39;, &#39;16500&#39;),
+ (&#39;mercury&#39;, &#39;gas&#39;, &#39;16503&#39;),
+ (&#39;volvo&#39;, &#39;gas&#39;, &#39;16515&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;16558&#39;),
+ (&#39;peugot&#39;, &#39;gas&#39;, &#39;16630&#39;),
+ (&#39;peugot&#39;, &#39;gas&#39;, &#39;16695&#39;),
+ (&#39;volvo&#39;, &#39;gas&#39;, &#39;16845&#39;),
+ (&#39;bmw&#39;, &#39;gas&#39;, &#39;16925&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;17199&#39;),
+ (&#39;audi&#39;, &#39;gas&#39;, &#39;17450&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;17669&#39;),
+ (&#39;audi&#39;, &#39;gas&#39;, &#39;17710&#39;),
+ (&#39;peugot&#39;, &#39;gas&#39;, &#39;18150&#39;),
+ (&#39;saab&#39;, &#39;gas&#39;, &#39;18150&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;18280&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;18399&#39;),
+ (&#39;volvo&#39;, &#39;gas&#39;, &#39;18420&#39;),
+ (&#39;saab&#39;, &#39;gas&#39;, &#39;18620&#39;),
+ (&#39;audi&#39;, &#39;gas&#39;, &#39;18920&#39;),
+ (&#39;volvo&#39;, &#39;gas&#39;, &#39;18950&#39;),
+ (&#39;volvo&#39;, &#39;gas&#39;, &#39;19045&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;19699&#39;),
+ (&#39;bmw&#39;, &#39;gas&#39;, &#39;20970&#39;),
+ (&#39;bmw&#39;, &#39;gas&#39;, &#39;21105&#39;),
+ (&#39;volvo&#39;, &#39;gas&#39;, &#39;21485&#39;),
+ (&#39;porsche&#39;, &#39;gas&#39;, &#39;22018&#39;),
+ (&#39;volvo&#39;, &#39;gas&#39;, &#39;22625&#39;),
+ (&#39;audi&#39;, &#39;gas&#39;, &#39;23875&#39;),
+ (&#39;bmw&#39;, &#39;gas&#39;, &#39;24565&#39;),
+ (&#39;bmw&#39;, &#39;gas&#39;, &#39;30760&#39;),
+ (&#39;jaguar&#39;, &#39;gas&#39;, &#39;32250&#39;),
+ (&#39;porsche&#39;, &#39;gas&#39;, &#39;32528&#39;),
+ (&#39;porsche&#39;, &#39;gas&#39;, &#39;34028&#39;),
+ (&#39;mercedes-benz&#39;, &#39;gas&#39;, &#39;34184&#39;),
+ (&#39;mercedes-benz&#39;, &#39;gas&#39;, &#39;35056&#39;),
+ (&#39;jaguar&#39;, &#39;gas&#39;, &#39;35550&#39;),
+ (&#39;jaguar&#39;, &#39;gas&#39;, &#39;36000&#39;),
+ (&#39;bmw&#39;, &#39;gas&#39;, &#39;36880&#39;),
+ (&#39;porsche&#39;, &#39;gas&#39;, &#39;37028&#39;),
+ (&#39;mercedes-benz&#39;, &#39;gas&#39;, &#39;40960&#39;),
+ (&#39;bmw&#39;, &#39;gas&#39;, &#39;41315&#39;),
+ (&#39;mercedes-benz&#39;, &#39;gas&#39;, &#39;45400&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;5118&#39;),
+ (&#39;chevrolet&#39;, &#39;gas&#39;, &#39;5151&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;5195&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;5348&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;5389&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;5399&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;5499&#39;),
+ (&#39;dodge&#39;, &#39;gas&#39;, &#39;5572&#39;),
+ (&#39;plymouth&#39;, &#39;gas&#39;, &#39;5572&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;6095&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;6189&#39;),
+ (&#39;dodge&#39;, &#39;gas&#39;, &#39;6229&#39;),
+ (&#39;plymouth&#39;, &#39;gas&#39;, &#39;6229&#39;),
+ (&#39;chevrolet&#39;, &#39;gas&#39;, &#39;6295&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;6338&#39;),
+ (&#39;dodge&#39;, &#39;gas&#39;, &#39;6377&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;6479&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;6488&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;6529&#39;),
+ (&#39;chevrolet&#39;, &#39;gas&#39;, &#39;6575&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;6649&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;6669&#39;),
+ (&#39;dodge&#39;, &#39;gas&#39;, &#39;6692&#39;),
+ (&#39;plymouth&#39;, &#39;gas&#39;, &#39;6692&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;6695&#39;),
+ (&#39;isuzu&#39;, &#39;gas&#39;, &#39;6785&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;6795&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;6849&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;6855&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;6918&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;6938&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;6989&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;7053&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;7126&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;7129&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;7198&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;7295&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;7295&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;7299&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;7349&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;7395&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;7463&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;7499&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;7603&#39;),
+ (&#39;dodge&#39;, &#39;gas&#39;, &#39;7609&#39;),
+ (&#39;plymouth&#39;, &#39;gas&#39;, &#39;7609&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;7689&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;7738&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;7775&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;7799&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;7895&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;7898&#39;),
+ (&#39;dodge&#39;, &#39;gas&#39;, &#39;7957&#39;),
+ (&#39;plymouth&#39;, &#39;gas&#39;, &#39;7957&#39;),
+ (&#39;volkswagen&#39;, &#39;gas&#39;, &#39;7975&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;7999&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;8013&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;8058&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;8189&#39;),
+ (&#39;volkswagen&#39;, &#39;gas&#39;, &#39;8195&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;8238&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;8249&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;8358&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;8449&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;8495&#39;),
+ (&#39;volkswagen&#39;, &#39;gas&#39;, &#39;8495&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;8499&#39;),
+ (&#39;dodge&#39;, &#39;gas&#39;, &#39;8558&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;8778&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;8845&#39;),
+ (&#39;mazda&#39;, &#39;gas&#39;, &#39;8845&#39;),
+ (&#39;dodge&#39;, &#39;gas&#39;, &#39;8921&#39;),
+ (&#39;plymouth&#39;, &#39;gas&#39;, &#39;8921&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;8948&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;8949&#39;),
+ (&#39;honda&#39;, &#39;gas&#39;, &#39;9095&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;9233&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;9258&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;9279&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;9279&#39;),
+ (&#39;renault&#39;, &#39;gas&#39;, &#39;9295&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;9298&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;9538&#39;),
+ (&#39;nissan&#39;, &#39;gas&#39;, &#39;9549&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;9639&#39;),
+ (&#39;renault&#39;, &#39;gas&#39;, &#39;9895&#39;),
+ (&#39;mitsubishi&#39;, &#39;gas&#39;, &#39;9959&#39;),
+ (&#39;subaru&#39;, &#39;gas&#39;, &#39;9960&#39;),
+ (&#39;volkswagen&#39;, &#39;gas&#39;, &#39;9980&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;9988&#39;),
+ (&#39;toyota&#39;, &#39;gas&#39;, &#39;9989&#39;),
+ (&#39;volkswagen&#39;, &#39;gas&#39;, &#39;9995&#39;)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://madhuriankara.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-12.html">Assignment-12</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-14.html">Assignment-14</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-3.html">Assignment-3</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-5.html">Assignment-5</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-7.html">Assignment-7</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/onlinefoods.html">onlinefoods</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Py Notes by Madhuri Ankaraboyina</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

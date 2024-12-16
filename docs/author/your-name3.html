@@ -48,7 +48,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/bigquery-1.html"><h3 class="article-title">Bigquery-1</h3></a>
-<h6 class="subheader" title="2024-12-13T00:00:00-05:00">Fri 13 December 2024
+<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
 </h6>
 
 
@@ -76,7 +76,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/body-style-hatchback.html"><h3 class="article-title">Body-Style-Hatchback</h3></a>
-<h6 class="subheader" title="2024-12-13T00:00:00-05:00">Fri 13 December 2024
+<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
 </h6>
 
 
@@ -101,7 +101,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/bokehcode.html"><h3 class="article-title">Bokehcode</h3></a>
-<h6 class="subheader" title="2024-12-13T00:00:00-05:00">Fri 13 December 2024
+<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
 </h6>
 
 
@@ -128,8 +128,44 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/bore-between-25-35.html"><h3 class="article-title">Bore-Between-2.5-3.5</h3></a>
+<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x113c33470&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Find cars where the bore is between 2.5 and 3.5, inclusive.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT make,&quot;bore&quot;</span>
+<span class="s2">                     FROM automobile</span>
+<span class="s2">                     WHERE CAST(&quot;bore&quot; AS FLOAT) BETWEEN 2.5 AND …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/bore-between-25-35.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/boxplotseaborn.html"><h3 class="article-title">Boxplotseaborn</h3></a>
-<h6 class="subheader" title="2024-12-13T00:00:00-05:00">Fri 13 December 2024
+<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
 </h6>
 
 
@@ -170,7 +206,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/breakfast.html"><h3 class="article-title">Breakfast</h3></a>
-<h6 class="subheader" title="2024-12-13T00:00:00-05:00">Fri 13 December 2024
+<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
 </h6>
 
 
@@ -213,7 +249,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/calories-dollar.html"><h3 class="article-title">Calories-Dollar</h3></a>
-<h6 class="subheader" title="2024-12-13T00:00:00-05:00">Fri 13 December 2024
+<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
 </h6>
 
 
@@ -258,7 +294,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/car-count-90-percentile.html"><h3 class="article-title">Car-Count-90-Percentile</h3></a>
-<h6 class="subheader" title="2024-12-13T00:00:00-05:00">Fri 13 December 2024
+<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
 </h6>
 
 
@@ -296,60 +332,42 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/city-max-min-mpg.html"><h3 class="article-title">City-Max-Min-Mpg</h3></a>
-<h6 class="subheader" title="2024-12-13T00:00:00-05:00">Fri 13 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/car-with-highest-compression.html"><h3 class="article-title">Car-With-Highest-Compression</h3></a>
+<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
 </h6>
 
-
-<div class="highlight"><pre><span></span><code><span class="ch">#!pip install duckdb</span>
-</code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Connect to DuckDB</span>
-<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file</span>
-<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x109af7770&gt;
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x104f395b0&gt;
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Identify the minimum and maximum city-mpg</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#Find the car with the highest compression-ratio for each fuel-type.</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT MIN(&quot;city-mpg&quot;),MAX(&quot;city-mpg&quot;) FROM automobile&quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT MAX(&quot;compression-ratio&quot;), &quot;fuel-type&quot;</span>
+<span class="s2">                            FROM automobile</span>
+<span class="s2">                            GROUP BY &quot;fuel-type&quot;</span>
+<span class="s2">                            &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="n">result</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>[(13, 49)]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score …</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+<div class="highlight"><pre><span></span><code>[(23.0, &#39;diesel&#39;), (11.5, &#39;gas …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/city-max-min-mpg.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/car-with-highest-compression.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -357,72 +375,42 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/climate-distribution.html"><h3 class="article-title">Climate-Distribution</h3></a>
-<h6 class="subheader" title="2024-12-13T00:00:00-05:00">Fri 13 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/case-light-heavy-medium.html"><h3 class="article-title">Case-Light-Heavy-Medium</h3></a>
+<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#What is the distribution of climate types across regions?</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x1089b8bf0&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Create a derived column weight-category based on curb-weight being light (&lt; 2500), medium (2500–3500), or heavy (&gt; 3500).</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT *,</span>
+<span class="s2">    CASE </span>
+<span class="s2">        WHEN &quot;curb-weight&quot; &lt; 2500 THEN &#39;Light&#39;</span>
+<span class="s2">        WHEN &quot;curb-weight&quot; BETWEEN …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/climate-distribution.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/coin-toss.html"><h3 class="article-title">Coin-Toss</h3></a>
-<h6 class="subheader" title="2024-12-13T00:00:00-05:00">Fri 13 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Initialize all_walks</span>
-<span class="n">all_walks</span> <span class="o">=</span> <span class="p">[];</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">:</span>
-
-    <span class="c1"># Code from before</span>
-    <span class="n">random_walk</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="p">:</span>
-        <span class="n">step</span> <span class="o">=</span> <span class="n">random_walk</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">dice</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">dice</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
-            <span class="n">step</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">step</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">dice</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
-            <span class="n">step</span> <span class="o">=</span> <span class="n">step</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">else …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/coin-toss.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/case-light-heavy-medium.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 3 of 18</h6>
+<h6 class="subheader">Page 3 of 19</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/author/your-name2.html">&laquo; Prev</a>
@@ -463,6 +451,7 @@
             <li><a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/onlinefoods.html">onlinefoods</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a></li>

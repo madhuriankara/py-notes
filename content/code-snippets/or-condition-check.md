@@ -1,6 +1,6 @@
 ---
 title: Or-Condition-Check
-date: 2024-12-13
+date: 2024-12-15
 author: Your Name
 cell_count: 2
 score: 0
