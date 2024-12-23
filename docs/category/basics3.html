@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Py Notes - basics</title>
+
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://madhuriankara.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://madhuriankara.github.io/pynotes">Py Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/postal-code.html"><h3 class="article-title">Postal-Code</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">postal_code</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">Zipcode_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is an Indian code&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is an Canadian postalcode&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">postal_code</span><span class="p">(</span><span class="s2">&quot;M1E5E6&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>This is an Canadian postalcode
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">postal_code</span><span class="p">(</span><span class="s2">&quot;1234567&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>This is an Indian code
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/postal-code.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/radius-of-a-circle.html"><h3 class="article-title">Radius-Of-A-Circle</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calculate_circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the area of a circle given its radius.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    radius (float): The radius of the circle.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    float: The area of the circle.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">area</span>
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calculate_circle_area</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Expected output: 78.53975</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">78.5</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">calculate_circle_area</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>  <span class="c1"># Expected …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/radius-of-a-circle.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/remove-duplicates-list.html"><h3 class="article-title">Remove-Duplicates-List</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://www.geeksforgeeks.org/python-ways-to-remove-duplicates-from-list/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_duplicates</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Problem: Write a function to remove duplicates from a list.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    lst: a list of elements</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    a list with duplicates removed</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># initialize an empty list to store unique elements</span>
+
+    <span class="c1"># loop through the input list</span>
+
+    <span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">lst …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/remove-duplicates-list.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/remove-element.html"><h3 class="article-title">Remove-Element</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_element</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Write a function to remove an element from a list by its value.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): The list from which the element needs to be removed.</span>
+<span class="sd">    value: The value of the element to be removed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    list: The updated list after removing the element.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">lst</span><span class="o">.</span><span class="n">remove …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/remove-element.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/sort-in-ascending.html"><h3 class="article-title">Sort-In-Ascending</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sort_list_ascending</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Sort a list in ascending order.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): List to be sorted.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    list: Sorted list in ascending order.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># TODO: Implement sorting algorithm</span>
+    <span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lst</span>
+
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sort_list_ascending</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>  <span class="c1"># Expected output …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/sort-in-ascending.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/string-integers.html"><h3 class="article-title">String-Integers</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convert_integers_to_strings</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a list of integers to a list of strings.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): A list of integers to be converted.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    list: A list of strings converted from the integers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># TODO: Complete the implementation of this function</span>
+    <span class="n">str_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">str_list</span>
+
+
+<span class="c1"># Sample …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/string-integers.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/sum-of-numbers-a6.html"><h3 class="article-title">Sum-Of-Numbers-A6</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calculate_sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the sum of numbers in a list.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    numbers (list): A list of numbers to calculate the sum for.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int: The sum of numbers in the list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Half-implemented function</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lst</span>
+
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calculate_sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span> <span class="c1"># Expected output: 6 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/sum-of-numbers-a6.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/time.html"><h3 class="article-title">%%Time</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">time</span>
+<span class="c1"># Generate squares of numbers from 1 to 1 million using a loop</span>
+<span class="n">squares</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1_000_001</span><span class="p">):</span>
+    <span class="n">squares</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>CPU times: user 87 ms, sys: 7.4 ms, total: 94.4 ms
+Wall time: 95.2 ms
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">timeit</span>
+<span class="c1"># Generate squares of numbers from 1 to …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/time.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/untitled.html"><h3 class="article-title">Untitled</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_smallest_number</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function finds the smallest number in a list.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    nums (list): A list of numbers</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int: The smallest number in the list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># TODO: Implement the function</span>
+
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">find_smallest_number</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]))</span> <span class="c1"># Expected output: 1</span>
+<span class="c1"># </span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">find_smallest_number …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/untitled.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/upper-case-python.html"><h3 class="article-title">Upper-Case-Python</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convert_to_uppercase</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a given string to uppercase.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    s (str): The input string to be converted.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: The input string converted to uppercase.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># TODO: Implement the function to convert the string to uppercase</span>
+    <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">convert_to_uppercase</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">))</span>  <span class="c1"># Expected output: &quot;HELLO&quot;</span>
+<span class="c1"># print(convert_to_uppercase …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/upper-case-python.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 3 of 4</h6>
+
+<p>
+            <a href="https://madhuriankara.github.io/pynotes/category/basics2.html">&laquo; Prev</a>
+
+        <a href="https://madhuriankara.github.io/pynotes/category/basics4.html">Next &raquo;</a>
+</p>
+</div>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://madhuriankara.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-12.html">Assignment-12</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-14.html">Assignment-14</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-3.html">Assignment-3</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-5.html">Assignment-5</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-7.html">Assignment-7</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/onlinefoods.html">onlinefoods</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Py Notes by Madhuri Ankaraboyina</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

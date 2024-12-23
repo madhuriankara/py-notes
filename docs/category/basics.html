@@ -47,7 +47,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/age-calculator.html"><h3 class="article-title">Age-Calculator</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
 
@@ -91,8 +91,263 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/calculate-length-of-list.html"><h3 class="article-title">Calculate-Length-Of-List</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calculate_list_length</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the length of a list.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): A list of elements.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int: The length of the list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Implement the code to calculate the length of the list here</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calculate_list_length</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>  <span class="c1"># Expected output: 3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/calculate-length-of-list.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/check-if-it-is-prime.html"><h3 class="article-title">Check-If-It-Is-Prime</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if a number is prime.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    num (int): The number to check for primality.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    bool: True if the number is prime, False otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>   
+        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+<span class="c1"># Sample test cases</span>
+<span class="c1"># print …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/check-if-it-is-prime.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/check-if-leap-year-or-not.html"><h3 class="article-title">Check-If-Leap-Year-Or-Not</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Given a year, check if it is a leap year.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    year (int): The year to be checked.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    bool: True if the year is a leap year, False otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Check if the year is divisible by 4</span>
+    <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="c1"># Sample …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/check-if-leap-year-or-not.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/check-if-list-is-empty.html"><h3 class="article-title">Check-If-List-Is-Empty</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_list_empty</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if a list is empty.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): A list to check for emptiness.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    bool: True if the list is empty, False otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">lst</span> <span class="o">==</span><span class="p">[]:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_list_empty</span><span class="p">([]))</span> <span class="c1"># True</span>
+<span class="c1"># print(is_list_empty([1, 2, 3])) # False</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>True
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">is_list_empty</span><span class="p">([</span><span class="mi">1 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/check-if-list-is-empty.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/check-number-even-odd.html"><h3 class="article-title">Check-Number-Even-Odd</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">check_even_odd</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function checks if a number is even or odd.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    num (int): The number to be checked.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: &#39;Even&#39; if the number is even, &#39;Odd&#39; if the number is odd.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Check if the number is even or odd</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Even&quot;</span>
+    <span class="k">return …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/check-number-even-odd.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/common-elements-in-a-list.html"><h3 class="article-title">Common-Elements-In-A-List</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stackoverflow.com/questions/2864842/common-elements-comparison-between-2-lists</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_common_elements</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">list2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Problem: Write a function to find the common elements in two lists.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    list1: First list of elements</span>
+<span class="sd">    list2: Second list of elements</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    List of common elements between list1 and list2</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Initialize an empty list to store common elements …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/common-elements-in-a-list.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/count-number-of-occurences.html"><h3 class="article-title">Count-Number-Of-Occurences</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">count_occurrences</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Count the occurrences of an item in a list.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): The list to search for occurrences.</span>
+<span class="sd">    item: The item to count occurrences of.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int: The number of occurrences of the item in the list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># TODO: Implement the function</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="n">lst</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="k">return …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/count-number-of-occurences.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/enumerate-args.html"><h3 class="article-title">Enumerate-Args</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
 
@@ -128,125 +383,44 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/hexvalidator.html"><h3 class="article-title">Hexvalidator</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/factorial-of-a-number.html"><h3 class="article-title">Factorial-Of-A-Number</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">webcolors</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the factorial of a number.</span>
 
-<span class="k">def</span> <span class="nf">is_valid_hex_color</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">webcolors</span><span class="o">.</span><span class="n">hex_to_rgb</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
+<span class="sd">    Parameters:</span>
+<span class="sd">    n (int): The number to calculate the factorial for.</span>
 
-<span class="c1"># Examples</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#FFF&quot;</span><span class="p">))</span>  <span class="c1"># True</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#123ABC&quot;</span><span class="p">))</span>  <span class="c1"># True</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#123ABCG&quot;</span><span class="p">))</span>  <span class="c1"># False</span>
-</code></pre></div>
+<span class="sd">    Returns:</span>
+<span class="sd">    int: The factorial of the given number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="highlight"><pre><span></span><code>True
-True
-False
-</code></pre></div>
+    <span class="c1"># TODO: Implement the factorial calculation here</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/hexvalidator.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/postal-code.html"><h3 class="article-title">Postal-Code</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">postal_code</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">Zipcode_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is an Indian code&quot;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is an Canadian postalcode&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">postal_code</span><span class="p">(</span><span class="s2">&quot;M1E5E6&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>This is an Canadian postalcode
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">postal_code</span><span class="p">(</span><span class="s2">&quot;1234567&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>This is an Indian code
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/postal-code.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/time.html"><h3 class="article-title">%%Time</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">time</span>
-<span class="c1"># Generate squares of numbers from 1 to 1 million using a loop</span>
-<span class="n">squares</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1_000_001</span><span class="p">):</span>
-    <span class="n">squares</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>CPU times: user 87 ms, sys: 7.4 ms, total: 94.4 ms
-Wall time: 95.2 ms
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">timeit</span>
-<span class="c1"># Generate squares of numbers from 1 to …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/time.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/factorial-of-a-number.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 1</h6>
+<h6 class="subheader">Page 1 of 4</h6>
 
 <p>
 
+        <a href="https://madhuriankara.github.io/pynotes/category/basics2.html">Next &raquo;</a>
 </p>
 </div>
 

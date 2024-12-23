@@ -48,56 +48,62 @@
         title="Permalink to Untitled">Untitled</a></h3>
     </header>
 
-<h6 class="subheader" title="2024-12-05T00:00:00-05:00">Thu 05 December 2024
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
-Translations: 
-        <a href="https://madhuriankara.github.io/pynotes/untitled.html">en</a>
 
-    <div class="highlight"><pre><span></span><code><span class="c1">#Assignment 15: Data Export and Input</span>
-<span class="c1">#Save the cleaned dataset to a new CSV file named food_cleaned.csv.</span>
+    <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_smallest_number</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function finds the smallest number in a list.</span>
 
-<span class="c1">#Export only the Food_Name, Price, and Category columns to a CSV file.</span>
+<span class="sd">    Parameters:</span>
+<span class="sd">    nums (list): A list of numbers</span>
 
-<span class="c1">#Save the dataset as an Excel file with two sheets: Food_Data and Summary.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">    int: The smallest number in the list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-<span class="c1">#Load the food_cleaned.csv file back into a Pandas DataFrame and validate its structure.</span>
+    <span class="c1"># TODO: Implement the function</span>
 
-<span class="c1">#Write a function that takes a Category as input and saves all food items in that category to a separate CSV file.</span>
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">find_smallest_number</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]))</span> <span class="c1"># Expected output: 1</span>
+<span class="c1"># </span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Price&#39;</span><span class="p">,</span> <span class="s1">&#39;Category&#39;</span><span class="p">]]</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">find_smallest_number</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span> <span class="c1"># Expected output: -5</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="nb">---------------------------------------------------------------------------</span>
-
-<span class="c">NameError                                 Traceback (most recent call last)</span>
-
-<span class="c">Cell In</span><span class="k">[</span><span class="c">3</span><span class="k">]</span><span class="nt">,</span><span class="c"> line 1</span>
-<span class="nb">----</span><span class="nv">&gt;</span><span class="c"> 1 df = df</span><span class="k">[[</span><span class="c">&#39;Food_Name&#39;</span><span class="nt">,</span><span class="c"> &#39;Price&#39;</span><span class="nt">,</span><span class="c"> &#39;Category&#39;</span><span class="k">]]</span>
-
-
-<span class="c">NameError: name &#39;df&#39; is not defined</span>
+<div class="highlight"><pre><span></span><code>-5
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_smallest_number</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function finds the smallest number in a list.</span>
 
-<div class="highlight"><pre><span></span><code>
+<span class="sd">    Parameters:</span>
+<span class="sd">    nums (list): A list of numbers</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int: The smallest number in the list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># TODO: Implement the function</span>
+
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 5</strong></p>
-<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-15.html">Assignment-15</a>
+<p><strong>Score: 0</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
 
-Translations: 
-        <a href="https://madhuriankara.github.io/pynotes/untitled.html">en</a>
 
 
 </article>
@@ -118,7 +124,6 @@ Translations:
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-12.html">Assignment-12</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-14.html">Assignment-14</a></li>
-            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-15.html">Assignment-15</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-3.html">Assignment-3</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a></li>
@@ -126,15 +131,18 @@ Translations:
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-7.html">Assignment-7</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a></li>
-            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-9.html">Assignment-9</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/onlinefoods.html">onlinefoods</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
    
         </ul>

@@ -1,6 +1,6 @@
 ---
 title: Simple-Join
-date: 2024-12-15
+date: 2024-12-23
 author: Your Name
 cell_count: 6
 score: 5

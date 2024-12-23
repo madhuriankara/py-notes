@@ -47,30 +47,46 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/time.html"><h3 class="article-title">%%Time</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/simple-insert.html"><h3 class="article-title">Simple-Insert</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">time</span>
-<span class="c1"># Generate squares of numbers from 1 to 1 million using a loop</span>
-<span class="n">squares</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1_000_001</span><span class="p">):</span>
-    <span class="n">squares</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>CPU times: user 87 ms, sys: 7.4 ms, total: 94.4 ms
-Wall time: 95.2 ms
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">timeit</span>
-<span class="c1"># Generate squares of numbers from 1 to …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Define the table</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Build the INSERT query</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">into</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Print the query</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>INSERT INTO &quot;users&quot; (&quot;name&quot;,&quot;age&quot;) VALUES (&#39;Alice&#39;,25)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/time.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-insert.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -78,8 +94,230 @@ Wall time: 95.2 ms
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/top-3-body-style.html"><h3 class="article-title">Top-3-Body-Style</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/simple-join.html"><h3 class="article-title">Simple-Join</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Define tables</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
+<span class="n">orders</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;orders&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Build a JOIN query</span>
+<span class="n">query</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">orders</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">orders</span><span class="o">.</span><span class="n">user_id</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">orders</span><span class="o">.</span><span class="n">order_date</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>SELECT &quot;users&quot;.&quot;name&quot;,&quot;orders&quot;.&quot;order_date&quot; FROM &quot;users&quot; JOIN &quot;orders&quot; ON &quot;users&quot;.&quot;id&quot;=&quot;orders&quot;.&quot;user_id&quot;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score …</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-join.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/simple-select.html"><h3 class="article-title">Simple-Select</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pypika</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">pypika</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.48.9</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Define a table</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Build a SELECT query</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">users</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>SELECT …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-select.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/simple-update.html"><h3 class="article-title">Simple-Update</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Define a table</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Build an UPDATE query</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;Jane Doe&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>UPDATE &quot;users&quot; SET &quot;name&quot;=&#39;Jane Doe&#39; WHERE &quot;id&quot;=1
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-update.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/simple-where.html"><h3 class="article-title">Simple-Where</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Define a table</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Build a SELECT query with a WHERE clause</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">users</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>SELECT &quot;id&quot;,&quot;name&quot; FROM &quot;users&quot; WHERE &quot;age&quot;&gt;30
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-where.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/small-large.html"><h3 class="article-title">Small Large</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<p>Finds and prints the smallest and largest numbers in the list.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_large_small</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is smallest&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is largest&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_large_small</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>The number is smallest
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_large_small</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>The number is largest
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_large_small</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+
+    <span class="k">if …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/small-large.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/sort-fueltype-then-price.html"><h3 class="article-title">Sort-Fueltype-Then-Price</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
 
@@ -92,22 +330,28 @@ Wall time: 95.2 ms
 <div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x105c8fe30&gt;
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x107a918b0&gt;
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Identify the top 3 body-style categories with the highest average price.</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#Sort the dataset first by fuel-type and then by price.</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT &quot;body-style&quot;,AVG(CAST(price AS FLOAT)) AS avg_price</span>
-<span class="s2">                     FROM automobile</span>
-<span class="s2">                     WHERE price != &#39;?&#39;</span>
-<span class="s2">                     GROUP BY &quot;body-style …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT make,&quot;fuel-type&quot;,price</span>
+<span class="s2">                       FROM automobile</span>
+<span class="s2">                    WHERE price != &#39;?&#39;</span>
+<span class="s2">                    ORDER BY &quot;fuel-type&quot;,price ASC &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;toyota&#39;, &#39;diesel …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/top-3-body-style.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/sort-fueltype-then-price.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -115,39 +359,35 @@ Wall time: 95.2 ms
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/top-5-low-curb-weights.html"><h3 class="article-title">Top-5-Low-Curb-Weights</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/sort-in-ascending.html"><h3 class="article-title">Sort-In-Ascending</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="ch">#!pip install duckdb</span>
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sort_list_ascending</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Sort a list in ascending order.</span>
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
-</code></pre></div>
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): List to be sorted.</span>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Connect to DuckDB</span>
-<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-</code></pre></div>
+<span class="sd">    Returns:</span>
+<span class="sd">    list: Sorted list in ascending order.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file</span>
-<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
-</code></pre></div>
+    <span class="c1"># TODO: Implement sorting algorithm</span>
+    <span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lst</span>
 
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x106461270&gt;
-</code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Find cars with the top 5 lowest curb-weight</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT &quot;curb-weight&quot; FROM automobile</span>
-<span class="s2">                       ORDER BY  &quot;curb-weight&quot; ASC LIMIT 5 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sort_list_ascending</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>  <span class="c1"># Expected output …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/top-5-low-curb-weights.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/sort-in-ascending.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -155,18 +395,88 @@ Wall time: 95.2 ms
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/total-columns.html"><h3 class="article-title">Total-Columns</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/sqllite-test1.html"><h3 class="article-title">Sqllite-Test1</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span><span class="s1">&#39;food.csv&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file into a DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/madhuriankaraboyina/Downloads/student_data.csv&#39;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Connect to SQLite</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;:memory:&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#conn = sqlite3.connect(&quot;abc.db&quot;)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Write DataFrame to SQLite</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;my_table&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">100</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Perform SQL query</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/sqllite-test1.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/square-error.html"><h3 class="article-title">Square-Error</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1">#print(&quot;inside main method&quot;)</span>
+
+    <span class="n">y_actual</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+    <span class="n">y_predicted</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+    <span class="n">rms</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_actual</span><span class="p">,</span> <span class="n">y_predicted</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">rms</span><span class="p">)</span>    
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0.5773502691896257</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
@@ -179,297 +489,19 @@ Wall time: 95.2 ms
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/total-columns.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/total-of-revenue.html"><h3 class="article-title">Total-Of-Revenue</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Calculate the total revenue for all items marked as Available = &quot;Yes&quot;.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ratings.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ratings</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span>
-</code></pre></div>
-
-<div>
-<style scoped>
-    .dataframe …</style></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/total-of-revenue.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/total-price.html"><h3 class="article-title">Total-Price</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Find the total price of all items that are marked as Available = &quot;Yes&quot;.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;Food_Name&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span>
-</code></pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead …</style></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/total-price.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/total-result.html"><h3 class="article-title">Total-Result</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Calculate the total calories for all food items grouped by the Available column.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span> <span class="s1">&#39;food.csv&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span>
-</code></pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Food_ID</th>
-      <th>Food_Name</th>
-      <th>Category</th>
-      <th>Price</th>
-      <th>Calories</th>
-      <th>Available</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0 …</th></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/total-result.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/total-revenue.html"><h3 class="article-title">Total-Revenue</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Load the food_sales.csv data into another DataFrame.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span> <span class="s1">&#39;food.csv&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">food</span>
-</code></pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Food_ID</th>
-      <th>Food_Name</th>
-      <th>Category</th>
-      <th>Price</th>
-      <th>Calories</th>
-      <th>Available</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>Pizza</td>
-      <td>Fast Food</td>
-      <td>8 …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-5.html">Assignment-5</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/total-revenue.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/total-score-80.html"><h3 class="article-title">Total-Score-80</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Find students who got a job and have all scores (test, participation, and project) above 80.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/total-score-80.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/twitter-analysis.html"><h3 class="article-title">Twitter-Analysis</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">nltk</span><span class="p">;</span>
-<span class="kn">from</span> <span class="nn">nltk.probability</span> <span class="kn">import</span> <span class="n">FreqDist</span><span class="p">,</span> <span class="n">DictionaryProbDist</span><span class="p">,</span> <span class="n">ELEProbDist</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">pos_tweets</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;I love this car&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
-              <span class="p">(</span><span class="s1">&#39;This view is amazing&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
-              <span class="p">(</span><span class="s1">&#39;I feel great this morning&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
-              <span class="p">(</span><span class="s1">&#39;I am so excited about the concert&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
-              <span class="p">(</span><span class="s1">&#39;He is my best friend&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">)]</span>
-
-<span class="n">neg_tweets</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;I do not like this car&#39;</span><span class="p">,</span> <span class="s1">&#39;negative&#39;</span><span class="p">),</span>
-              <span class="p">(</span><span class="s1">&#39;This view …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/twitter-analysis.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/square-error.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 18 of 19</h6>
+<h6 class="subheader">Page 18 of 22</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/author/your-name17.html">&laquo; Prev</a>

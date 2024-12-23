@@ -47,46 +47,35 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/simple-insert.html"><h3 class="article-title">Simple-Insert</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/question4.html"><h3 class="article-title">Question4</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code>
+<p>def generate_squares(n):
+    """
+    Generate a list of squares of numbers from 1 to n.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Args</span><span class="o">:</span>
+<span class="n">n</span><span class="o">:</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">integer</span><span class="w"> </span><span class="n">representing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">upper</span><span class="w"> </span><span class="n">limit</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">range</span>
+
+<span class="n">Returns</span><span class="o">:</span>
+<span class="n">A</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">squares</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">n</span>
+<span class="s2">&quot;&quot;</span><span class="err">&quot;</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Initialize</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">squares</span>
+<span class="n">squares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Pass</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Define the table</span>
-<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Build the INSERT query</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">into</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Print the query</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>INSERT INTO &quot;users&quot; (&quot;name&quot;,&quot;age&quot;) VALUES (&#39;Alice&#39;,25)
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+<h1>Sample test cases</h1>
+<p>print …</p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-insert.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/question4.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -94,48 +83,34 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/simple-join.html"><h3 class="article-title">Simple-Join</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/question6.html"><h3 class="article-title">Question6</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
+<p>def rotate_list(lst, k):
+    """
+    Rotate a list by k positions.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Args</span><span class="o">:</span>
+<span class="n">lst</span><span class="o">:</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">rotate</span>
+<span class="n">k</span><span class="o">:</span><span class="w"> </span><span class="n">int</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">positions</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">rotate</span>
+
+<span class="n">Returns</span><span class="o">:</span>
+<span class="n">list</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rotated</span><span class="w"> </span><span class="n">list</span>
+<span class="s2">&quot;&quot;</span><span class="err">&quot;</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">TODO</span><span class="o">:</span><span class="w"> </span><span class="n">Implement</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rotation</span><span class="w"> </span><span class="n">logic</span><span class="w"> </span><span class="n">here</span>
+<span class="n">pass</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Define tables</span>
-<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
-<span class="n">orders</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;orders&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Build a JOIN query</span>
-<span class="n">query</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">orders</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">orders</span><span class="o">.</span><span class="n">user_id</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">orders</span><span class="o">.</span><span class="n">order_date</span><span class="p">)</span>
-<span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>SELECT &quot;users&quot;.&quot;name&quot;,&quot;orders&quot;.&quot;order_date&quot; FROM &quot;users&quot; JOIN &quot;orders&quot; ON &quot;users&quot;.&quot;id&quot;=&quot;orders&quot;.&quot;user_id&quot;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score …</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+<h1>Sample test cases</h1>
+<h1>print(rotate_list([1, 2, 3, 4, 5], 2))  # Output: [4 …</h1><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-join.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/question6.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -143,41 +118,37 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/simple-select.html"><h3 class="article-title">Simple-Select</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/question8.html"><h3 class="article-title">Question8</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">reverse_words</span><span class="p">(</span><span class="n">sentence</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Given a sentence, reverse the order of words in it.</span>
 
-<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pypika</span>
-</code></pre></div>
+<span class="sd">    Args:</span>
+<span class="sd">    sentence: A string representing the input sentence.</span>
 
-<div class="highlight"><pre><span></span><code><span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">pypika</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.48.9</span><span class="p">)</span>
-</code></pre></div>
+<span class="sd">    Returns:</span>
+<span class="sd">    A string with words in reversed order.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+    <span class="c1"># Split the sentence into words</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Define a table</span>
-<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
-</code></pre></div>
+    <span class="c1"># do your code</span>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Build a SELECT query</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">users</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-</code></pre></div>
+    <span class="k">return</span> <span class="n">reversed_sentence</span>
 
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>SELECT …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+<span class="c1"># Test cases</span>
+<span class="c1"># print(reverse_words(&quot;Hello World&quot;))  # Output: &quot;World …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-select.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/question8.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -185,39 +156,38 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/simple-update.html"><h3 class="article-title">Simple-Update</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/radius-of-a-circle.html"><h3 class="article-title">Radius-Of-A-Circle</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calculate_circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the area of a circle given its radius.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    radius (float): The radius of the circle.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    float: The area of the circle.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">area</span>
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calculate_circle_area</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Expected output: 78.53975</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Define a table</span>
-<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="mf">78.5</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># Build an UPDATE query</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;Jane Doe&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>UPDATE &quot;users&quot; SET &quot;name&quot;=&#39;Jane Doe&#39; WHERE &quot;id&quot;=1
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">calculate_circle_area</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>  <span class="c1"># Expected …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-update.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/radius-of-a-circle.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -225,255 +195,10 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/simple-where.html"><h3 class="article-title">Simple-Where</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/rating-healthy.html"><h3 class="article-title">Rating-Healthy</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
 </h6>
 
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Define a table</span>
-<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Build a SELECT query with a WHERE clause</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">users</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>SELECT &quot;id&quot;,&quot;name&quot; FROM &quot;users&quot; WHERE &quot;age&quot;&gt;30
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/simple-where.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/small-large.html"><h3 class="article-title">Small Large</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<p>Finds and prints the smallest and largest numbers in the list.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_large_small</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is smallest&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is largest&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">get_large_small</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>The number is smallest
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">get_large_small</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>The number is largest
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_large_small</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-
-    <span class="k">if …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/small-large.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/sort-fueltype-then-price.html"><h3 class="article-title">Sort-Fueltype-Then-Price</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x107a918b0&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Sort the dataset first by fuel-type and then by price.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT make,&quot;fuel-type&quot;,price</span>
-<span class="s2">                       FROM automobile</span>
-<span class="s2">                    WHERE price != &#39;?&#39;</span>
-<span class="s2">                    ORDER BY &quot;fuel-type&quot;,price ASC &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[(&#39;toyota&#39;, &#39;diesel …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/sort-fueltype-then-price.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/sqllite-test1.html"><h3 class="article-title">Sqllite-Test1</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file into a DataFrame</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/madhuriankaraboyina/Downloads/student_data.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Connect to SQLite</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;:memory:&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#conn = sqlite3.connect(&quot;abc.db&quot;)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Write DataFrame to SQLite</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;my_table&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">100</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Perform SQL query</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">&quot;SELECT …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/sqllite-test1.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/square-error.html"><h3 class="article-title">Square-Error</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="c1">#print(&quot;inside main method&quot;)</span>
-
-    <span class="n">y_actual</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-    <span class="n">y_predicted</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-
-    <span class="n">rms</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_actual</span><span class="p">,</span> <span class="n">y_predicted</span><span class="p">))</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="n">rms</span><span class="p">)</span>    
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">0.5773502691896257</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/square-error.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/standard-deviation.html"><h3 class="article-title">Standard Deviation</h3></a>
-<h6 class="subheader" title="2024-12-15T00:00:00-05:00">Sun 15 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Determine the standard deviation of the Calories column.</span>
-</code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </code></pre></div>
@@ -484,7 +209,10 @@
 <div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ratings.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">ratings</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="n">df</span>
@@ -509,19 +237,240 @@
     <tr style="text-align: right;">
       <th></th>
       <th>Food_ID</th>
-      <th>Food_Name …</th></tr></thead></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a>
+      <th>Food_Name</th>
+      <th>Category</th>
+      <th>Price …</th></tr></thead></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/standard-deviation.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/rating-healthy.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/ratio-horsepower-enginesize.html"><h3 class="article-title">Ratio-Horsepower-Enginesize</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x11183fcf0&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Calculate the ratio of horsepower to engine-size for each car.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT *,</span>
+<span class="s2">    CAST(horsepower AS FLOAT) / CAST(&quot;engine-Size&quot; AS FLOAT)</span>
+<span class="s2">    FROM automobile</span>
+<span class="s2">    WHERE horsepower != &#39;?&#39;&quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(3,
+  &#39;?&#39;,
+  &#39;alfa-romero …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/ratio-horsepower-enginesize.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/regex.html"><h3 class="article-title">Regex</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;My email addresses are madhuri@gmail.com, ankaraboyina@yahoo.com, and keerthi@hotmail.com.&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">email_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">emails</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">email_pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found email addresses:&quot;</span><span class="p">,</span> <span class="n">emails</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Found</span><span class="w"> </span><span class="nx">email</span><span class="w"> </span><span class="nx">addresses</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&#39;</span><span class="nx">madhuri</span><span class="err">@</span><span class="nx">gmail</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">ankaraboyina</span><span class="err">@</span><span class="nx">yahoo</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">keerthi</span><span class="err">@</span><span class="nx">hotmail</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text_with_placeholder</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">email_pattern …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/regex.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/remove-duplicates-list.html"><h3 class="article-title">Remove-Duplicates-List</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://www.geeksforgeeks.org/python-ways-to-remove-duplicates-from-list/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_duplicates</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Problem: Write a function to remove duplicates from a list.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    lst: a list of elements</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    a list with duplicates removed</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># initialize an empty list to store unique elements</span>
+
+    <span class="c1"># loop through the input list</span>
+
+    <span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">lst …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/remove-duplicates-list.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/remove-element.html"><h3 class="article-title">Remove-Element</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_element</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Write a function to remove an element from a list by its value.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): The list from which the element needs to be removed.</span>
+<span class="sd">    value: The value of the element to be removed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    list: The updated list after removing the element.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">lst</span><span class="o">.</span><span class="n">remove …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/remove-element.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/replace-column.html"><h3 class="article-title">Replace-Column</h3></a>
+<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span> <span class="s1">&#39;food.csv&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span>
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Food_ID</th>
+      <th>Food_Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Calories</th>
+      <th>Available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Pizza</td>
+      <td>Fast Food</td>
+      <td>8.99</td>
+      <td>300</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Burger</td>
+      <td>Fast Food …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-3.html">Assignment-3</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/replace-column.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 16 of 19</h6>
+<h6 class="subheader">Page 16 of 22</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/index15.html">&laquo; Prev</a>
