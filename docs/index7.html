@@ -47,8 +47,89 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/distinct-body-style.html"><h3 class="article-title">Distinct-Body-Style</h3></a>
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x103747c70&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Group by make and count the number of unique body-style values.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT make,COUNT(DISTINCT &quot;body-style&quot;) AS unique_body_style</span>
+<span class="s2">                       FROM automobile</span>
+<span class="s2">                       GROUP BY make&quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;nissan&#39;, 4 …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/distinct-body-style.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/distinct-engine-type.html"><h3 class="article-title">Distinct-Engine-Type</h3></a>
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!pip install duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Connect to DuckDB</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file</span>
+<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x10728e2f0&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Count the number of unique values in the engine-type column.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT DISTINCT(&quot;engine-type&quot;) FROM automobile LIMIT 10&quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/distinct-engine-type.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/divisibility.html"><h3 class="article-title">Divisibility</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -75,7 +156,7 @@ Prints "Divisible by both" or "Not divisible by both."</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/divisible-by-5.html"><h3 class="article-title">Divisible-By-5</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -103,7 +184,7 @@ Prints "Divisible by both" or "Not divisible by both."</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/dns.html"><h3 class="article-title">Dns</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -142,7 +223,7 @@ Prints "Divisible by both" or "Not divisible by both."</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/drive-wheels-category.html"><h3 class="article-title">Drive-Wheels-Category</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -182,7 +263,7 @@ Prints "Divisible by both" or "Not divisible by both."</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/drop-column.html"><h3 class="article-title">Drop-Column</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -253,7 +334,7 @@ Prints "Divisible by both" or "Not divisible by both."</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/duckdb-test1.html"><h3 class="article-title">Duckdb-Test1</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -278,7 +359,7 @@ Prints "Divisible by both" or "Not divisible by both."</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/duplicate-identifier.html"><h3 class="article-title">Duplicate-Identifier</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -315,7 +396,7 @@ Prints "Divisible by both" or "Not divisible by both."</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/election-results.html"><h3 class="article-title">Election-Results</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -350,74 +431,9 @@ Prints "Divisible by both" or "Not divisible by both."</p>
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/email.html"><h3 class="article-title">Email</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">smtplib</span>
-<span class="kn">from</span> <span class="nn">email.mime.multipart</span> <span class="kn">import</span> <span class="n">MIMEMultipart</span>
-<span class="kn">from</span> <span class="nn">email.mime.text</span> <span class="kn">import</span> <span class="n">MIMEText</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Sender and receiver email addresses</span>
-<span class="n">sender_email</span> <span class="o">=</span> <span class="s1">&#39;your_email@gmail.com&#39;</span>
-<span class="n">receiver_email</span> <span class="o">=</span> <span class="s1">&#39;receiver_email@example.com&#39;</span>
-<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;your_email_password&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Create the MIME message</span>
-<span class="n">message</span> <span class="o">=</span> <span class="n">MIMEMultipart</span><span class="p">()</span>
-<span class="n">message</span><span class="p">[</span><span class="s1">&#39;From&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sender_email</span>
-<span class="n">message</span><span class="p">[</span><span class="s1">&#39;To&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">receiver_email</span>
-<span class="n">message</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Test Email from Python&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Body of the …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/email.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/ends-on.html"><h3 class="article-title">Ends-On</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Filter students whose names end with &quot;on&quot;.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project</span><span class="p">.</span><span class="w"> </span><span class="nx">You …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/ends-on.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 7 of 22</h6>
+<h6 class="subheader">Page 7 of 23</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/index6.html">&laquo; Prev</a>

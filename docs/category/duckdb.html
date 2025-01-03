@@ -46,8 +46,8 @@
         
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/aspiration-make-turbo.html"><h3 class="article-title">Aspiration-Make-Turbo</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/age-difference.html"><h3 class="article-title">Age-Difference</h3></a>
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -62,66 +62,22 @@
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file</span>
-<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE food AS SELECT * FROM &#39;updatedonline_file.csv&#39;&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x1077b42b0&gt;
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x104dcb8b0&gt;
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Retrieve all rows where aspiration is turbo.</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#What is the minimum age of individuals in the dataset?</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT * FROM automobile</span>
-<span class="s2">                        WHERE &quot;aspiration&quot; = &#39;turbo&#39; &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT make, aspiration FROM automobile</span>
-<span class="s2">                        WHERE &quot;aspiration&quot; = &#39;turbo&#39; &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT Min(Age) FROM food &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="n">result</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>[(&#39;audi&#39;, &#39;turbo&#39;),
- (&#39;audi&#39;, &#39;turbo&#39;),
- (&#39;dodge&#39;, &#39;turbo&#39;),
- (&#39;dodge&#39;, &#39;turbo&#39;),
- (&#39;dodge&#39;, &#39;turbo&#39;),
- (&#39;mercedes-benz&#39;, &#39;turbo&#39;),
- (&#39;mercedes-benz&#39;, &#39;turbo&#39;),
- (&#39;mercedes-benz&#39;, &#39;turbo&#39;),
- (&#39;mercedes-benz&#39;, &#39;turbo&#39;),
- (&#39;mercury&#39;, &#39;turbo&#39;),
- (&#39;mitsubishi&#39;, &#39;turbo&#39;),
- (&#39;mitsubishi&#39;, &#39;turbo&#39;),
- (&#39;mitsubishi&#39;, &#39;turbo&#39;),
- (&#39;mitsubishi&#39;, &#39;turbo&#39;),
- (&#39;mitsubishi&#39;, &#39;turbo&#39;),
- (&#39;mitsubishi&#39;, &#39;turbo&#39;),
- (&#39;nissan&#39;, &#39;turbo&#39;),
- (&#39;peugot&#39;, &#39;turbo&#39;),
- (&#39;peugot&#39;, &#39;turbo&#39;),
- (&#39;peugot&#39;, &#39;turbo&#39;),
- (&#39;peugot&#39;, &#39;turbo&#39;),
- (&#39;peugot&#39;, &#39;turbo&#39;),
- (&#39;peugot&#39;, &#39;turbo&#39;),
- (&#39;plymouth&#39;, &#39;turbo&#39;),
- (&#39;plymouth&#39;, &#39;turbo&#39;),
- (&#39;saab&#39;, &#39;turbo&#39;),
- (&#39;saab&#39;, &#39;turbo&#39;),
- (&#39;subaru&#39;, &#39;turbo&#39;),
- (&#39;subaru&#39;, &#39;turbo&#39;),
- (&#39;toyota&#39;, &#39;turbo&#39;),
- (&#39;volkswagen&#39;, &#39;turbo&#39;),
- (&#39;volkswagen&#39;, &#39;turbo&#39;),
- (&#39;volvo&#39;, &#39;turbo&#39;),
- (&#39;volvo&#39;, &#39;turbo&#39;),
- (&#39;volvo&#39;, &#39;turbo&#39;),
- (&#39;volvo&#39;, &#39;turbo&#39;),
- (&#39;volvo&#39;, &#39;turbo&#39;)]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code>[(18,)]
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
@@ -153,8 +109,51 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/aspiration-make-turbo.html"><h3 class="article-title">Aspiration-Make-Turbo</h3></a>
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!pip install duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Connect to DuckDB</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file</span>
+<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x1077b42b0&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Retrieve all rows where aspiration is turbo.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT * FROM automobile</span>
+<span class="s2">                        WHERE &quot;aspiration&quot; = &#39;turbo&#39; &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/aspiration-make-turbo.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/average-engine-size.html"><h3 class="article-title">Average-Engine-Size</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -194,7 +193,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/average-price-groupby-make.html"><h3 class="article-title">Average-Price-Groupby-Make</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -233,7 +232,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/body-style-hatchback.html"><h3 class="article-title">Body-Style-Hatchback</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -258,7 +257,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/bore-between-25-35.html"><h3 class="article-title">Bore-Between-2.5-3.5</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -294,7 +293,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/car-count-90-percentile.html"><h3 class="article-title">Car-Count-90-Percentile</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -333,7 +332,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/car-with-highest-compression.html"><h3 class="article-title">Car-With-Highest-Compression</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -376,7 +375,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/case-light-heavy-medium.html"><h3 class="article-title">Case-Light-Heavy-Medium</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -413,7 +412,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/city-max-min-mpg.html"><h3 class="article-title">City-Max-Min-Mpg</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -469,49 +468,9 @@
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/compression-ratio-10.html"><h3 class="article-title">Compression-Ratio-10</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="ch">#!pip install duckdb</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Connect to DuckDB</span>
-<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file</span>
-<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x1063d1370&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Filter cars with a compression-ratio above 10</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT make,&quot;compression-ratio&quot; FROM automobile</span>
-<span class="s2">                        WHERE CAST(&quot;compression-ratio&quot; AS INT) &gt; 10 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/compression-ratio-10.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 3</h6>
+<h6 class="subheader">Page 1 of 5</h6>
 
 <p>
 

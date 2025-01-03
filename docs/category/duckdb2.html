@@ -47,8 +47,48 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/compression-ratio-10.html"><h3 class="article-title">Compression-Ratio-10</h3></a>
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!pip install duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Connect to DuckDB</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file</span>
+<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x1063d1370&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Filter cars with a compression-ratio above 10</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT make,&quot;compression-ratio&quot; FROM automobile</span>
+<span class="s2">                        WHERE CAST(&quot;compression-ratio&quot; AS INT) &gt; 10 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/compression-ratio-10.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/count-appears-once.html"><h3 class="article-title">Count-Appears-Once</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -88,8 +128,55 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/count-occupation.html"><h3 class="article-title">Count-Occupation</h3></a>
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Count the number of individuals with &quot;Post Graduate&quot; qualifications.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE food AS SELECT * FROM &#39;updatedonline_file.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x106cef770&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot; SELECT COUNT(Occupation) FROM food &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(388,)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/count-occupation.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/display-ten-rows.html"><h3 class="article-title">Display-Ten-Rows</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -114,7 +201,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/distinct-body-style.html"><h3 class="article-title">Distinct-Body-Style</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -156,7 +243,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/distinct-engine-type.html"><h3 class="article-title">Distinct-Engine-Type</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -195,7 +282,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/drive-wheels-category.html"><h3 class="article-title">Drive-Wheels-Category</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -235,7 +322,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/duckdb-test1.html"><h3 class="article-title">Duckdb-Test1</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -260,7 +347,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/engine-location-rear.html"><h3 class="article-title">Engine-Location-Rear</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -302,107 +389,50 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/groupby-curb-weight.html"><h3 class="article-title">Groupby-Curb-Weight</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+                <a href="https://madhuriankara.github.io/pynotes/family-size-max.html"><h3 class="article-title">Family-Size-Max</h3></a>
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x106062330&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Group the cars by body-style and calculate the sum of curb-weight for each group.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT &quot;body-style&quot;, SUM(&quot;curb-weight&quot;) AS curb</span>
-<span class="s2">                            FROM automobile</span>
-<span class="s2">                            GROUP BY &quot;body-style&quot;</span>
-<span class="s2">                            &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/groupby-curb-weight.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/horsepower-greater-150.html"><h3 class="article-title">Horsepower-Greater-150</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">duckdb</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">Collecting</span><span class="w"> </span><span class="n">duckdb</span>
-<span class="w">  </span><span class="n">Downloading</span><span class="w"> </span><span class="n">duckdb</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="n">cp312</span><span class="o">-</span><span class="n">cp312</span><span class="o">-</span><span class="n">macosx_12_0_arm64</span><span class="o">.</span><span class="n">whl</span><span class="o">.</span><span class="n">metadata</span><span class="w"> </span><span class="p">(</span><span class="mi">762</span><span class="w"> </span><span class="n">bytes</span><span class="p">)</span>
-<span class="n">Downloading</span><span class="w"> </span><span class="n">duckdb</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="n">cp312</span><span class="o">-</span><span class="n">cp312</span><span class="o">-</span><span class="n">macosx_12_0_arm64</span><span class="o">.</span><span class="n">whl</span><span class="w"> </span><span class="p">(</span><span class="mf">15.5</span><span class="w"> </span><span class="n">MB</span><span class="p">)</span>
-<span class="err"></span><span class="p">[</span><span class="mi">2</span><span class="n">K</span><span class="w">   </span><span class="err"></span><span class="p">[</span><span class="mi">38</span><span class="p">;</span><span class="mi">2</span><span class="p">;</span><span class="mi">114</span><span class="p">;</span><span class="mi">156</span><span class="p">;</span><span class="mi">31</span><span class="n">m</span><span class="err">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span><span class="p">[</span><span class="mi">0</span><span class="n">m</span><span class="w"> </span><span class="err"></span><span class="p">[</span><span class="mi">32</span><span class="n">m15</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="mf">15.5</span><span class="w"> </span><span class="n">MB</span><span class="err"></span><span class="p">[</span><span class="mi">0</span><span class="n">m</span><span class="w"> </span><span class="err"></span><span class="p">[</span><span class="mi">31</span><span class="n">m34</span><span class="o">.</span><span class="mi">2 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/horsepower-greater-150.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/intermediate-1.html"><h3 class="article-title">Intermediate-1</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Identify the make with the highest number of models in the dataset.</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!pip install duckdb</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Connect to DuckDB</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file</span>
+<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE food AS SELECT * FROM &#39;updatedonline_file.csv&#39;&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x107e5c970&gt;
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x105ae9070&gt;
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Identify the make with the highest number of models in the dataset.</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#What is the maximum family size recorded in the dataset?</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT make, COUNT …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT MAX(&quot;Family-size&quot;) FROM food &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(6 …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/intermediate-1.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/family-size-max.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 2 of 3</h6>
+<h6 class="subheader">Page 2 of 5</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">&laquo; Prev</a>

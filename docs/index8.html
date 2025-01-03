@@ -47,8 +47,73 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/email.html"><h3 class="article-title">Email</h3></a>
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">smtplib</span>
+<span class="kn">from</span> <span class="nn">email.mime.multipart</span> <span class="kn">import</span> <span class="n">MIMEMultipart</span>
+<span class="kn">from</span> <span class="nn">email.mime.text</span> <span class="kn">import</span> <span class="n">MIMEText</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Sender and receiver email addresses</span>
+<span class="n">sender_email</span> <span class="o">=</span> <span class="s1">&#39;your_email@gmail.com&#39;</span>
+<span class="n">receiver_email</span> <span class="o">=</span> <span class="s1">&#39;receiver_email@example.com&#39;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;your_email_password&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Create the MIME message</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">MIMEMultipart</span><span class="p">()</span>
+<span class="n">message</span><span class="p">[</span><span class="s1">&#39;From&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sender_email</span>
+<span class="n">message</span><span class="p">[</span><span class="s1">&#39;To&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">receiver_email</span>
+<span class="n">message</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Test Email from Python&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Body of the …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/email.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/ends-on.html"><h3 class="article-title">Ends-On</h3></a>
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Filter students whose names end with &quot;on&quot;.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project</span><span class="p">.</span><span class="w"> </span><span class="nx">You …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/ends-on.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/ends-son.html"><h3 class="article-title">Ends Son</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -73,7 +138,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/ends-with-character.html"><h3 class="article-title">Ends-With-Character</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -120,7 +185,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/engine-location-rear.html"><h3 class="article-title">Engine-Location-Rear</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -163,7 +228,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/enumerate-args.html"><h3 class="article-title">Enumerate-Args</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -200,7 +265,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/env-work.html"><h3 class="article-title">Env-Work</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -237,7 +302,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/error-enum.html"><h3 class="article-title">Error-Enum</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -278,7 +343,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/eventlet.html"><h3 class="article-title">Eventlet</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -305,7 +370,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/factorial-of-a-number.html"><h3 class="article-title">Factorial-Of-A-Number</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -335,78 +400,9 @@
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/fibonacci.html"><h3 class="article-title">Fibonacci</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">## Example 1: Using looping technique</span>
-<span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-
-    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b : &#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">b</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">## Example …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/fibonacci.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/fibonacciii-series.html"><h3 class="article-title">Fibonacciii-Series</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fibonacci_numbers</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="c1">#Problem: Write a function to return the first n Fibonacci numbers.</span>
-
-    <span class="c1">#Parameters:</span>
-    <span class="c1">#n (int): Number of Fibonacci numbers to return</span>
-
-    <span class="c1">#Returns:</span>
-    <span class="c1">#list: List of the first n Fibonacci numbers</span>
-
-
-    <span class="c1"># Initialize the list to store Fibonacci numbers</span>
-    <span class="n">fib</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">fib</span><span class="o">.</span><span class="n">append …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/fibonacciii-series.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 8 of 22</h6>
+<h6 class="subheader">Page 8 of 23</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/index7.html">&laquo; Prev</a>

@@ -1,6 +1,6 @@
 ---
 title: Standard Deviation
-date: 2024-12-23
+date: 2025-01-03
 author: Your Name
 cell_count: 15
 score: 15

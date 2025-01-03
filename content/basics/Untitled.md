@@ -1,6 +1,6 @@
 ---
 title: Untitled
-date: 2024-12-23
+date: 2025-01-03
 author: Your Name
 cell_count: 3
 score: 0
@@ -40,20 +40,7 @@ print(find_smallest_number([-2, 0, 4, -5, 3])) # Expected output: -5
 
 
 ```python
-def find_smallest_number(nums):
-    """
-    This function finds the smallest number in a list.
 
-    Parameters:
-    nums (list): A list of numbers
-
-    Returns:
-    int: The smallest number in the list
-    """
-    
-    # TODO: Implement the function
-    
-    return min(nums)
 ```
 
 

@@ -1,6 +1,6 @@
 ---
 title: Tables-Rich
-date: 2024-12-23
+date: 2025-01-03
 author: Your Name
 cell_count: 8
 score: 5

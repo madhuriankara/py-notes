@@ -47,7 +47,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/1-address.html"><h3 class="article-title">1 Address</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -132,7 +132,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/2-address.html"><h3 class="article-title">2-Address</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -174,7 +174,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/add-a-new-column.html"><h3 class="article-title">Add-A-New-Column</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -231,7 +231,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/age-calculator.html"><h3 class="article-title">Age-Calculator</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -273,8 +273,53 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/age-difference.html"><h3 class="article-title">Age-Difference</h3></a>
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!pip install duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Connect to DuckDB</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file</span>
+<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE food AS SELECT * FROM &#39;updatedonline_file.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x104dcb8b0&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#What is the minimum age of individuals in the dataset?</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT Min(Age) FROM food &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(18 …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/age-difference.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/all-rows-columns.html"><h3 class="article-title">All-Rows-Columns</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -327,7 +372,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/aspiration-make-turbo.html"><h3 class="article-title">Aspiration-Make-Turbo</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -370,7 +415,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/assignment3.html"><h3 class="article-title">Assignment3</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -414,7 +459,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/attendance-less-than-85.html"><h3 class="article-title">Attendance-Less-Than-85</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -439,7 +484,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/attendance-participation.html"><h3 class="article-title">Attendance-Participation</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -462,37 +507,9 @@
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/average-birthrate-country.html"><h3 class="article-title">Average-Birthrate-Country</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#What is the average birthrate for countries in each climate type?</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/average-birthrate-country.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 22</h6>
+<h6 class="subheader">Page 1 of 23</h6>
 
 <p>
 

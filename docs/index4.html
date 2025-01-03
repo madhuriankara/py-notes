@@ -47,8 +47,51 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/car-with-highest-compression.html"><h3 class="article-title">Car-With-Highest-Compression</h3></a>
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x104f395b0&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Find the car with the highest compression-ratio for each fuel-type.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT MAX(&quot;compression-ratio&quot;), &quot;fuel-type&quot;</span>
+<span class="s2">                            FROM automobile</span>
+<span class="s2">                            GROUP BY &quot;fuel-type&quot;</span>
+<span class="s2">                            &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(23.0, &#39;diesel&#39;), (11.5, &#39;gas …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/car-with-highest-compression.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/case-light-heavy-medium.html"><h3 class="article-title">Case-Light-Heavy-Medium</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -85,7 +128,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/check-if-it-is-prime.html"><h3 class="article-title">Check-If-It-Is-Prime</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -120,7 +163,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/check-if-leap-year-or-not.html"><h3 class="article-title">Check-If-Leap-Year-Or-Not</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -155,7 +198,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/check-if-list-is-empty.html"><h3 class="article-title">Check-If-List-Is-Empty</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -199,7 +242,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/check-number-even-odd.html"><h3 class="article-title">Check-Number-Even-Odd</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -232,7 +275,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/city-max-min-mpg.html"><h3 class="article-title">City-Max-Min-Mpg</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -293,7 +336,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/climate-distribution.html"><h3 class="article-title">Climate-Distribution</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -321,7 +364,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/coin-toss.html"><h3 class="article-title">Coin-Toss</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -360,7 +403,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/column-healthy.html"><h3 class="article-title">Column-Healthy</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
 </h6>
 
 
@@ -426,43 +469,9 @@
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/common-elements-in-a-list.html"><h3 class="article-title">Common-Elements-In-A-List</h3></a>
-<h6 class="subheader" title="2024-12-23T00:00:00-05:00">Mon 23 December 2024
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#https://stackoverflow.com/questions/2864842/common-elements-comparison-between-2-lists</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_common_elements</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">list2</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Problem: Write a function to find the common elements in two lists.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">    list1: First list of elements</span>
-<span class="sd">    list2: Second list of elements</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">    List of common elements between list1 and list2</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c1"># Initialize an empty list to store common elements …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/common-elements-in-a-list.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 4 of 22</h6>
+<h6 class="subheader">Page 4 of 23</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/index3.html">&laquo; Prev</a>

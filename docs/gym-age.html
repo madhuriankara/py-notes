@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Gym-Age</title>
+
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://madhuriankara.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://madhuriankara.github.io/pynotes">Py Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/gym-age.html" rel="bookmark"
+        title="Permalink to Gym-Age">Gym-Age</a></h3>
+    </header>
+
+<h6 class="subheader" title="2025-01-03T00:00:00-05:00">Fri 03 January 2025
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE gym AS SELECT * FROM &#39;gym.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x1180eb530&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT age FROM gym</span>
+<span class="s2">                        WHERE Gender == &#39;Male&#39; &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(56,),
+ (25,),
+ (38,),
+ (36,),
+ (28,),
+ (28,),
+ (41,),
+ (53,),
+ (57,),
+ (41,),
+ (20,),
+ (19,),
+ (38,),
+ (29,),
+ (44,),
+ (59,),
+ (45,),
+ (32,),
+ (38,),
+ (26,),
+ (35,),
+ (21,),
+ (42,),
+ (43,),
+ (37,),
+ (45,),
+ (24,),
+ (25,),
+ (53,),
+ (57,),
+ (21,),
+ (23,),
+ (27,),
+ (53,),
+ (32,),
+ (40,),
+ (35,),
+ (41,),
+ (43,),
+ (46,),
+ (41,),
+ (25,),
+ (28,),
+ (25,),
+ (52,),
+ (22,),
+ (56,),
+ (58,),
+ (26,),
+ (29,),
+ (51,),
+ (50,),
+ (41,),
+ (54,),
+ (52,),
+ (18,),
+ (52,),
+ (54,),
+ (20,),
+ (18,),
+ (43,),
+ (31,),
+ (56,),
+ (44,),
+ (26,),
+ (32,),
+ (59,),
+ (30,),
+ (56,),
+ (49,),
+ (21,),
+ (54,),
+ (56,),
+ (53,),
+ (49,),
+ (39,),
+ (45,),
+ (59,),
+ (23,),
+ (45,),
+ (37,),
+ (45,),
+ (42,),
+ (18,),
+ (30,),
+ (58,),
+ (20,),
+ (56,),
+ (23,),
+ (50,),
+ (59,),
+ (41,),
+ (32,),
+ (49,),
+ (41,),
+ (20,),
+ (54,),
+ (19,),
+ (19,),
+ (45,),
+ (54,),
+ (50,),
+ (18,),
+ (36,),
+ (43,),
+ (21,),
+ (28,),
+ (34,),
+ (55,),
+ (23,),
+ (28,),
+ (50,),
+ (26,),
+ (37,),
+ (20,),
+ (36,),
+ (49,),
+ (58,),
+ (50,),
+ (57,),
+ (56,),
+ (28,),
+ (48,),
+ (47,),
+ (59,),
+ (43,),
+ (19,),
+ (29,),
+ (22,),
+ (54,),
+ (49,),
+ (58,),
+ (52,),
+ (36,),
+ (33,),
+ (41,),
+ (50,),
+ (41,),
+ (28,),
+ (25,),
+ (53,),
+ (57,),
+ (42,),
+ (52,),
+ (50,),
+ (50,),
+ (38,),
+ (37,),
+ (20,),
+ (50,),
+ (29,),
+ (39,),
+ (39,),
+ (47,),
+ (55,),
+ (25,),
+ (44,),
+ (50,),
+ (45,),
+ (50,),
+ (36,),
+ (52,),
+ (45,),
+ (47,),
+ (46,),
+ (58,),
+ (54,),
+ (52,),
+ (38,),
+ (40,),
+ (48,),
+ (49,),
+ (40,),
+ (59,),
+ (43,),
+ (34,),
+ (50,),
+ (46,),
+ (59,),
+ (43,),
+ (52,),
+ (30,),
+ (25,),
+ (33,),
+ (29,),
+ (40,),
+ (32,),
+ (49,),
+ (42,),
+ (59,),
+ (23,),
+ (32,),
+ (22,),
+ (56,),
+ (49,),
+ (47,),
+ (52,),
+ (57,),
+ (30,),
+ (34,),
+ (36,),
+ (45,),
+ (43,),
+ (43,),
+ (40,),
+ (29,),
+ (56,),
+ (22,),
+ (39,),
+ (46,),
+ (29,),
+ (33,),
+ (54,),
+ (39,),
+ (31,),
+ (47,),
+ (22,),
+ (29,),
+ (43,),
+ (56,),
+ (53,),
+ (40,),
+ (22,),
+ (48,),
+ (36,),
+ (49,),
+ (22,),
+ (21,),
+ (41,),
+ (33,),
+ (19,),
+ (49,),
+ (41,),
+ (29,),
+ (52,),
+ (50,),
+ (54,),
+ (29,),
+ (20,),
+ (18,),
+ (27,),
+ (46,),
+ (30,),
+ (29,),
+ (19,),
+ (34,),
+ (27,),
+ (43,),
+ (58,),
+ (24,),
+ (21,),
+ (28,),
+ (46,),
+ (42,),
+ (38,),
+ (53,),
+ (27,),
+ (52,),
+ (35,),
+ (56,),
+ (49,),
+ (41,),
+ (40,),
+ (40,),
+ (52,),
+ (47,),
+ (34,),
+ (42,),
+ (39,),
+ (36,),
+ (36,),
+ (29,),
+ (26,),
+ (45,),
+ (36,),
+ (22,),
+ (52,),
+ (29,),
+ (42,),
+ (38,),
+ (56,),
+ (59,),
+ (56,),
+ (48,),
+ (40,),
+ (46,),
+ (35,),
+ (26,),
+ (27,),
+ (55,),
+ (30,),
+ (26,),
+ (19,),
+ (22,),
+ (46,),
+ (36,),
+ (25,),
+ (39,),
+ (34,),
+ (42,),
+ (53,),
+ (48,),
+ (36,),
+ (44,),
+ (43,),
+ (45,),
+ (37,),
+ (56,),
+ (18,),
+ (20,),
+ (30,),
+ (55,),
+ (23,),
+ (49,),
+ (38,),
+ (54,),
+ (53,),
+ (36,),
+ (35,),
+ (48,),
+ (18,),
+ (40,),
+ (28,),
+ (29,),
+ (49,),
+ (33,),
+ (55,),
+ (29,),
+ (41,),
+ (45,),
+ (54,),
+ (53,),
+ (44,),
+ (26,),
+ (50,),
+ (37,),
+ (30,),
+ (45,),
+ (23,),
+ (22,),
+ (42,),
+ (19,),
+ (27,),
+ (50,),
+ (35,),
+ (38,),
+ (42,),
+ (44,),
+ (30,),
+ (58,),
+ (38,),
+ (23,),
+ (34,),
+ (22,),
+ (48,),
+ (20,),
+ (54,),
+ (27,),
+ (27,),
+ (34,),
+ (26,),
+ (18,),
+ (21,),
+ (18,),
+ (57,),
+ (49,),
+ (51,),
+ (25,),
+ (56,),
+ (43,),
+ (20,),
+ (47,),
+ (34,),
+ (32,),
+ (38,),
+ (19,),
+ (28,),
+ (56,),
+ (55,),
+ (51,),
+ (47,),
+ (32,),
+ (51,),
+ (55,),
+ (41,),
+ (32,),
+ (47,),
+ (59,),
+ (21,),
+ (27,),
+ (27,),
+ (34,),
+ (37,),
+ (41,),
+ (19,),
+ (40,),
+ (33,),
+ (21,),
+ (42,),
+ (49,),
+ (20,),
+ (44,),
+ (36,),
+ (35,),
+ (45,),
+ (39,),
+ (58,),
+ (29,),
+ (43,),
+ (51,),
+ (44,),
+ (47,),
+ (34,),
+ (43,),
+ (18,),
+ (25,),
+ (52,),
+ (32,),
+ (39,),
+ (31,),
+ (40,),
+ (31,),
+ (43,),
+ (31,),
+ (24,),
+ (20,),
+ (35,),
+ (55,),
+ (52,),
+ (32,),
+ (27,),
+ (56,),
+ (56,),
+ (39,),
+ (37,),
+ (42,),
+ (27,),
+ (35,),
+ (39,),
+ (51,),
+ (25,),
+ (57,),
+ (59,),
+ (51,),
+ (23,),
+ (39,),
+ (23,),
+ (21,),
+ (47,),
+ (26,),
+ (48,),
+ (57,),
+ (45,),
+ (21,),
+ (47,),
+ (32,),
+ (22,),
+ (37,),
+ (50,),
+ (18,),
+ (43,),
+ (55,),
+ (28,),
+ (53,),
+ (30,),
+ (20,),
+ (23,),
+ (27,),
+ (40,),
+ (27,),
+ (30,),
+ (54,),
+ (34,),
+ (26,),
+ (28,),
+ (32,),
+ (41,),
+ (55,),
+ (52,),
+ (47,),
+ (48,),
+ (22,),
+ (51,),
+ (18,),
+ (57,),
+ (39,),
+ (46,),
+ (31,),
+ (47,),
+ (52,),
+ (54,),
+ (22,),
+ (43,),
+ (21,),
+ (42,),
+ (59,),
+ (42,),
+ (35,),
+ (57,),
+ (49,),
+ (55,),
+ (40,),
+ (32,),
+ (50,),
+ (57,),
+ (23,),
+ (20,),
+ (24,),
+ (25,),
+ (32,),
+ (46,)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://madhuriankara.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-12.html">Assignment-12</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-14.html">Assignment-14</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-3.html">Assignment-3</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-5.html">Assignment-5</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-7.html">Assignment-7</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/onlinefoods.html">onlinefoods</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Py Notes by Madhuri Ankaraboyina</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
