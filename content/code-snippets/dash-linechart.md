@@ -1,6 +1,6 @@
 ---
 title: Dash-Linechart
-date: 2025-01-03
+date: 2025-01-06
 author: Your Name
 cell_count: 8
 score: 5
