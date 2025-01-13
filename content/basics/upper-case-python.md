@@ -1,6 +1,6 @@
 ---
 title: Upper-Case-Python
-date: 2025-01-06
+date: 2025-01-13
 author: Your Name
 cell_count: 3
 score: 0

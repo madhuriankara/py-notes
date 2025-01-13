@@ -47,8 +47,147 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/pie-matplot.html"><h3 class="article-title">Pie-Matplot</h3></a>
+<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Data for plotting</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Banana&#39;</span><span class="p">,</span> <span class="s1">&#39;Cherry&#39;</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>  <span class="c1"># The percentage share of each category</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#ff9999&#39;</span><span class="p">,</span><span class="s1">&#39;#66b3ff&#39;</span><span class="p">,</span><span class="s1">&#39;#99ff99&#39;</span><span class="p">,</span><span class="s1">&#39;#ffcc99&#39;</span><span class="p">]</span>  <span class="c1"># Custom colors for each slice</span>
+<span class="n">explode</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># &quot;Explode&quot; the first slice (Apple) slightly</span>
+
+<span class="c1"># Create a pie chart …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/pie-matplot.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/pincodes.html"><h3 class="article-title">Pincodes</h3></a>
+<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!pip install duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Connect to DuckDB</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file</span>
+<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE food AS SELECT * FROM &#39;updatedonline_file.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x1061fed70&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#List all unique pin codes in the dataset..</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT DISTINCT(&quot;pin-code&quot;) FROM food LIMIT 10&quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(560026 …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/pincodes.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/plot-cv-predict.html"><h3 class="article-title">Plot-Cv-Predict</h3></a>
+<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_predict</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_diabetes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Load an example dataset (replace this with your own data)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">load_diabetes</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">data</span>  <span class="c1"># Features</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">target</span>  <span class="c1"># Target</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize the linear regression model</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="n">linear_model …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/plot-cv-predict.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/plot-digit-classification.html"><h3 class="article-title">Plot-Digit-Classification</h3></a>
+<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Import datasets, classifiers and performance metrics</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">svm</span><span class="p">,</span> <span class="n">metrics</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># The digits dataset</span>
+<span class="n">digits</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_digits</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># The data that we are interested in is made of 8x8 images of digits, let&#39;s</span>
+<span class="c1"># have a look at the first 4 images, stored in the …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/plot-digit-classification.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/plot-gridlines.html"><h3 class="article-title">Plot-Gridlines</h3></a>
-<h6 class="subheader" title="2025-01-06T00:00:00-05:00">Mon 06 January 2025
+<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
 </h6>
 
 
@@ -74,7 +213,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/postal-code.html"><h3 class="article-title">Postal-Code</h3></a>
-<h6 class="subheader" title="2025-01-06T00:00:00-05:00">Mon 06 January 2025
+<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
 </h6>
 
 
@@ -117,7 +256,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/price-ascending.html"><h3 class="article-title">Price-Ascending</h3></a>
-<h6 class="subheader" title="2025-01-06T00:00:00-05:00">Mon 06 January 2025
+<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
 </h6>
 
 
@@ -142,7 +281,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/prime-numbers.html"><h3 class="article-title">Prime-Numbers</h3></a>
-<h6 class="subheader" title="2025-01-06T00:00:00-05:00">Mon 06 January 2025
+<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
 </h6>
 
 
@@ -184,7 +323,7 @@ Prints "Prime" or "Not Prime."</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/profit-margin.html"><h3 class="article-title">Profit-Margin</h3></a>
-<h6 class="subheader" title="2025-01-06T00:00:00-05:00">Mon 06 January 2025
+<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
 </h6>
 
 
@@ -221,7 +360,7 @@ Prints "Prime" or "Not Prime."</p>
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/qr-code.html"><h3 class="article-title">Qr-Code</h3></a>
-<h6 class="subheader" title="2025-01-06T00:00:00-05:00">Mon 06 January 2025
+<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
 </h6>
 
 
@@ -258,155 +397,9 @@ Prints "Prime" or "Not Prime."</p>
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/question3.html"><h3 class="article-title">Question3</h3></a>
-<h6 class="subheader" title="2025-01-06T00:00:00-05:00">Mon 06 January 2025
-</h6>
-
-
-<p>def find_common_elements(list1, list2):
-    """
-    Given two lists, find the common elements between them.</p>
-<div class="highlight"><pre><span></span><code><span class="n">Args</span><span class="o">:</span>
-<span class="n">list1</span><span class="o">:</span><span class="w"> </span><span class="n">First</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">elements</span>
-<span class="n">list2</span><span class="o">:</span><span class="w"> </span><span class="n">Second</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">elements</span>
-
-<span class="n">Returns</span><span class="o">:</span>
-<span class="n">List</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">common</span><span class="w"> </span><span class="n">elements</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">list1</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">list2</span>
-<span class="s2">&quot;&quot;</span><span class="err">&quot;</span>
-
-<span class="err">#</span><span class="w"> </span><span class="n">Initialize</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="n">common</span><span class="w"> </span><span class="n">elements</span>
-<span class="n">common_elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span>
-
-<span class="err">#</span><span class="w"> </span><span class="n">pass</span>
-</code></pre></div>
-
-<h1>Sample test cases</h1>
-<h1>print(find_common_elements([1, 2 …</h1><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/question3.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/question4.html"><h3 class="article-title">Question4</h3></a>
-<h6 class="subheader" title="2025-01-06T00:00:00-05:00">Mon 06 January 2025
-</h6>
-
-
-<p>def generate_squares(n):
-    """
-    Generate a list of squares of numbers from 1 to n.</p>
-<div class="highlight"><pre><span></span><code><span class="n">Args</span><span class="o">:</span>
-<span class="n">n</span><span class="o">:</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">integer</span><span class="w"> </span><span class="n">representing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">upper</span><span class="w"> </span><span class="n">limit</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">range</span>
-
-<span class="n">Returns</span><span class="o">:</span>
-<span class="n">A</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">squares</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">n</span>
-<span class="s2">&quot;&quot;</span><span class="err">&quot;</span>
-
-<span class="err">#</span><span class="w"> </span><span class="n">Initialize</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">squares</span>
-<span class="n">squares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span>
-
-<span class="err">#</span><span class="w"> </span><span class="n">Pass</span>
-</code></pre></div>
-
-<h1>Sample test cases</h1>
-<p>print …</p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/question4.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/question6.html"><h3 class="article-title">Question6</h3></a>
-<h6 class="subheader" title="2025-01-06T00:00:00-05:00">Mon 06 January 2025
-</h6>
-
-
-<p>def rotate_list(lst, k):
-    """
-    Rotate a list by k positions.</p>
-<div class="highlight"><pre><span></span><code><span class="n">Args</span><span class="o">:</span>
-<span class="n">lst</span><span class="o">:</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">rotate</span>
-<span class="n">k</span><span class="o">:</span><span class="w"> </span><span class="n">int</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">positions</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">rotate</span>
-
-<span class="n">Returns</span><span class="o">:</span>
-<span class="n">list</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rotated</span><span class="w"> </span><span class="n">list</span>
-<span class="s2">&quot;&quot;</span><span class="err">&quot;</span>
-
-<span class="err">#</span><span class="w"> </span><span class="n">TODO</span><span class="o">:</span><span class="w"> </span><span class="n">Implement</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rotation</span><span class="w"> </span><span class="n">logic</span><span class="w"> </span><span class="n">here</span>
-<span class="n">pass</span>
-</code></pre></div>
-
-<h1>Sample test cases</h1>
-<h1>print(rotate_list([1, 2, 3, 4, 5], 2))  # Output: [4 …</h1><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/question6.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/question8.html"><h3 class="article-title">Question8</h3></a>
-<h6 class="subheader" title="2025-01-06T00:00:00-05:00">Mon 06 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">reverse_words</span><span class="p">(</span><span class="n">sentence</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Given a sentence, reverse the order of words in it.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">    sentence: A string representing the input sentence.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">    A string with words in reversed order.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c1"># Split the sentence into words</span>
-    <span class="n">words</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
-    <span class="c1"># do your code</span>
-
-    <span class="k">return</span> <span class="n">reversed_sentence</span>
-
-<span class="c1"># Test cases</span>
-<span class="c1"># print(reverse_words(&quot;Hello World&quot;))  # Output: &quot;World …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/question8.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 17 of 24</h6>
+<h6 class="subheader">Page 17 of 25</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/author/your-name16.html">&laquo; Prev</a>
@@ -429,6 +422,7 @@ Prints "Prime" or "Not Prime."</p>
 		
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-12.html">Assignment-12</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-14.html">Assignment-14</a></li>
