@@ -1,9 +1,9 @@
 ---
 title: Reserved-Keywords
-date: 2025-01-13
+date: 2025-01-15
 author: Your Name
-cell_count: 32
-score: 30
+cell_count: 46
+score: 45
 ---
 
 ```python
@@ -340,9 +340,173 @@ for i in func():
 
 
 ```python
+#class Keyword
+```
+
+
+```python
+class ClassExample:
+    def func1(parameters):
+        . . . .
+    def func2(parameters):
+        . . . .
+
+```
+
+
+      Cell In[36], line 3
+        . . . .
+        ^
+    SyntaxError: invalid syntax
+
+
+
+
+```python
+#with Keyword
+```
+
+
+```python
+with open('myfile.txt', 'w') as file:
+    file.write('Scientech Easy!')
+
+```
+
+
+```python
+#as Keyword
+```
+
+
+```python
+import math as x
+print(x.cos(0))
+
+```
+
+    1.0
+
+
+
+```python
+#lambda Keyword
+
+```
+
+
+```python
+# Lambda keyword
+cube = lambda x: x * x * x
+print(cube(7))
+
+```
+
+    343
+
+
+
+```python
+#del Keyword
+```
+
+
+```python
+my_var1 = 200
+my_var2 = "Scientech Easy"
+
+# check if my_var1 and my_var2 exists.
+print(my_var1)
+print(my_var2)
+
+# delete both the variables.
+del my_var1
+del my_var2
+
+# check if my_var1 and my_var2 exists
+print(my_var1)
+print(my_var2)
+
+```
+
+    200
+    Scientech Easy
+
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    Cell In[44], line 13
+         10 del my_var2
+         12 # check if my_var1 and my_var2 exists
+    ---> 13 print(my_var1)
+         14 print(my_var2)
+
+
+    NameError: name 'my_var1' is not defined
+
+
+
+```python
+#try, except, raise, and finally
+```
+
+
+```python
+# initializing the value of variables.
+x = 10
+y = 0
+# No exception raised in try block
+try:
+    z = x // y  # raises divide by zero exception.
+    print(z)
+# handles zero division exception
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+finally:
+    # this block always gets executed regardless of exception produced.
+    print('finally block always gets executed')
+
+```
+
+    Cannot divide by zero
+    finally block always gets executed
+
+
+
+```python
+#assert Keyword
+```
+
+
+```python
+x = 10
+assert x >= 10
+assert x < 10
+```
+
+
+    ---------------------------------------------------------------------------
+
+    AssertionError                            Traceback (most recent call last)
+
+    Cell In[49], line 3
+          1 x = 10
+          2 assert x >= 10
+    ----> 3 assert x < 10
+
+
+    AssertionError: 
+
+
+
+```python
 
 ```
 
 
 ---
-**Score: 30**
+**Score: 45**

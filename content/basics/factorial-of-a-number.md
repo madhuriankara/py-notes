@@ -1,6 +1,6 @@
 ---
 title: Factorial-Of-A-Number
-date: 2025-01-13
+date: 2025-01-15
 author: Your Name
 cell_count: 8
 score: 5

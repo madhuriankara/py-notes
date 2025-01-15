@@ -48,7 +48,7 @@
         title="Permalink to Reserved-Keywords">Reserved-Keywords</a></h3>
     </header>
 
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
 
@@ -304,11 +304,137 @@ Scientech Easy, Dhanbad
 <span class="mf">10</span>
 </code></pre></div>
 
+<div class="highlight"><pre><span></span><code><span class="c1">#class Keyword</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ClassExample</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">func1</span><span class="p">(</span><span class="n">parameters</span><span class="p">):</span>
+        <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+    <span class="k">def</span> <span class="nf">func2</span><span class="p">(</span><span class="n">parameters</span><span class="p">):</span>
+        <span class="o">.</span> <span class="o">.</span> <span class="o">.</span> <span class="o">.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>  Cell In[36], line 3
+    . . . .
+    ^
+SyntaxError: invalid syntax
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#with Keyword</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;myfile.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Scientech Easy!&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#as Keyword</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1.0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#lambda Keyword</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Lambda keyword</span>
+<span class="n">cube</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cube</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">343</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#del Keyword</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">my_var1</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">my_var2</span> <span class="o">=</span> <span class="s2">&quot;Scientech Easy&quot;</span>
+
+<span class="c1"># check if my_var1 and my_var2 exists.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_var1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_var2</span><span class="p">)</span>
+
+<span class="c1"># delete both the variables.</span>
+<span class="k">del</span> <span class="n">my_var1</span>
+<span class="k">del</span> <span class="n">my_var2</span>
+
+<span class="c1"># check if my_var1 and my_var2 exists</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_var1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_var2</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">200</span>
+<span class="n">Scientech</span><span class="w"> </span><span class="n">Easy</span>
+
+
+
+<span class="o">---------------------------------------------------------------------------</span>
+
+<span class="n">NameError</span><span class="w">                                 </span><span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">last</span><span class="p">)</span>
+
+<span class="n">Cell</span><span class="w"> </span><span class="n">In</span><span class="err">[</span><span class="mf">44</span><span class="err">]</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mf">13</span>
+<span class="w">     </span><span class="mf">10</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">my_var2</span>
+<span class="w">     </span><span class="mf">12</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="n">my_var1</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">my_var2</span><span class="w"> </span><span class="n">exists</span>
+<span class="o">---&gt;</span><span class="w"> </span><span class="mf">13</span><span class="w"> </span><span class="kr">print</span><span class="p">(</span><span class="n">my_var1</span><span class="p">)</span>
+<span class="w">     </span><span class="mf">14</span><span class="w"> </span><span class="kr">print</span><span class="p">(</span><span class="n">my_var2</span><span class="p">)</span>
+
+
+<span class="n">NameError</span><span class="p">:</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="err">&#39;</span><span class="n">my_var1</span><span class="err">&#39;</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="kd">def</span><span class="n">ined</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#try, except, raise, and finally</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># initializing the value of variables.</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># No exception raised in try block</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">//</span> <span class="n">y</span>  <span class="c1"># raises divide by zero exception.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="c1"># handles zero division exception</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cannot divide by zero&quot;</span><span class="p">)</span>
+
+<span class="k">finally</span><span class="p">:</span>
+    <span class="c1"># this block always gets executed regardless of exception produced.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;finally block always gets executed&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Cannot divide by zero
+finally block always gets executed
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#assert Keyword</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">assert</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">10</span>
+<span class="k">assert</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">---------------------------------------------------------------------------</span>
+
+<span class="c">AssertionError                            Traceback (most recent call last)</span>
+
+<span class="c">Cell In</span><span class="k">[</span><span class="c">49</span><span class="k">]</span><span class="nt">,</span><span class="c"> line 3</span>
+<span class="c">      1 x = 10</span>
+<span class="c">      2 assert x </span><span class="nv">&gt;</span><span class="c">= 10</span>
+<span class="nb">----</span><span class="nv">&gt;</span><span class="c"> 3 assert x </span><span class="nv">&lt;</span><span class="c"> 10</span>
+
+
+<span class="c">AssertionError:</span>
+</code></pre></div>
+
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 30</strong></p>
+<p><strong>Score: 45</strong></p>
 <p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a>
 
 </p>

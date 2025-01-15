@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Abc-Escapesequance</title>
+
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://madhuriankara.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://madhuriankara.github.io/pynotes">Py Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/abc-escapesequance.html" rel="bookmark"
+        title="Permalink to Abc-Escapesequance">Abc-Escapesequance</a></h3>
+    </header>
+
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="c1">#Escape Sequence </span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;He said &#39;</span><span class="n">Python</span> <span class="ow">is</span> <span class="n">fun</span> <span class="n">unlimited</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>  Cell In[2], line 1
+    print(&#39;He said &#39;Python is fun unlimited&#39;&#39;)
+          ^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;He said &#39;Python is fun unlimited&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>He said &#39;Python is fun unlimited&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;He said &quot;Python is fun unlimited&quot;&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>He said &quot;Python is fun unlimited&quot;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;He said </span><span class="se">\&quot;</span><span class="s2">Python is fun unlimited</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>He said &quot;Python is fun unlimited&quot;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Program based on the escape sequence \’:</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># \&#39;: Used for printing the text string with a single quotation mark.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Good Morning </span><span class="se">\&#39;</span><span class="s1">Scientech Easy</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Good Morning &#39;Scientech Easy&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># \&quot;: Used for printing the text string with double quotation marks.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to </span><span class="se">\&quot;</span><span class="s2">Scientech Easy</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Welcome to &quot;Scientech Easy&quot;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># \t: It gives a tab between two words.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to</span><span class="se">\t</span><span class="s2">Scientech Easy&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Welcome to  Scientech Easy
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># \n: This escape sequence breaks the statement line into two lines.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Good Morning </span><span class="se">\n</span><span class="s2">Scientech Easy&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*</span><span class="se">\n</span><span class="s2">**</span><span class="se">\n</span><span class="s2">***</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Good Morning 
+Scientech Easy
+<span class="gs">*</span>
+<span class="gs">*</span>*
+***
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># \\: It prints the text string with backslash.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Good Evening </span><span class="se">\\</span><span class="s1">Scientech Easy</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Good Evening \Scientech Easy\
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># \r: This escape sequence moves the output \</span>
+<span class="c1"># point back to the beginning of the line without moving down a line (generally).</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Good Morning </span><span class="se">\r</span><span class="s1">Scientech Easy&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Scientech Easy
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">emp_code</span> <span class="o">=</span> <span class="s2">&quot;IT-35264&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Ivaan Sagar&quot;</span>
+<span class="n">desig</span> <span class="o">=</span> <span class="s2">&quot;Sr. Software Programmer&quot;</span>
+<span class="n">comp</span> <span class="o">=</span> <span class="s2">&quot;TCS&quot;</span>
+<span class="n">salary</span> <span class="o">=</span> <span class="s2">&quot;USD 40000&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Employee code: &quot;</span><span class="p">,</span> <span class="n">emp_code</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Name: &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Designation: &quot;</span><span class="p">,</span><span class="n">desig</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">Company: &quot;</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Annual Salary: &quot;</span><span class="p">,</span> <span class="n">salary</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Employee code:  IT-35264 
+Name:  Ivaan Sagar
+Designation:  Sr. Software Programmer   Company:  TCS
+Annual Salary:  USD 40000
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Hello </span><span class="se">\&#39;</span><span class="s2">Python&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Hello </span><span class="se">\&quot;</span><span class="s2">Python&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Hello </span><span class="se">\t</span><span class="s2">Python&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4. Hello </span><span class="se">\n</span><span class="s2">Python&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5. Hello </span><span class="se">\r</span><span class="s2">Python&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;6. Hello </span><span class="se">\a</span><span class="s2"> Python&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;7. Hello </span><span class="se">\\</span><span class="s2">Python&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;8. \ooo 20&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;9. Hello </span><span class="se">\n</span><span class="s2">Python&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;10. Hello </span><span class="se">\b</span><span class="s2">Python&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;11. Hello </span><span class="se">\f</span><span class="s2">Python&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;12. Hello </span><span class="se">\v</span><span class="s2">Python&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Hello</span><span class="w"> </span><span class="err">&#39;</span><span class="n">Python</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Hello</span><span class="w"> </span><span class="s">&quot;Python</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Hello</span><span class="w">    </span><span class="n">Python</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Hello</span><span class="w"> </span>
+<span class="n">Python</span>
+<span class="n">Pythonlo</span><span class="w"> </span>
+<span class="mf">6.</span><span class="w"> </span><span class="n">Hello</span><span class="w"> </span><span class="err"></span><span class="w"> </span><span class="n">Python</span>
+<span class="mf">7.</span><span class="w"> </span><span class="n">Hello</span><span class="w"> </span><span class="err">\</span><span class="n">Python</span>
+<span class="mf">8.</span><span class="w"> </span><span class="err">\</span><span class="n">ooo</span><span class="w"> </span><span class="mf">20</span>
+<span class="mf">9.</span><span class="w"> </span><span class="n">Hello</span><span class="w"> </span>
+<span class="n">Python</span>
+<span class="mf">10.</span><span class="w"> </span><span class="n">HelloPython</span>
+<span class="mf">11.</span><span class="w"> </span><span class="n">Hello</span><span class="w"> </span><span class="n">Python</span>
+<span class="mf">12.</span><span class="w"> </span><span class="n">Hello</span><span class="w"> </span><span class="n">Python</span>
+
+
+<span class="o">&lt;&gt;</span><span class="p">:</span><span class="mf">8</span><span class="p">:</span><span class="w"> </span><span class="n">SyntaxWarning</span><span class="p">:</span><span class="w"> </span><span class="n">invalid</span><span class="w"> </span><span class="n">escape</span><span class="w"> </span><span class="n">sequence</span><span class="w"> </span><span class="err">&#39;\</span><span class="n">o</span><span class="err">&#39;</span>
+<span class="o">&lt;&gt;</span><span class="p">:</span><span class="mf">8</span><span class="p">:</span><span class="w"> </span><span class="n">SyntaxWarning</span><span class="p">:</span><span class="w"> </span><span class="n">invalid</span><span class="w"> </span><span class="n">escape</span><span class="w"> </span><span class="n">sequence</span><span class="w"> </span><span class="err">&#39;\</span><span class="n">o</span><span class="err">&#39;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mf">26</span><span class="o">/</span><span class="mf">1</span><span class="n">_zstvd1579g9j700z2jnmp40000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_53479</span><span class="o">/</span><span class="mf">839562236.</span><span class="n">py</span><span class="p">:</span><span class="mf">8</span><span class="p">:</span><span class="w"> </span><span class="n">SyntaxWarning</span><span class="p">:</span><span class="w"> </span><span class="n">invalid</span><span class="w"> </span><span class="n">escape</span><span class="w"> </span><span class="n">sequence</span><span class="w"> </span><span class="err">&#39;\</span><span class="n">o</span><span class="err">&#39;</span>
+<span class="w">  </span><span class="kr">print</span><span class="p">(</span><span class="s">&quot;8. \ooo 20&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 15</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://madhuriankara.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-12.html">Assignment-12</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-14.html">Assignment-14</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-3.html">Assignment-3</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-5.html">Assignment-5</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-7.html">Assignment-7</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/onlinefoods.html">onlinefoods</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pythonbasics.html">pythonbasics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Py Notes by Madhuri Ankaraboyina</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

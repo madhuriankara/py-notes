@@ -47,104 +47,8 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/generate-squares-a2.html"><h3 class="article-title">Generate-Squares-A2</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_squares</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Generate a list of squares of numbers from 1 to n.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">    n (int): The upper limit of the range.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">    list: A list of squares of numbers from 1 to n.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
-    <span class="k">return</span> <span class="nb">list</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="n">generate_squares</span><span class="p">(</span><span class="mi">5 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/generate-squares-a2.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/gnb.html"><h3 class="article-title">Gnb</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
-
-
-<span class="n">gnb</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">gnb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of mislabeled points out of a total </span><span class="si">%d</span><span class="s2"> points : </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],(</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span> <span class="o">!=</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Number of mislabeled points out of …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/gnb.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/got-job-1.html"><h3 class="article-title">Got-Job-1</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Select students who have both high project scores (e.g., above 85) and got a job.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/got-job-1.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/greater-than.html"><h3 class="article-title">Greater-Than</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+                <a href="https://madhuriankara.github.io/pynotes/food-analysis.html"><h3 class="article-title">Food-Analysis</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
 
@@ -157,7 +61,7 @@
 <div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">df</span>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <div>
@@ -199,14 +103,13 @@
     <tr>
       <th>1</th>
       <td>2</td>
-      <td>Burger</td>
-      <td>Fast Food …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a>
+      <td>Burger …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/greater-than.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/food-analysis.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -214,13 +117,10 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/greater-than-80.html"><h3 class="article-title">Greater-Than-80</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+                <a href="https://madhuriankara.github.io/pynotes/food-distinct-gender.html"><h3 class="article-title">Food-Distinct-Gender</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Find students with test scores greater than 80.</span>
-</code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
 </code></pre></div>
@@ -228,13 +128,13 @@
 <div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project</span><span class="p">.</span><span class="w"> </span><span class="nx">You</span><span class="w"> </span><span class="nx">might</span><span class="w"> </span><span class="nx">receive</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="s">&quot;quota exceeded&quot;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="s">&quot;API …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/onlinefoods.html">onlinefoods</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/greater-than-80.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/food-distinct-gender.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -242,39 +142,24 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/groupby-curb-weight.html"><h3 class="article-title">Groupby-Curb-Weight</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+                <a href="https://madhuriankara.github.io/pynotes/food-distinct-gender-copy1.html"><h3 class="article-title">Food-Distinct-Gender-Copy1</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x106062330&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Group the cars by body-style and calculate the sum of curb-weight for each group.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT &quot;body-style&quot;, SUM(&quot;curb-weight&quot;) AS curb</span>
-<span class="s2">                            FROM automobile</span>
-<span class="s2">                            GROUP BY &quot;body-style&quot;</span>
-<span class="s2">                            &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project</span><span class="p">.</span><span class="w"> </span><span class="nx">You</span><span class="w"> </span><span class="nx">might</span><span class="w"> </span><span class="nx">receive</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="s">&quot;quota exceeded&quot;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="s">&quot;API …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/onlinefoods.html">onlinefoods</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/groupby-curb-weight.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/food-distinct-gender-copy1.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -282,128 +167,21 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/gym-age.html"><h3 class="article-title">Gym-Age</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+                <a href="https://madhuriankara.github.io/pynotes/food-items.html"><h3 class="article-title">Food-Items</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE gym AS SELECT * FROM &#39;gym.csv&#39;&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x1180eb530&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT age FROM gym</span>
-<span class="s2">                        WHERE Gender == &#39;Male&#39; &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[(56,),
- (25,),
- (38,),
- (36,),
- (28,),
- (28,),
- (41,),
- (53,),
- (57,),
- (41,),
- (20,),
- (19,),
- (38,),
- (29,),
- (44,),
- (59,),
- (45,),
- (32 …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/gym-age.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/hexvalidator.html"><h3 class="article-title">Hexvalidator</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">webcolors</span>
-
-<span class="k">def</span> <span class="nf">is_valid_hex_color</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">webcolors</span><span class="o">.</span><span class="n">hex_to_rgb</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span> <span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-
-<span class="c1"># Examples</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#FFF&quot;</span><span class="p">))</span>  <span class="c1"># True</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#123ABC&quot;</span><span class="p">))</span>  <span class="c1"># True</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#123ABCG&quot;</span><span class="p">))</span>  <span class="c1"># False</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>True
-True
-False
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/hexvalidator.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/highest-calories-per-dollar.html"><h3 class="article-title">Highest Calories-Per-Dollar</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Identify the 3 most calorie-dense food items (highest Calories per Dollar).</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#Count the number of food items available (Available = &quot;Yes&quot;) in each Category.</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food.csv&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span><span class="s1">&#39;food.csv&#39;</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ratings.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ratings</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="n">df</span>
@@ -411,13 +189,40 @@ False
 
 <div>
 <style scoped>
-    .dataframe …</style></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Food_ID</th>
+      <th>Food_Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Calories</th>
+      <th>Available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1 …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/highest-calories-per-dollar.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/food-items.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -425,12 +230,101 @@ False
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/highest-literacy-country.html"><h3 class="article-title">Highest-Literacy-Country</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+                <a href="https://madhuriankara.github.io/pynotes/food-unique.html"><h3 class="article-title">Food Unique</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Which country has the highest literacy rate?</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span> <span class="s1">&#39;food.csv&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">Category</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0</span><span class="w">    </span><span class="n">Fast</span><span class="w"> </span><span class="n">Food</span>
+<span class="mf">1</span><span class="w">    </span><span class="n">Fast</span><span class="w"> </span><span class="n">Food</span>
+<span class="mf">2</span><span class="w">      </span><span class="n">Italian</span>
+<span class="mf">3</span><span class="w">     </span><span class="n">Japanese</span>
+<span class="mf">4</span><span class="w">      </span><span class="n">Mexican</span>
+<span class="mf">5</span><span class="w">      </span><span class="n">Healthy</span>
+<span class="mf">6</span><span class="w">        </span><span class="n">Asian</span>
+<span class="mf">7</span><span class="w">      </span><span class="n">Dessert</span>
+<span class="mf">8</span><span class="w">        </span><span class="n">Grill</span>
+<span class="mf">9</span><span class="w">      </span><span class="n">Healthy</span>
+<span class="n">Name</span><span class="p">:</span><span class="w"> </span><span class="n">Category</span><span class="p">,</span><span class="w"> </span><span class="n">dtype</span><span class="p">:</span><span class="w"> </span><span class="n">object</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/food-unique.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/frequency-element.html"><h3 class="article-title">Frequency-Element</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">frequency_element</span><span class="p">():</span>
+    <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="n">frequency</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">frequency</span><span class="p">:</span>
+            <span class="n">frequency</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">frequency</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">frequency</span>
+<span class="n">frequency_element</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{1: 1, 2: 2, 3: 3, 4: 1}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/pythonbasics.html">pythonbasics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/frequency-element.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/gdp-capita-region.html"><h3 class="article-title">Gdp-Capita-Region</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Which region has the highest average GDP per capita</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
@@ -439,19 +333,130 @@ False
 <div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project</span><span class="p">.</span><span class="w"> </span><span class="nx">You …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/highest-literacy-country.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/gdp-capita-region.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/gender-distinct.html"><h3 class="article-title">Gender-Distinct</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE food AS SELECT * FROM &#39;onlinefoods.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x10ac935b0&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT DISTINCT(Gender) FROM food </span>
+<span class="s2">                         &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[(&#39;Female&#39;,), (&#39;Male&#39;,)]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/gender-distinct.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/genearate-squares-of-numbers.html"><h3 class="article-title">Genearate-Squares-Of-Numbers</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_squares</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate a list of squares of numbers from 1 to n.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    n (int): The upper limit of the range.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    list: A list of squares of numbers from 1 to n.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">]</span>
+
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">generate_squares …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/genearate-squares-of-numbers.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/generate-squares-a2.html"><h3 class="article-title">Generate-Squares-A2</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_squares</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate a list of squares of numbers from 1 to n.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    n (int): The upper limit of the range.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    list: A list of squares of numbers from 1 to n.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="nb">list</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">generate_squares</span><span class="p">(</span><span class="mi">5 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/generate-squares-a2.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 11 of 25</h6>
+<h6 class="subheader">Page 11 of 26</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/author/your-name10.html">&laquo; Prev</a>

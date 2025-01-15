@@ -1,6 +1,6 @@
 ---
 title: Highest Calories-Per-Dollar
-date: 2025-01-13
+date: 2025-01-15
 author: Your Name
 cell_count: 13
 score: 10

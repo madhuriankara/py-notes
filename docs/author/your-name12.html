@@ -47,12 +47,47 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/highest-net-migration-rate.html"><h3 class="article-title">Highest-Net-Migration-Rate</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+                <a href="https://madhuriankara.github.io/pynotes/gnb.html"><h3 class="article-title">Gnb</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Which country has the highest net migration rate?</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
+
+
+<span class="n">gnb</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">gnb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of mislabeled points out of a total </span><span class="si">%d</span><span class="s2"> points : </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],(</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span> <span class="o">!=</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Number of mislabeled points out of …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/gnb.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/got-job-1.html"><h3 class="article-title">Got-Job-1</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Select students who have both high project scores (e.g., above 85) and got a job.</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
@@ -61,13 +96,13 @@
 <div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/highest-net-migration-rate.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/got-job-1.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -75,52 +110,18 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/highest-population-density.html"><h3 class="article-title">Highest-Population-Density</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+                <a href="https://madhuriankara.github.io/pynotes/greater-than.html"><h3 class="article-title">Greater-Than</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Which country has the highest population density?</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project</span><span class="p">.</span><span class="w"> </span><span class="nx">You …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/highest-population-density.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/histogram-calories.html"><h3 class="article-title">Histogram-Calories</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Create a histogram of the Calories column.</span>
-</code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food.csv&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">FILEPATH</span> <span class="o">=</span> <span class="s1">&#39;food.csv&#39;</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">FILEPATH</span><span class="p">)</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="n">df</span>
@@ -146,13 +147,33 @@
       <th></th>
       <th>Food_ID</th>
       <th>Food_Name</th>
-      <th>Category …</th></tr></thead></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-12.html">Assignment-12</a>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Calories</th>
+      <th>Available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Pizza</td>
+      <td>Fast Food</td>
+      <td>8.99</td>
+      <td>300</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Burger</td>
+      <td>Fast Food …</td></tr></tbody></table></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/histogram-calories.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/greater-than.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -160,146 +181,12 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/horsepower-greater-150.html"><h3 class="article-title">Horsepower-Greater-150</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+                <a href="https://madhuriankara.github.io/pynotes/greater-than-80.html"><h3 class="article-title">Greater-Than-80</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">duckdb</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">Collecting</span><span class="w"> </span><span class="n">duckdb</span>
-<span class="w">  </span><span class="n">Downloading</span><span class="w"> </span><span class="n">duckdb</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="n">cp312</span><span class="o">-</span><span class="n">cp312</span><span class="o">-</span><span class="n">macosx_12_0_arm64</span><span class="o">.</span><span class="n">whl</span><span class="o">.</span><span class="n">metadata</span><span class="w"> </span><span class="p">(</span><span class="mi">762</span><span class="w"> </span><span class="n">bytes</span><span class="p">)</span>
-<span class="n">Downloading</span><span class="w"> </span><span class="n">duckdb</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="n">cp312</span><span class="o">-</span><span class="n">cp312</span><span class="o">-</span><span class="n">macosx_12_0_arm64</span><span class="o">.</span><span class="n">whl</span><span class="w"> </span><span class="p">(</span><span class="mf">15.5</span><span class="w"> </span><span class="n">MB</span><span class="p">)</span>
-<span class="err"></span><span class="p">[</span><span class="mi">2</span><span class="n">K</span><span class="w">   </span><span class="err"></span><span class="p">[</span><span class="mi">38</span><span class="p">;</span><span class="mi">2</span><span class="p">;</span><span class="mi">114</span><span class="p">;</span><span class="mi">156</span><span class="p">;</span><span class="mi">31</span><span class="n">m</span><span class="err">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span><span class="p">[</span><span class="mi">0</span><span class="n">m</span><span class="w"> </span><span class="err"></span><span class="p">[</span><span class="mi">32</span><span class="n">m15</span><span class="o">.</span><span class="mi">5</span><span class="o">/</span><span class="mf">15.5</span><span class="w"> </span><span class="n">MB</span><span class="err"></span><span class="p">[</span><span class="mi">0</span><span class="n">m</span><span class="w"> </span><span class="err"></span><span class="p">[</span><span class="mi">31</span><span class="n">m34</span><span class="o">.</span><span class="mi">2 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/horsepower-greater-150.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/index-of-an-item.html"><h3 class="article-title">Index-Of-An-Item</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_index</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">lst</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function finds the index of an item in a list.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">    item (any): The item to find in the list.</span>
-<span class="sd">    lst (list): The list to search for the item.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">    int: The index of the item in the list, or -1 if the item is …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/index-of-an-item.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/individuals.html"><h3 class="article-title">Individuals</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE food AS SELECT * FROM &#39;onlinefoods.csv&#39;&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x1104c34f0&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT Age, Gender, Feedback FROM food </span>
-<span class="s2">                        WHERE Feedback = &#39;Positive&#39; &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[(20, &#39;Female&#39;, &#39;Positive&#39;),
- (24, &#39;Female&#39;, &#39;Positive&#39;),
- (22, &#39;Female&#39;, &#39;Positive&#39;),
- (22, &#39;Male&#39;, &#39;Positive&#39;),
- (27, &#39;Female&#39;, &#39;Positive&#39;),
- (22 …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/individuals.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/indiviuals-in-family.html"><h3 class="article-title">Indiviuals-In-Family</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">##How many individuals belong to each family size?</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE food AS SELECT * FROM &#39;updated_file.csv&#39;&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x107a0df70&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Retrieve all records where the monthly income is &quot;Below Rs.10000&quot;.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT * FROM food</span>
-<span class="s2">            WHERE CAST(&quot;Monthly-Income&quot; AS INTEGER …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/indiviuals-in-family.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/infant-mortality-per-gdp.html"><h3 class="article-title">Infant-Mortality-Per-Gdp</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#What is the infant mortality rate for countries with GDP per capita above $50,000?</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#Find students with test scores greater than 80.</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
@@ -308,13 +195,13 @@
 <div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/infant-mortality-per-gdp.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/greater-than-80.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -322,13 +209,10 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/intermediate-1.html"><h3 class="article-title">Intermediate-1</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+                <a href="https://madhuriankara.github.io/pynotes/groupby-curb-weight.html"><h3 class="article-title">Groupby-Curb-Weight</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Identify the make with the highest number of models in the dataset.</span>
-</code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
 </code></pre></div>
@@ -339,19 +223,25 @@
 <div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x107e5c970&gt;
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x106062330&gt;
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Identify the make with the highest number of models in the dataset.</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#Group the cars by body-style and calculate the sum of curb-weight for each group.</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT make, COUNT …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT &quot;body-style&quot;, SUM(&quot;curb-weight&quot;) AS curb</span>
+<span class="s2">                            FROM automobile</span>
+<span class="s2">                            GROUP BY &quot;body-style&quot;</span>
+<span class="s2">                            &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/intermediate-1.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/groupby-curb-weight.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -359,43 +249,204 @@
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/is-a-palindrome.html"><h3 class="article-title">Is-A-Palindrome</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+                <a href="https://madhuriankara.github.io/pynotes/gym-age.html"><h3 class="article-title">Gym-Age</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#https://www.geeksforgeeks.org/python-program-check-string-palindrome-not/</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Problem: Write a function to check if a string is a palindrome.</span>
+<div class="highlight"><pre><span></span><code><span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
 
-<span class="sd">    Args:</span>
-<span class="sd">    s: input string to be checked</span>
+<div class="highlight"><pre><span></span><code><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE gym AS SELECT * FROM &#39;gym.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
 
-<span class="sd">    Returns:</span>
-<span class="sd">    True if the string is a palindrome, False otherwise</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x1180eb530&gt;
+</code></pre></div>
 
-    <span class="c1"># Half-implemented function</span>
-    <span class="c1"># Implement the logic here</span>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT age FROM gym</span>
+<span class="s2">                        WHERE Gender == &#39;Male&#39; &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
 
-    <span class="k">return</span> <span class="n">s</span> <span class="o">==</span> <span class="n">s</span><span class="p">[::</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">result</span>
+</code></pre></div>
 
-<span class="c1"># Sample test cases …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+<div class="highlight"><pre><span></span><code>[(56,),
+ (25,),
+ (38,),
+ (36,),
+ (28,),
+ (28,),
+ (41,),
+ (53,),
+ (57,),
+ (41,),
+ (20,),
+ (19,),
+ (38,),
+ (29,),
+ (44,),
+ (59,),
+ (45,),
+ (32 …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/is-a-palindrome.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/gym-age.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/hexvalidator.html"><h3 class="article-title">Hexvalidator</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">webcolors</span>
+
+<span class="k">def</span> <span class="nf">is_valid_hex_color</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">webcolors</span><span class="o">.</span><span class="n">hex_to_rgb</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+<span class="c1"># Examples</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#FFF&quot;</span><span class="p">))</span>  <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#123ABC&quot;</span><span class="p">))</span>  <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_valid_hex_color</span><span class="p">(</span><span class="s2">&quot;#123ABCG&quot;</span><span class="p">))</span>  <span class="c1"># False</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>True
+True
+False
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/hexvalidator.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/highest-calories-per-dollar.html"><h3 class="article-title">Highest Calories-Per-Dollar</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Identify the 3 most calorie-dense food items (highest Calories per Dollar).</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ratings.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ratings</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span>
+</code></pre></div>
+
+<div>
+<style scoped>
+    .dataframe …</style></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/highest-calories-per-dollar.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/highest-literacy-country.html"><h3 class="article-title">Highest-Literacy-Country</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Which country has the highest literacy rate?</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project</span><span class="p">.</span><span class="w"> </span><span class="nx">You …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/highest-literacy-country.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/highest-net-migration-rate.html"><h3 class="article-title">Highest-Net-Migration-Rate</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Which country has the highest net migration rate?</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/highest-net-migration-rate.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 12 of 25</h6>
+<h6 class="subheader">Page 12 of 26</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/author/your-name11.html">&laquo; Prev</a>

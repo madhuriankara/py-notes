@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Abc-Literals</title>
+
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://madhuriankara.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://madhuriankara.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://madhuriankara.github.io/pynotes">Py Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://madhuriankara.github.io/pynotes/abc-literals.html" rel="bookmark"
+        title="Permalink to Abc-Literals">Abc-Literals</a></h3>
+    </header>
+
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="c1">#created on 20250113</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://www.scientecheasy.com/2022/09/literals-in-python.html/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Literals</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#single-line literal</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">single_line_string</span> <span class="o">=</span> <span class="err">‘</span><span class="n">Scientech</span> <span class="n">Easy</span><span class="err">’</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Multi-line String</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">multi_line_string</span> <span class="o">=</span> <span class="s1">&#39;Welcome </span><span class="se">\</span>
+<span class="s1">to </span><span class="se">\</span>
+<span class="s1">Scientech Easy&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">multi_line_string</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Welcome to Scientech Easy
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#We can also create a multi-line string literal using triple quotation marks.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">multi_line_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Welcome </span><span class="se">\</span>
+<span class="s1">to </span><span class="se">\</span>
+<span class="s1">Scientech Easy, </span><span class="se">\</span>
+<span class="s1">Dhanbad&#39;&#39;&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">multi_line_string</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Welcome to Scientech Easy, Dhanbad
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Numeric literal </span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># Decimal integer</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mo">0o62</span> <span class="c1"># Octal integer</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mh">0x32</span> <span class="c1"># Hexadecimal integer</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Decimal literal representation: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Octal literal representation: &quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hexadecimal representation: &quot;</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Decimal literal representation:  50
+Octal literal representation:  50
+Hexadecimal representation:  50
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#floating-point</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mf">75e-2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">0.75</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0.75</span>
+<span class="mf">0.75</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Complex literal</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># complex literal</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">10</span><span class="n">j</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="n">j</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>(5+10j)
+2j
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Boolean literals</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># boolean literals</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span> <span class="o">==</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="kc">True</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="n">d</span> <span class="o">=</span> <span class="kc">False</span> <span class="o">+</span> <span class="mi">5</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a is &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b is &quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c is &quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;d is &quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>a is  True
+b is  False
+c is  6
+d is  5
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Special literals</span>
+<span class="c1">#Python language contains only one special literal, i.e., None</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Special literals</span>
+<span class="n">a</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> 
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>None
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#List literals</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># List literals</span>
+<span class="n">address</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Scientech Easy&#39;</span><span class="p">,</span> <span class="s1">&#39;Joraphatak Road&#39;</span><span class="p">,</span> <span class="s1">&#39;Dhanbad&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;Scientech Easy&#39;, &#39;Joraphatak Road&#39;, &#39;Dhanbad&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Dictionary Literals</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Dictionary literals</span>
+<span class="n">fruits_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;o&#39;</span><span class="p">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="s1">&#39;banana&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits_dict</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;a&#39;: &#39;apple&#39;, &#39;o&#39;: &#39;orange&#39;, &#39;b&#39;: &#39;banana&#39;}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Tuple Literals</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># tuple literals</span>
+<span class="n">even_numbers</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">vowels</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;u&#39;</span><span class="p">)</span>
+<span class="n">direction</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;North&#39;</span><span class="p">,</span> <span class="s1">&#39;South&#39;</span><span class="p">,</span> <span class="s1">&#39;East&#39;</span><span class="p">,</span> <span class="s1">&#39;West&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">even_numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vowels</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">direction</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>(2, 4, 6, 8, 10, 12)
+(&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;)
+(&#39;North&#39;, &#39;South&#39;, &#39;East&#39;, &#39;West&#39;)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Set Literals</span>
+<span class="c1">#Set literals in Python are a well-defined collection of unordered data that cannot be changed.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Set literals</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Mango&#39;</span><span class="p">,</span> <span class="s1">&#39;Banana&#39;</span><span class="p">,</span> <span class="s1">&#39;Orange&#39;</span><span class="p">,</span> <span class="s1">&#39;Grape&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;Apple&#39;, &#39;Grape&#39;, &#39;Mango&#39;, &#39;Orange&#39;, &#39;Banana&#39;}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Set literals</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Apple&#39;</span><span class="p">,</span> <span class="s1">&#39;Mango&#39;</span><span class="p">,</span> <span class="s1">&#39;Banana&#39;</span><span class="p">,</span> <span class="s1">&#39;Orange&#39;</span><span class="p">,</span> <span class="s1">&#39;Grape&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;Apple&#39;, &#39;Grape&#39;, &#39;Mango&#39;, &#39;Orange&#39;, &#39;Banana&#39;}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 30</strong></p>
+<p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://madhuriankara.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-12.html">Assignment-12</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-13.html">Assignment-13</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-14.html">Assignment-14</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-2.html">Assignment-2</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-3.html">Assignment-3</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-4.html">Assignment-4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-5.html">Assignment-5</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-6.html">Assignment-6</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-7.html">Assignment-7</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignment-8.html">Assignment-8</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/beautiful_soup_4.html">Beautiful_soup_4</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/cricket.html">Cricket</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/langchain-poc.html">langchain-poc</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/onlinefoods.html">onlinefoods</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/pythonbasics.html">pythonbasics</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Py Notes by Madhuri Ankaraboyina</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

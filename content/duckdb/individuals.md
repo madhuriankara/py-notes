@@ -1,6 +1,6 @@
 ---
 title: Individuals
-date: 2025-01-13
+date: 2025-01-15
 author: Your Name
 cell_count: 6
 score: 5

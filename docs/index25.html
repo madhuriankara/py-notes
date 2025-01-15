@@ -47,8 +47,326 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/total-score-80.html"><h3 class="article-title">Total-Score-80</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Find students who got a job and have all scores (test, participation, and project) above 80.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/total-score-80.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/twitter-analysis.html"><h3 class="article-title">Twitter-Analysis</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">nltk</span><span class="p">;</span>
+<span class="kn">from</span> <span class="nn">nltk.probability</span> <span class="kn">import</span> <span class="n">FreqDist</span><span class="p">,</span> <span class="n">DictionaryProbDist</span><span class="p">,</span> <span class="n">ELEProbDist</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">pos_tweets</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;I love this car&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
+              <span class="p">(</span><span class="s1">&#39;This view is amazing&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
+              <span class="p">(</span><span class="s1">&#39;I feel great this morning&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
+              <span class="p">(</span><span class="s1">&#39;I am so excited about the concert&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">),</span>
+              <span class="p">(</span><span class="s1">&#39;He is my best friend&#39;</span><span class="p">,</span> <span class="s1">&#39;positive&#39;</span><span class="p">)]</span>
+
+<span class="n">neg_tweets</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;I do not like this car&#39;</span><span class="p">,</span> <span class="s1">&#39;negative&#39;</span><span class="p">),</span>
+              <span class="p">(</span><span class="s1">&#39;This view …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/twitter-analysis.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/untitled.html"><h3 class="article-title">Untitled</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_smallest_number</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function finds the smallest number in a list.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    nums (list): A list of numbers</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int: The smallest number in the list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># TODO: Implement the function</span>
+
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">find_smallest_number</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]))</span> <span class="c1"># Expected output: 1</span>
+<span class="c1"># </span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">find_smallest_number …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/untitled.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/updated-row.html"><h3 class="article-title">Updated-Row</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pypika</span> <span class="kn">import</span> <span class="n">Query</span><span class="p">,</span> <span class="n">Table</span><span class="p">,</span> <span class="n">functions</span> <span class="k">as</span> <span class="n">fn</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>  <span class="c1"># Use your preferred database connector (e.g., psycopg2 for PostgreSQL)</span>
+
+<span class="c1"># Define the table</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s2">&quot;users&quot;</span><span class="p">)</span>
+
+<span class="c1"># Build a query to fetch updated rows based on an `updated_at` column</span>
+<span class="n">last_checked_time</span> <span class="o">=</span> <span class="s2">&quot;2024-11-01 00:00:00&quot;</span>
+<span class="n">query</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">Query</span><span class="o">.</span><span class="n">from_</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">users</span><span class="o">.</span><span class="n">id …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/updated-row.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/upper-case-python.html"><h3 class="article-title">Upper-Case-Python</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convert_to_uppercase</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a given string to uppercase.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    s (str): The input string to be converted.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: The input string converted to uppercase.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># TODO: Implement the function to convert the string to uppercase</span>
+    <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="c1"># Sample test cases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">convert_to_uppercase</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">))</span>  <span class="c1"># Expected output: &quot;HELLO&quot;</span>
+<span class="c1"># print(convert_to_uppercase …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/upper-case-python.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/various.html"><h3 class="article-title">Various</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Reverse a string</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">rev_string</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rev_string</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>olleh
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">reverse_string</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">word</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">sentence</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">sentence</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">reverse_string</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;dlrow olleH&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#2.4. Find the Largest Element in an Array</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_largest_number</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span><span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+<span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/various.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/violin-plot-seaborn.html"><h3 class="article-title">Violin-Plot-Seaborn</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">days_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">learners_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">score_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0 …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/violin-plot-seaborn.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/vowels.html"><h3 class="article-title">Vowels</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">google</span><span class="o">/</span><span class="nx">auth</span><span class="o">/</span><span class="nx">_default</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="w"> </span><span class="nx">UserWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">authenticated</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">credentials</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="nx">Cloud</span><span class="w"> </span><span class="nx">SDK</span><span class="w"> </span><span class="nx">without</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">quota</span><span class="w"> </span><span class="nx">project</span><span class="p">.</span><span class="w"> </span><span class="nx">You</span><span class="w"> </span><span class="nx">might</span><span class="w"> </span><span class="nx">receive</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="s">&quot;quota exceeded&quot;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="s">&quot;API …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/gcp.html">gcp</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/vowels.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/vowles-count-.html"><h3 class="article-title">Vowles-Count-</h3></a>
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">count_vowels</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function counts the number of vowels in a given string.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    s (str): A string to count vowels from.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    int: The number of vowels in the string.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Initialize a variable to store the count of vowels</span>
+
+
+    <span class="c1"># Loop through each character in the string</span>
+
+
+    <span class="c1"># Return the …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/vowles-count-.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/word-count.html"><h3 class="article-title">Word Count</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
+<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
 </h6>
 
 
@@ -90,45 +408,14 @@ Nov 20 2024</p>
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/zero-positive-negative.html"><h3 class="article-title">Zero-Positive-Negative</h3></a>
-<h6 class="subheader" title="2025-01-13T00:00:00-05:00">Mon 13 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">check_number</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function checks if a number is positive, negative, or zero.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">    num (int): The number to be checked.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">    str: &#39;Positive&#39; if the number is positive, &#39;Negative&#39; if the number is negative, &#39;Zero&#39; if the number is zero.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c1"># Implement the function here</span>
-    <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/zero-positive-negative.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 25 of 25</h6>
+<h6 class="subheader">Page 25 of 26</h6>
 
 <p>
             <a href="https://madhuriankara.github.io/pynotes/index24.html">&laquo; Prev</a>
 
+        <a href="https://madhuriankara.github.io/pynotes/index26.html">Next &raquo;</a>
 </p>
 </div>
 
