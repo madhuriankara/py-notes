@@ -47,8 +47,166 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/prime-numbers.html"><h3 class="article-title">Prime-Numbers</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<p>Assignment 5
+Checks if the number is a prime number.
+Prints "Prime" or "Not Prime."</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_prime_number</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is prime&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;The </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1"> is not prime&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">get_prime_number</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&#39;The 3 is prime&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/prime-numbers.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/profit-margin.html"><h3 class="article-title">Profit-Margin</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Calculate the profit margin for each food item, assuming a fixed cost of 70% of the Price.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">food</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">food_sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;food_sales.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">ratings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ratings.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">food_sales</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Food_Name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ratings …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignment-14.html">Assignment-14</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/profit-margin.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/qr-code.html"><h3 class="article-title">Qr-Code</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">qrcode</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">qrcode</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Caskroom</span><span class="o">/</span><span class="nx">miniconda</span><span class="o">/</span><span class="kd">base</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">8.0</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">qrcode</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>    
+
+    <span class="n">qr</span> <span class="o">=</span> <span class="n">qrcode</span><span class="o">.</span><span class="n">QRCode</span><span class="p">(</span>
+        <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">error_correction</span><span class="o">=</span><span class="n">qrcode</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">ERROR_CORRECT_L</span><span class="p">,</span>
+        <span class="n">box_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="n">border</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">qr</span><span class="o">.</span><span class="n">add_data</span><span class="p">(</span><span class="s1">&#39;http://talentaccurate.com&#39;</span><span class="p">)</span>
+    <span class="n">qr</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">fit</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">img</span> <span class="o">=</span> <span class="n">qr …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/qr-code.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/question3.html"><h3 class="article-title">Question3</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<p>def find_common_elements(list1, list2):
+    """
+    Given two lists, find the common elements between them.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Args</span><span class="o">:</span>
+<span class="n">list1</span><span class="o">:</span><span class="w"> </span><span class="n">First</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">elements</span>
+<span class="n">list2</span><span class="o">:</span><span class="w"> </span><span class="n">Second</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">elements</span>
+
+<span class="n">Returns</span><span class="o">:</span>
+<span class="n">List</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">common</span><span class="w"> </span><span class="n">elements</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">list1</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">list2</span>
+<span class="s2">&quot;&quot;</span><span class="err">&quot;</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Initialize</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="n">common</span><span class="w"> </span><span class="n">elements</span>
+<span class="n">common_elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[]</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">pass</span>
+</code></pre></div>
+
+<h1>Sample test cases</h1>
+<h1>print(find_common_elements([1, 2 …</h1><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/question3.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/question4.html"><h3 class="article-title">Question4</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -84,7 +242,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/question6.html"><h3 class="article-title">Question6</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -119,7 +277,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/question8.html"><h3 class="article-title">Question8</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -157,7 +315,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/radius-of-a-circle.html"><h3 class="article-title">Radius-Of-A-Circle</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -196,7 +354,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/rating-healthy.html"><h3 class="article-title">Rating-Healthy</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -254,7 +412,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/ratio-horsepower-enginesize.html"><h3 class="article-title">Ratio-Horsepower-Enginesize</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -291,145 +449,6 @@
 
 
                 <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/ratio-horsepower-enginesize.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/regex.html"><h3 class="article-title">Regex</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;My email addresses are madhuri@gmail.com, ankaraboyina@yahoo.com, and keerthi@hotmail.com.&quot;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">email_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}&quot;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">emails</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">email_pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found email addresses:&quot;</span><span class="p">,</span> <span class="n">emails</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nx">Found</span><span class="w"> </span><span class="nx">email</span><span class="w"> </span><span class="nx">addresses</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&#39;</span><span class="nx">madhuri</span><span class="err">@</span><span class="nx">gmail</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">ankaraboyina</span><span class="err">@</span><span class="nx">yahoo</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">keerthi</span><span class="err">@</span><span class="nx">hotmail</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">]</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">text_with_placeholder</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">email_pattern …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/regex.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/remove-duplicate-keys.html"><h3 class="article-title">Remove-Duplicate-Keys</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_duplicates</span><span class="p">():</span>
-    <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-    <span class="n">modified_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">modified_list</span><span class="p">:</span>
-            <span class="n">modified_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">modified_list</span>
-<span class="n">remove_duplicates</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[1, 2, 3, 4, 5]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/pythonbasics.html">pythonbasics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/remove-duplicate-keys.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/remove-duplicates-list.html"><h3 class="article-title">Remove-Duplicates-List</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#https://www.geeksforgeeks.org/python-ways-to-remove-duplicates-from-list/</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_duplicates</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Problem: Write a function to remove duplicates from a list.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">    lst: a list of elements</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">    a list with duplicates removed</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c1"># initialize an empty list to store unique elements</span>
-
-    <span class="c1"># loop through the input list</span>
-
-    <span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">lst …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/remove-duplicates-list.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/remove-element.html"><h3 class="article-title">Remove-Element</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_element</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Write a function to remove an element from a list by its value.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">    lst (list): The list from which the element needs to be removed.</span>
-<span class="sd">    value: The value of the element to be removed.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">    list: The updated list after removing the element.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">lst</span><span class="o">.</span><span class="n">remove …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/remove-element.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -483,6 +502,7 @@
             <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/topics-python-mangling.html">topics-python-mangling</a></li>
    
         </ul>
 

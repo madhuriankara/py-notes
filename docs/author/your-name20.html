@@ -47,8 +47,147 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/regex.html"><h3 class="article-title">Regex</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;My email addresses are madhuri@gmail.com, ankaraboyina@yahoo.com, and keerthi@hotmail.com.&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">email_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">emails</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">email_pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found email addresses:&quot;</span><span class="p">,</span> <span class="n">emails</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Found</span><span class="w"> </span><span class="nx">email</span><span class="w"> </span><span class="nx">addresses</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&#39;</span><span class="nx">madhuri</span><span class="err">@</span><span class="nx">gmail</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">ankaraboyina</span><span class="err">@</span><span class="nx">yahoo</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">keerthi</span><span class="err">@</span><span class="nx">hotmail</span><span class="p">.</span><span class="nx">com</span><span class="err">&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text_with_placeholder</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">email_pattern …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/regex.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/remove-duplicate-keys.html"><h3 class="article-title">Remove-Duplicate-Keys</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_duplicates</span><span class="p">():</span>
+    <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+    <span class="n">modified_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">modified_list</span><span class="p">:</span>
+            <span class="n">modified_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">modified_list</span>
+<span class="n">remove_duplicates</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[1, 2, 3, 4, 5]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/pythonbasics.html">pythonbasics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/remove-duplicate-keys.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/remove-duplicates-list.html"><h3 class="article-title">Remove-Duplicates-List</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://www.geeksforgeeks.org/python-ways-to-remove-duplicates-from-list/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_duplicates</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Problem: Write a function to remove duplicates from a list.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">    lst: a list of elements</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    a list with duplicates removed</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># initialize an empty list to store unique elements</span>
+
+    <span class="c1"># loop through the input list</span>
+
+    <span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">lst …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/remove-duplicates-list.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/remove-element.html"><h3 class="article-title">Remove-Element</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_element</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Write a function to remove an element from a list by its value.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): The list from which the element needs to be removed.</span>
+<span class="sd">    value: The value of the element to be removed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    list: The updated list after removing the element.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">lst</span><span class="o">.</span><span class="n">remove …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/remove-element.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/remove-element-after-threshold.html"><h3 class="article-title">Remove-Element-After-Threshold</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -85,7 +224,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/remove-n-item.html"><h3 class="article-title">Remove-N-Item</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -119,7 +258,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/replace-column.html"><h3 class="article-title">Replace-Column</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -190,7 +329,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/replace-word.html"><h3 class="article-title">Replace-Word</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -246,7 +385,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/replaced-space-.html"><h3 class="article-title">Replaced-Space-</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -279,7 +418,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/reserved-keywords.html"><h3 class="article-title">Reserved-Keywords</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -300,153 +439,6 @@
 
 
                 <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/reserved-keywords.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/return-intersection.html"><h3 class="article-title">Return-Intersection</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_intersection</span><span class="p">():</span>
-    <span class="n">intersection</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-    <span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">list2</span><span class="p">:</span>
-            <span class="n">intersection</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">intersection</span>
-<span class="n">get_intersection</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[3, 4]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/pythonbasics.html">pythonbasics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/return-intersection.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/reverse-numbers.html"><h3 class="article-title">Reverse-Numbers</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
-</h6>
-
-
-<p>6
-Reverse the given list</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_reverse_numbers</span><span class="p">():</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;series of numbers is now listed: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">&#39;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">get_reverse_numbers</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&#39;series of numbers is now listed: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]&#39;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/assignments.html">assignments</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/reverse-numbers.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/rotate-list.html"><h3 class="article-title">Rotate-List</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_rotate_lst</span><span class="p">():</span>
-    <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
-    <span class="n">rotated_lst</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="o">-</span><span class="n">n</span><span class="p">:]</span> <span class="o">+</span> <span class="n">lst</span><span class="p">[:</span><span class="o">-</span><span class="n">n</span><span class="p">]</span> 
-    <span class="k">return</span> <span class="n">rotated_lst</span>
-<span class="n">get_rotate_lst</span><span class="p">()</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>[3, 4, 5, 1, 2]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/pythonbasics.html">pythonbasics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/rotate-list.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/schedule-basic.html"><h3 class="article-title">Schedule-Basic</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">schedule</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="c1"># Define the task function</span>
-<span class="k">def</span> <span class="nf">job</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Job is running!&quot;</span><span class="p">)</span>
-
-<span class="c1"># Schedule the job to run every 2 seconds</span>
-<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">seconds</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
-
-<span class="c1"># Keep the program running</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">schedule</span><span class="o">.</span><span class="n">run_pending</span><span class="p">()</span>  <span class="c1"># Run all pending tasks</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Job is running …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/schedule-basic.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -500,6 +492,7 @@ Reverse the given list</p>
             <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/topics-python-mangling.html">topics-python-mangling</a></li>
    
         </ul>
 

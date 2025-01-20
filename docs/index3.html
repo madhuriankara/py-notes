@@ -47,8 +47,95 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/aspiration-make-turbo.html"><h3 class="article-title">Aspiration-Make-Turbo</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="ch">#!pip install duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">duckdb</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Connect to DuckDB</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Load CSV file</span>
+<span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE automobile AS SELECT * FROM &#39;automobile_data.csv&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;duckdb.duckdb.DuckDBPyConnection at 0x1077b42b0&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Retrieve all rows where aspiration is turbo.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT * FROM automobile</span>
+<span class="s2">                        WHERE &quot;aspiration&quot; = &#39;turbo&#39; &quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/duckdb.html">duckdb</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/aspiration-make-turbo.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://madhuriankara.github.io/pynotes/assignment3.html"><h3 class="article-title">Assignment3</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">days_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">len</span><span class="p">(</span><span class="n">days_list</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">learners_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Madhuri&#39;</span><span class="p">,</span><span class="s1">&#39;Sarvana&#39;</span><span class="p">,</span><span class="s1">&#39;Soundarya&#39;</span><span class="p">,</span><span class="s1">&#39;Steve&#39;</span><span class="p">,</span><span class="s1">&#39;Hari&#39;</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">len</span><span class="p">(</span><span class="n">learners_list …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/assignment3.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/attendance-less-than-85.html"><h3 class="article-title">Attendance-Less-Than-85</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -73,7 +160,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/attendance-participation.html"><h3 class="article-title">Attendance-Participation</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -101,7 +188,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/average-birthrate-country.html"><h3 class="article-title">Average-Birthrate-Country</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -129,7 +216,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/average-calories.html"><h3 class="article-title">Average-Calories</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -185,7 +272,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/average-engine-size.html"><h3 class="article-title">Average-Engine-Size</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -225,7 +312,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/average-food.html"><h3 class="article-title">Average-Food</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -266,7 +353,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/average-price-groupby-make.html"><h3 class="article-title">Average-Price-Groupby-Make</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -305,7 +392,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/average-students.html"><h3 class="article-title">Average-Students</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -322,65 +409,6 @@
 
 
                 <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/average-students.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/bar-counts.html"><h3 class="article-title">Bar Counts</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">N</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="n">medalists_mob</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>  <span class="c1"># the x locations for the groups</span>
-<span class="n">width</span> <span class="o">=</span> <span class="mf">0.15</span>       <span class="c1"># the width of the bars</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">rects1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ind …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/bar-counts.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/barcode.html"><h3 class="article-title">Barcode</h3></a>
-<h6 class="subheader" title="2025-01-15T00:00:00-05:00">Wed 15 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">barcode</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">Collecting</span><span class="w"> </span><span class="n">python</span><span class="o">-</span><span class="n">barcode</span>
-<span class="w">  </span><span class="n">Downloading</span><span class="w"> </span><span class="n">python_barcode</span><span class="o">-</span><span class="mf">0.15</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span><span class="o">.</span><span class="n">metadata</span><span class="w"> </span><span class="p">(</span><span class="mf">2.3</span><span class="w"> </span><span class="n">kB</span><span class="p">)</span>
-<span class="n">Downloading</span><span class="w"> </span><span class="n">python_barcode</span><span class="o">-</span><span class="mf">0.15</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span><span class="w"> </span><span class="p">(</span><span class="mi">212</span><span class="w"> </span><span class="n">kB</span><span class="p">)</span>
-<span class="n">Installing</span><span class="w"> </span><span class="n">collected</span><span class="w"> </span><span class="n">packages</span><span class="p">:</span><span class="w"> </span><span class="n">python</span><span class="o">-</span><span class="n">barcode</span>
-<span class="n">Successfully</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="n">python</span><span class="o">-</span><span class="n">barcode</span><span class="o">-</span><span class="mf">0.15</span><span class="o">.</span><span class="mi">1</span>
-<span class="n">Note</span><span class="p">:</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">need</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">restart</span><span class="w"> </span><span class="n">the …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/code-snippets.html">code-snippets</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/barcode.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -434,6 +462,7 @@
             <li><a href="https://madhuriankara.github.io/pynotes/category/seaborn.html">seaborn</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/sqllite.html">sqllite</a></li>
             <li><a href="https://madhuriankara.github.io/pynotes/category/testcodes.html">testcodes</a></li>
+            <li><a href="https://madhuriankara.github.io/pynotes/category/topics-python-mangling.html">topics-python-mangling</a></li>
    
         </ul>
 

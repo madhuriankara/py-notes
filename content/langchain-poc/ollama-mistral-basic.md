@@ -1,6 +1,6 @@
 ---
 title: Ollama-Mistral-Basic
-date: 2025-01-15
+date: 2025-01-20
 author: Your Name
 cell_count: 15
 score: 15
