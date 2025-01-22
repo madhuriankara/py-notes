@@ -47,7 +47,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/1-address.html"><h3 class="article-title">1 Address</h3></a>
-<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+<h6 class="subheader" title="2025-01-22T00:00:00-05:00">Wed 22 January 2025
 </h6>
 
 
@@ -132,7 +132,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/2-address.html"><h3 class="article-title">2-Address</h3></a>
-<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+<h6 class="subheader" title="2025-01-22T00:00:00-05:00">Wed 22 January 2025
 </h6>
 
 
@@ -173,8 +173,52 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/abc-break.html"><h3 class="article-title">Abc-Break</h3></a>
+<h6 class="subheader" title="2025-01-22T00:00:00-05:00">Wed 22 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created on 20250120</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://www.scientecheasy.com/2022/11/break-statement-in-python.html/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">break</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X = &quot;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>X =  1
+X =  2
+X =  3
+X =  4
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;Python&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;t&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Current letter is &#39;</span><span class="p">,</span><span class="n">letter</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Current letter is  P
+Current …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/abc-break.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/abc-comments.html"><h3 class="article-title">Abc-Comments</h3></a>
-<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+<h6 class="subheader" title="2025-01-22T00:00:00-05:00">Wed 22 January 2025
 </h6>
 
 
@@ -215,8 +259,41 @@
 
 
             <article>
+                <a href="https://madhuriankara.github.io/pynotes/abc-conditional.html"><h3 class="article-title">Abc-Conditional</h3></a>
+<h6 class="subheader" title="2025-01-22T00:00:00-05:00">Wed 22 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created on 20250121</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://www.scientecheasy.com/2022/11/conditional-statements-in-python.html/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Python program to calculate the area of a triangle.</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="c1"># Calculating the semi-perimeter.</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="c1"># Calculating the area of triangle.</span>
+<span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span><span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">z</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
+<span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/abc-conditional.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://madhuriankara.github.io/pynotes/abc-coninue.html"><h3 class="article-title">Abc-Coninue</h3></a>
-<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+<h6 class="subheader" title="2025-01-22T00:00:00-05:00">Wed 22 January 2025
 </h6>
 
 
@@ -262,7 +339,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/abc-datatypes.html"><h3 class="article-title">Abc-Datatypes</h3></a>
-<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+<h6 class="subheader" title="2025-01-22T00:00:00-05:00">Wed 22 January 2025
 </h6>
 
 
@@ -323,7 +400,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/abc-delimiter.html"><h3 class="article-title">Abc-Delimiter</h3></a>
-<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+<h6 class="subheader" title="2025-01-22T00:00:00-05:00">Wed 22 January 2025
 </h6>
 
 
@@ -354,7 +431,7 @@
 
             <article>
                 <a href="https://madhuriankara.github.io/pynotes/abc-escapesequance.html"><h3 class="article-title">Abc-Escapesequance</h3></a>
-<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+<h6 class="subheader" title="2025-01-22T00:00:00-05:00">Wed 22 January 2025
 </h6>
 
 
@@ -393,146 +470,36 @@ SyntaxError: invalid syntax. Perhaps you forgot a comma?
 
 
             <article>
-                <a href="https://madhuriankara.github.io/pynotes/abc-identifiers.html"><h3 class="article-title">Abc-Identifiers</h3></a>
-<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+                <a href="https://madhuriankara.github.io/pynotes/abc-forloop.html"><h3 class="article-title">Abc-Forloop</h3></a>
+<h6 class="subheader" title="2025-01-22T00:00:00-05:00">Wed 22 January 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#created on 20250113</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#created on 20250120</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#https://www.scientecheasy.com/2022/09/identifiers-in-python.html/</span>
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Five Rules for writing Identifiers in Python</span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You are the high scorer!&#39;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="err">= 10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">class</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code>You are the high scorer!
+You are the high scorer!
+You are the high scorer!
+You are the high scorer!
+You are the high scorer!
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>  Cell In[4], line 1
-    class = 10
-          ^
-SyntaxError: invalid syntax
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">class_</span> <span class="o">=</span> <span class="s2">&quot;RSVM&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">class_</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>RSVM
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Identifiers does not include symbols !, @, #, $, % </span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">school</span><span class="o">@</span> <span class="o">=</span> <span class="s2">&quot;RSVM&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">school</span><span class="o">@</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>  Cell In[6], line …</code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I love to code …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/abc-identifiers.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/abc-literals.html"><h3 class="article-title">Abc-Literals</h3></a>
-<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#created on 20250113</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#https://www.scientecheasy.com/2022/09/literals-in-python.html/</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Literals</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#single-line literal</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">single_line_string</span> <span class="o">=</span> <span class="err">‘</span><span class="n">Scientech</span> <span class="n">Easy</span><span class="err">’</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Multi-line String</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">multi_line_string</span> <span class="o">=</span> <span class="s1">&#39;Welcome </span><span class="se">\</span>
-<span class="s1">to </span><span class="se">\</span>
-<span class="s1">Scientech Easy&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">multi_line_string</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Welcome to Scientech Easy
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#We can also create a multi-line string literal using triple quotation marks.</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">multi_line_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Welcome </span><span class="se">\</span>
-<span class="s1">to </span><span class="se">\</span>
-<span class="s1">Scientech Easy, </span><span class="se">\</span>
-<span class="s1">Dhanbad&#39;&#39;&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">multi_line_string …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/abc-literals.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://madhuriankara.github.io/pynotes/abc-local-gloabal.html"><h3 class="article-title">Abc-Local-Gloabal</h3></a>
-<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#created on 20250115</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#https://www.scientecheasy.com/2022/09/global-and-local-variables-in-python.html/</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Global and Local Variables in Python</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># a global variable.</span>
-<span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inside function: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="n">my_function</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Outside function: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Inside function:  20
-Outside function:  20
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="mi">30</span> 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inside function: &quot;</span><span class="p">,</span> <span class="n">x …</span></code></pre></div><p class="subheader">Category: <a href="https://madhuriankara.github.io/pynotes/category/abc-python.html">abc-python</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/abc-local-gloabal.html">Read More</a>
+                <a class="button radius secondary small right" href="https://madhuriankara.github.io/pynotes/abc-forloop.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 

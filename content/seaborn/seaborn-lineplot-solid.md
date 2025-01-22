@@ -1,6 +1,6 @@
 ---
 title: Seaborn-Lineplot-Solid
-date: 2025-01-20
+date: 2025-01-22
 author: Your Name
 cell_count: 23
 score: 20
